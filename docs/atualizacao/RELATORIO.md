@@ -42,6 +42,8 @@ publicado. Nenhuma conta real: todas as pastas de dados foram temporárias (as c
 | — | Trava 2 (fumaça) local | **ok**: "abriu, ficou 25 s de pé, sem crash.log, fechou e não sobrou processo" | |
 | 8 | publicar de verdade no GitHub (com o OK do usuário) | **ok**: o commit `d6562ba` na `main` rodou o Actions (execução nº 1, sucesso: Trava 1, build, Trava 2, ZIP, instalador) e criou a Release **v1.1.1** "Latest" com `PokeNexus-Setup-1.1.1.exe` (95,6 MB), `PokeNexus-1.1.1.zip` (138,4 MB) e `SHA256SUMS.txt`; os dois arquivos baixados do GitHub conferem com o SHA256SUMS; o download real redireciona para `release-assets.githubusercontent.com` (aceito pelo programa). Um commit com `[sem atualização]` não publicou (ver abaixo) | https://github.com/PauloAfonsoGR/poke-nexus/releases/tag/v1.1.1 |
 
+**Teste 8, segunda parte:** o commit `a56db0b` ("Relatório do teste 8 [sem atualização]", que mexe também em `instalador/requirements-build.txt`, fora do `paths-ignore`) gerou a execução nº 2 com o job `publicar` **pulado** (`skipped`); continua existindo só a Release v1.1.1, que segue como "Latest".
+
 ## Defeito achado e corrigido durante os testes
 
 Na primeira tentativa do teste 5 o programa baixou, conferiu e fechou, mas **o instalador nunca rodou**. O
