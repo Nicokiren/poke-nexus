@@ -13,7 +13,7 @@ from PySide6.QtWidgets import (QSizePolicy, QCheckBox, QComboBox, QDialog, QDoub
                                QScrollArea, QSpinBox, QVBoxLayout, QWidget)
 
 from app import config_edit
-from app.config import (CONFIG_PATH, DATA_DIR, DEFAULT_SPRITES, DEFAULTS, LOGS_DIR, MODO_LEVE,
+from app.config import (APP_VERSION, CONFIG_PATH, DATA_DIR, DEFAULT_SPRITES, DEFAULTS, LOGS_DIR, MODO_LEVE,
                         PROFILES_DIR, SPRITES_POKEMON, load_config)
 from app.config_edit import CAMPOS, NOMES_ATALHOS, ErroConfig
 from app.dialogos import avisar, perguntar
@@ -95,6 +95,7 @@ class SettingsDialog(QDialog):
         self._contas()
         self._atalhos()
         self._desempenho()
+        self._atualizacao()
         self.lay.addStretch()
         travar_roda(corpo, rolagem.verticalScrollBar())
 
@@ -344,6 +345,25 @@ class SettingsDialog(QDialog):
         d.setStyleSheet("font-size:11px;")
         g.addWidget(d, g.rowCount(), 0, 1, 3)
 
+    def _atualizacao(self):
+        g = self._card("Atualização", "atualizacao")
+        self.w_avisar = QCheckBox("Avisar quando tiver atualização")
+        self._linha(g, "", self.w_avisar, "atualizacao", "avisar",
+                    "Procura uma versão nova no GitHub ao abrir e a cada 6 horas. Nada é baixado sem você "
+                    "clicar em Atualizar")
+        b = Botao(" Procurar atualização agora")
+        b.setIcon(icone("recarregar"))
+        b.setIconSize(ICO_TAM)
+        b.setObjectName("tool")
+        dono = self.parent()
+        b.clicked.connect(lambda: dono.atualizacao.procurar_agora(self) if hasattr(dono, "atualizacao") else None)
+        g.addWidget(b, g.rowCount(), 1, Qt.AlignLeft)
+        txt = QLabel(f"Versão instalada: {APP_VERSION}. Os logins e a configuração não mudam ao atualizar.")
+        txt.setObjectName("muted")
+        txt.setWordWrap(True)
+        txt.setStyleSheet("font-size:11px;")
+        g.addWidget(txt, g.rowCount(), 0, 1, 3)
+
     # ------------------------------------------------------------ valores
     def _carregar(self, cfg: dict, contas, secoes=None):
         """Põe os valores nos campos (secoes=None: todas)."""
@@ -375,6 +395,8 @@ class SettingsDialog(QDialog):
                 w.setKeySequence(QKeySequence(cfg["atalhos"].get(k, "")))
         if quer("desempenho"):
             self.w_leve.setChecked(bool(cfg["desempenho"]["modo_leve"]))
+        if quer("atualizacao"):
+            self.w_avisar.setChecked(bool(cfg.get("atualizacao", DEFAULTS["atualizacao"])["avisar"]))
 
     def _restaurar(self, titulo: str, secao: str):
         if not perguntar(self, "Restaurar padrão", f"Voltar \"{titulo}\" para os valores "
@@ -397,6 +419,7 @@ class SettingsDialog(QDialog):
         for k, w in self.w_atalhos.items():
             v[("atalhos", k)] = w.keySequence().toString(QKeySequence.PortableText)
         v[("desempenho", "modo_leve")] = self.w_leve.isChecked()
+        v[("atualizacao", "avisar")] = self.w_avisar.isChecked()
         contas = [{"nome": wc["nome"].text().strip(), "sprite": wc["sprite"].value(),
                    "hunt": wc["hunt"].text().strip(), "ativa": wc["ativa"].isChecked()}
                   for wc in self.widgets_contas]

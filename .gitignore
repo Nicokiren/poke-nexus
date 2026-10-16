@@ -13,6 +13,9 @@ manager_state.json
 dist/
 dist_*/
 build/
+build_*/
+# Versão do build de publicação (gerado pelo GitHub Actions / build.bat com VERSAO_BUILD)
+app/_build.py
 # Ferramentas locais
 .claude/
 .venv/

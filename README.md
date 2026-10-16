@@ -26,23 +26,45 @@ Por isso o PokeNexus:
 
 ## 1. Instalar e abrir
 
-**Não precisa instalar nada** — nem Python, nem navegador, nem dependências.
+1. Abra as **[Releases](https://github.com/PauloAfonsoGR/poke-nexus/releases/latest)** e baixe o
+   **`PokeNexus-Setup-<versão>.exe`**.
+2. Dê **dois cliques** nele. Não pede administrador: o programa vai para
+   `%LOCALAPPDATA%\Programs\PokeNexus`, com atalho no Menu Iniciar e na Área de Trabalho.
+3. No fim, "Abrir o PokeNexus" já vem marcado.
 
-1. Baixe o arquivo **`PokeNexus-<versão>.zip`**.
-2. Clique com o botão direito nele → **Extrair tudo…** (escolha uma pasta, por exemplo `Documentos`).
-3. Abra a pasta **`PokeNexus`** e dê **dois cliques em `PokeNexus.exe`**.
+Não precisa de Python, navegador nem nada mais. Para desinstalar: **Configurações do Windows → Apps**
+(os logins e a configuração ficam; ver abaixo).
 
-Pronto. Se quiser, clique com o botão direito em `PokeNexus.exe` → **Enviar para → Área de
-trabalho (criar atalho)**.
+> O instalador e o programa não são assinados digitalmente: o Windows pode mostrar "O Windows protegeu o
+> computador". Clique em **Mais informações → Executar assim mesmo**.
 
-> Na primeira vez o Windows pode mostrar "O Windows protegeu o computador" (o programa não é
-> assinado digitalmente). Clique em **Mais informações → Executar assim mesmo**.
+**Alternativa sem instalar (ZIP):** baixe o `PokeNexus-<versão>.zip` da mesma Release, clique com o botão
+direito → **Extrair tudo…** e dê dois cliques em `PokeNexus\PokeNexus.exe`. O ZIP não se atualiza sozinho:
+para receber o aviso de atualização, use o instalador.
+
+> **Quem tem a versão 1.1.0 (em ZIP):** ela não tem o aviso de atualização. Instale **uma vez** pelo
+> `PokeNexus-Setup`; os logins e a configuração continuam (ficam em outra pasta). Depois, pode apagar a
+> pasta do ZIP antigo.
+
+### Atualizações
+
+O PokeNexus instalado procura uma versão nova no GitHub ao abrir (depois de 30 s) e a cada 6 horas. Se
+houver, aparece uma faixa no topo: **"Nova versão … disponível"**, com o que mudou e os botões:
+- **Atualizar:** baixa o instalador da Release (só do GitHub), confere o SHA-256, fecha o PokeNexus do
+  jeito normal (as contas param com segurança; se houver conta conectada, ele pergunta antes), instala e
+  abre a versão nova sozinho. Os logins, a configuração e os logs não mudam.
+- **Depois:** esconde o aviso até a próxima procura.
+- **Pular esta versão:** não avisa mais desta versão (a próxima volta a avisar).
+
+Nada é baixado ou instalado sem o seu clique. Sem internet, nada aparece (só uma linha no log). Em
+**Ajustes → Atualização**: "Avisar quando tiver atualização" (ligado por padrão) e **Procurar atualização
+agora**.
 
 ### Onde ficam os seus dados
 
 Configuração, perfis (com os logins) e logs ficam em **`%LOCALAPPDATA%\PokeNexus`** — fora da pasta
 do programa. Assim:
-- dá para atualizar o PokeNexus (apagar a pasta velha e extrair a nova) sem perder os logins;
+- atualizar, reinstalar ou desinstalar o PokeNexus não apaga os logins;
 - se você passar a pasta do programa para alguém, **os seus logins não vão junto**.
 
 Ela abre em **Ajustes → Pastas** (junto com a pasta dos perfis e a de logs).
@@ -360,13 +382,38 @@ py -m venv .venv
 .venv\Scripts\python.exe main.py
 ```
 
-### Gerar uma nova versão do PokeNexus
+### Como publicar uma versão
 
-1. Ajuste `APP_VERSION` em `app/config.py`.
-2. Dê dois cliques em **`build.bat`** (precisa de Python 3.11+ só na máquina de quem gera a versão).
-3. Saída:
+**Todo commit na `main` publica uma versão** pelo GitHub Actions (`.github/workflows/release.yml`):
+1. **Trava 1:** falha se algum arquivo rastreado for login, log ou dado de conta (`profiles/`, `logs/`,
+   `*.log`, `Local Storage`, `Cookies`, `leveldb`, `manager_state.json`, `rmt_*.json`).
+2. Build com o PyInstaller nas versões exatas de `instalador/requirements-build.txt`.
+3. **Trava 2:** abre o `PokeNexus.exe` gerado por 25 s (`instalador/fumaca.ps1`), confere que não
+   fechou nem gravou `crash.log`, fecha e confere que não sobrou processo.
+4. Gera o ZIP, o instalador (Inno Setup, `instalador/PokeNexus.iss`) e o `SHA256SUMS.txt`, e cria a
+   Release `v<versão>` (a mais nova fica "Latest") com as mensagens dos commits como notas.
+
+A versão é `APP_VERSION_BASE` (`app/config.py`, hoje `1.1`) + o número da execução do Actions: `1.1.57`.
+Para uma versão nova "grande", troque a base (`1.2`). Rodando do código a versão aparece como `1.1-dev`
+e o aviso de atualização fica desligado.
+
+**Não publica:** commit com **`[sem atualização]`** na mensagem, ou que só mexe em `docs/`, `*.md` ou
+`ferramentas/`. Também dá para publicar à mão em Actions → "Publicar versão" → Run workflow.
+
+Nunca coloque token ou senha no programa: o repositório é público e o aviso consulta as Releases sem
+login. Releases só saem pelo Actions, com as travas.
+
+### Gerar o programa na sua máquina
+
+1. Dê dois cliques em **`build.bat`** (precisa de Python só na máquina de quem gera).
+2. Saída:
    - `dist\PokeNexus\PokeNexus.exe` (pasta pronta para rodar);
-   - `dist\PokeNexus-<versão>.zip` — **é isto que se entrega ao usuário**.
+   - `dist\PokeNexus-<versão>.zip`;
+   - `dist\PokeNexus-Setup-<versão>.exe`, se o **Inno Setup 6** estiver instalado (sem ele, só o ZIP).
+
+Sem nada, o build local sai como `1.1-dev` (sem aviso de atualização). Para testar o aviso, defina antes
+`set VERSAO_BUILD=1.1.5`. Os testes do aviso (servidor falso de Releases, builds de teste) estão em
+`ferramentas/atualizacao/` e `docs/atualizacao/RELATORIO.md`.
 
 O build usa o **PyInstaller** (`PokeNexus.spec`) em modo pasta: o executável leva junto o Python, o
 PySide6 e o **Qt WebEngine** (o motor Chromium que exibe o jogo), além das pixel arts e do
@@ -393,6 +440,9 @@ antiga não é trocado; as mudanças de padrão que precisam chegar nele ficam e
 main.py                     ponto de entrada
 config.toml                 configuração padrão (copiada para a pasta de dados)
 PokeNexus.spec, build.bat   build do executável
+instalador/                 instalador (Inno Setup), teste de fumaça e versões exatas do build
+.github/workflows/release.yml  publica a versão (Release) a cada commit na main
+app/atualizacao.py          aviso de atualização (procura, faixa, download, SHA-256, instala)
 app/config.py               caminhos (programa x dados do usuário) e leitura da configuração
 app/manager.py              loop asyncio com um worker por conta, watchdog, logs
 app/gui.py, app/widgets.py  interface PySide6 (visão individual e Todas as contas)

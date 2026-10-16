@@ -23,6 +23,7 @@ from app.settings_ui import SettingsDialog
 from app.hunt_ui import HuntPanel
 from app.rmt_ui import RmtPanel
 from app.manager import Manager
+from app.atualizacao import Atualizacao
 from app.dialogos import avisar, perguntar
 from app.molduras import Botao, Moldura
 from app.icones import TAM as ICO_TAM, icone, por_nome_do_botao
@@ -1020,6 +1021,8 @@ class MainWindow(QMainWindow):
         self.web.view_removed.connect(self.game.remove_view)
 
         self._shortcuts(len(snap))
+        # Aviso de atualização (app/atualizacao.py): uma faixa abaixo do topo, escondida sem versão nova.
+        self.atualizacao = Atualizacao(self, self.m, lambda faixa: root.insertWidget(1, faixa))
         self.select(0)
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.refresh)
@@ -1101,7 +1104,7 @@ class MainWindow(QMainWindow):
             if sec is None:
                 if k == "max_simultaneas":
                     self.cfg[k] = v
-            elif sec in ("intervalos", "farm", "atalhos"):
+            elif sec in ("intervalos", "farm", "atalhos", "atualizacao"):
                 self.cfg[sec][k] = v          # os workers leem estes dicionários a cada uso
             elif (sec, k) == ("janela", "layout_ver_todas"):
                 self.cfg["janela"][k] = v

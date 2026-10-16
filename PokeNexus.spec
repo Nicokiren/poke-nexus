@@ -5,6 +5,7 @@
 # O Qt WebEngine (o navegador embutido) é grande e tem um processo auxiliar
 # (QtWebEngineProcess.exe); no modo de arquivo único ele seria extraído para uma pasta
 # temporária a CADA abertura. Em pasta, abre na hora.
+import os
 
 a = Analysis(
     ["main.py"],
@@ -15,7 +16,9 @@ a = Analysis(
         ("config.toml", "."),          # configuração padrão (copiada para a pasta de dados)
         ("hunts/bridge.js", "hunts"),  # ponte do Hunt Analyzer com os módulos do jogo
     ],
-    hiddenimports=["websockets", "websockets.asyncio.client"],
+    # app._build: a versão do build de publicação (só existe quando o Actions ou o build.bat a grava)
+    hiddenimports=["websockets", "websockets.asyncio.client"]
+                  + (["app._build"] if os.path.isfile(os.path.join("app", "_build.py")) else []),
     hookspath=[],
     runtime_hooks=[],
     excludes=["playwright", "tkinter", "unittest", "pydoc", "test",

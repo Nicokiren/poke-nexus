@@ -20,6 +20,13 @@ App desktop para Windows (Python 3.11+, PySide6/Qt WebEngine) que roda até **4 
   fechava o mercado por cima do jogo e a tela piscava. Um pedido por anúncio, sem rajada.
 - `app/manager.py` + `workers/` — loop asyncio numa thread; uma tarefa por conta; vigias de travamento e
   de memória.
+- Distribuição: `instalador/PokeNexus.iss` (Inno Setup, por usuário, sem admin, em
+  `%LOCALAPPDATA%\Programs\PokeNexus`; `AppId` fixo, **nunca troque**), `instalador/fumaca.ps1` (teste de
+  fumaça), `instalador/requirements-build.txt` (versões exatas do build), `.github/workflows/release.yml`
+  (publica a Release a cada commit na `main`) e `app/atualizacao.py` (aviso de atualização: faixa no topo,
+  escolha do usuário em 16/10/2026; Atualizar baixa, confere o SHA-256, fecha pelo caminho do X e um
+  "ajudante" PowerShell roda o instalador depois que o processo termina). Versão: `APP_VERSION_BASE` +
+  número do Actions, gravada em `app/_build.py` (não versionado); do código é `1.1-dev`, sem aviso.
 - Interface: `app/gui.py` (janela, VER TODAS em grade ou "celulares", painel da conta recolhível),
   `app/widgets.py`, `app/hunt_ui.py` (Hunt Analyzer), `app/rmt_ui.py` + `rmt/` (RMT/Mercado),
   `app/settings_ui.py` + `app/config_edit.py` (Configurações; grava o `config.toml` mantendo os
@@ -89,7 +96,15 @@ App desktop para Windows (Python 3.11+, PySide6/Qt WebEngine) que roda até **4 
 - Testes de interface com WebEngine precisam de uma janela de verdade (rodam num terminal normal, não em
   sandbox). Use `POKENEXUS_DATA` numa pasta nova: as contas abrem na tela de login e nada das contas reais
   é tocado.
-- Gerar a versão: `build.bat` (para no fim esperando uma tecla). Equivalente direto:
+- **Publicar uma versão:** commit na `main` (o Actions faz build, travas, ZIP, instalador, SHA256SUMS e a
+  Release). `[sem atualização]` na mensagem, ou commit só em `docs/`, `*.md`, `ferramentas/`: não publica.
+  **Nunca token ou senha no programa** (o repositório é público e o aviso consulta sem login); Releases
+  só pelo Actions, com as travas. Testes do aviso: `ferramentas/atualizacao/` (servidor falso de
+  Releases, builds de teste em `dist_teste\`, automação da janela) e `docs/atualizacao/RELATORIO.md`.
+  Instalar a versão de teste na máquina do usuário cria atalhos: ele tem um `PokeNexus.lnk` próprio na
+  Área de Trabalho (aponta para outra pasta): guarde e devolva.
+- Gerar a versão local: `build.bat` (para no fim esperando uma tecla; gera o instalador se houver Inno
+  Setup 6; `set VERSAO_BUILD=1.1.5` antes = build com aviso de atualização). Equivalente direto:
   `.venv\Scripts\python.exe -m PyInstaller --noconfirm --clean PokeNexus.spec`, depois compactar
   `dist\PokeNexus` em `dist\PokeNexus-<versão>.zip`. A pasta tem ~321 MB e o ZIP ~133 MB.
 - Se o PyInstaller der "acesso negado" numa DLL de `dist`, algum processo está com ela aberta: gere com
@@ -116,17 +131,18 @@ App desktop para Windows (Python 3.11+, PySide6/Qt WebEngine) que roda até **4 
 4. `PROMPT_ASSINATURA_PREMIUM.md` — assinatura de R$ 5 por Pix, site com conta e confirmação de e-mail,
    app só para assinantes. Começa pela Etapa 0 (decisões do usuário: nome sem "Poke", autorização do
    PokeIdle, provedor de Pix, taxas, contador e advogado).
-5. `PROMPT_GITHUB_E_LIMPEZA.md` — **parcialmente feito** (16/10/2026): `.gitignore` novo e histórico
-   limpo pronto **só na pasta local** (branch `limpo`, 1 commit, sem `profiles/`, `logs/` nem builds;
-   trava passou). **O GitHub não foi atualizado:** o usuário não quis apagar/recriar o repositório, e
-   force push no antigo não tira os commits velhos do GitHub. Lá o histórico ainda tem `profiles/`:
-   o repositório não pode voltar a ser público até isso ser resolvido. **Falta** também a limpeza do
-   código não usado, **sem mudar nada do app**. Os `PROMPT_*.md` antigos ficam só na pasta local, em
-   `docs/prompts_antigos/` (fora do Git, escolha do usuário).
+5. `PROMPT_GITHUB_E_LIMPEZA.md` — **parcialmente feito** (16/10/2026): o usuário apagou e recriou o
+   repositório, e o histórico limpo (1 commit, sem `profiles/`, `logs/` nem builds; trava conferida num
+   clone) foi enviado como `main`. A branch local `antiga-com-logins` guarda o histórico velho: **nunca envie**
+   (sem `git push --all`). **Falta** a limpeza do código não usado, **sem mudar nada do app**. Os
+   `PROMPT_*.md` antigos ficam só na pasta local, em `docs/prompts_antigos/` (fora do Git, escolha do usuário).
 6. Vistoria da interface após o PokeIdle 1.300.2 — **feita** (16/10/2026). Relatório em
    `docs/visual/interface_1300/RELATORIO.md`. O Market cortado é defeito do jogo (altura fixa desde
    15/10/2026); por escolha do usuário o PokeNexus baixa o zoom só enquanto o Market do jogo está aberto
    (`CellsHost.MARKET_CSS_H`, só lê a página). Ferramentas de teste em `ferramentas/interface/` (não vão
    no pacote). Pendentes no relatório (Ginásios com o mesmo defeito do jogo, itens Baixa de janela estreita).
+7. Instalador + aviso de atualização — **feito no código e testado na máquina** (16/10/2026), relatório
+   em `docs/atualizacao/RELATORIO.md`. Falta a primeira publicação de verdade no GitHub (teste 8, com o
+   OK do usuário).
 
 Prompts antigos já executados: `PROMPT_CONFIG_MODO_LEVE.md`, `PROMPT_RMT_VERTICAL.md`.

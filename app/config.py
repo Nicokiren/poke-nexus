@@ -13,7 +13,15 @@ from dataclasses import dataclass
 from pathlib import Path
 
 APP_NAME = "PokeNexus"
-APP_VERSION = "1.1.0"
+# MAJOR.MINOR. O terceiro número é o da execução do GitHub Actions, gravado no app/_build.py só no
+# build de publicação (ver .github/workflows/release.yml). Rodando do código: "1.1-dev", e o aviso de
+# atualização fica desligado.
+APP_VERSION_BASE = "1.1"
+try:
+    from app._build import COMMIT as APP_COMMIT, VERSAO as APP_VERSION
+    VERSAO_DE_BUILD = True
+except ImportError:
+    APP_VERSION, APP_COMMIT, VERSAO_DE_BUILD = f"{APP_VERSION_BASE}-dev", "", False
 
 ROOT = Path(__file__).resolve().parent.parent          # código-fonte
 BUNDLE_DIR = Path(getattr(sys, "_MEIPASS", ROOT))       # arquivos empacotados no .exe
@@ -54,6 +62,7 @@ DEFAULTS = {
     },
     "janela": {"zoom": 1.0, "layout_ver_todas": "grade", "painel_conta": True, "guia_mercado_visto": False},
     "desempenho": {"modo_leve": False},
+    "atualizacao": {"avisar": True, "versao_pulada": ""},
     "atalhos": {
         "conta_1": "Ctrl+1", "conta_2": "Ctrl+2", "conta_3": "Ctrl+3",
         "conta_4": "Ctrl+4", "ver_todas": "Ctrl+0", "hunts": "Ctrl+H",

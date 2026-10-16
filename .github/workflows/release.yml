@@ -1,0 +1,115 @@
+# Publica uma versão do PokeNexus a cada commit na main: build, testes (travas), ZIP + instalador e uma
+# Release no GitHub. O aviso de atualização dentro do programa lê a Release "Latest".
+#
+# NÃO publica: commit com "[sem atualização]" na mensagem, ou que só mexe em docs/, *.md ou ferramentas/.
+# Versão: APP_VERSION_BASE (app/config.py) + "." + número desta execução. Ex.: 1.1.57.
+name: Publicar versão
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "docs/**"
+      - "**/*.md"
+      - "ferramentas/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publicar-versao
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    if: ${{ !contains(github.event.head_commit.message, '[sem atualização]') }}
+    runs-on: windows-latest
+    permissions:
+      contents: write          # só para criar a Release e a tag
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0       # as tags das Releases anteriores (notas desde a última)
+
+      - name: Trava 1 (segurança) - nenhum login nem log rastreado
+        run: |
+          $ruins = git ls-files | Where-Object { $_ -match '(?i)(^|/)profiles/|(^|/)logs/|\.log$|local storage|session storage|cookies|leveldb|manager_state\.json|rmt_[^/]*\.jsonl?$' }
+          if ($ruins) {
+            Write-Host "Arquivos que nunca podem ir para o GitHub estão rastreados:"
+            $ruins | ForEach-Object { Write-Host "  $_" }
+            exit 1
+          }
+          Write-Host "ok: $((git ls-files | Measure-Object).Count) arquivos rastreados, nenhum sensível"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"     # o mesmo do .venv do desenvolvedor
+          cache: pip
+          cache-dependency-path: instalador/requirements-build.txt
+
+      - name: Dependências (versões exatas)
+        run: python -m pip install -r requirements.txt -r instalador/requirements-build.txt
+
+      - name: Versão do build
+        run: |
+          $base = (Select-String -Path app/config.py -Pattern '^APP_VERSION_BASE = "(\d+\.\d+)"').Matches[0].Groups[1].Value
+          if (-not $base) { throw "APP_VERSION_BASE não encontrado em app/config.py" }
+          $versao = "$base.${{ github.run_number }}"
+          $commit = "${{ github.sha }}".Substring(0, 7)
+          Set-Content -Encoding utf8 app/_build.py "# gerado pelo GitHub Actions (não editar, não versionar)`nVERSAO = `"$versao`"`nCOMMIT = `"$commit`"`n"
+          "VERSAO=$versao" >> $env:GITHUB_ENV
+          Write-Host "Versão $versao (commit $commit)"
+
+      - name: Build (PyInstaller)
+        run: python -m PyInstaller --noconfirm --clean PokeNexus.spec
+
+      - name: Trava 2 (fumaça) - abre, fica de pé e fecha
+        run: |
+          powershell -NoProfile -ExecutionPolicy Bypass -File instalador/fumaca.ps1 -Exe dist/PokeNexus/PokeNexus.exe -Segundos 25
+          if ($LASTEXITCODE -ne 0) { exit 1 }
+
+      - name: ZIP
+        run: Compress-Archive -Path dist/PokeNexus -DestinationPath "dist/PokeNexus-$env:VERSAO.zip" -Force
+
+      - name: Instalador (Inno Setup)
+        run: |
+          $lugares = { @("${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe", "$env:ProgramFiles\Inno Setup 6\ISCC.exe",
+                         "$env:LOCALAPPDATA\Programs\Inno Setup 6\ISCC.exe") | Where-Object { Test-Path $_ } | Select-Object -First 1 }
+          $iscc = & $lugares
+          if (-not $iscc) {
+            choco install innosetup -y --no-progress
+            $iscc = & $lugares
+          }
+          if (-not $iscc) { throw "Inno Setup não encontrado" }
+          & $iscc "/DVERSAO=$env:VERSAO" instalador/PokeNexus.iss
+          if ($LASTEXITCODE -ne 0) { exit 1 }
+
+      - name: SHA256SUMS.txt
+        run: |
+          Push-Location dist
+          $arquivos = @("PokeNexus-Setup-$env:VERSAO.exe", "PokeNexus-$env:VERSAO.zip")
+          $linhas = $arquivos | ForEach-Object { "{0}  {1}" -f (Get-FileHash $_ -Algorithm SHA256).Hash.ToLower(), $_ }
+          [IO.File]::WriteAllText("$PWD/SHA256SUMS.txt", ($linhas -join "`n") + "`n")
+          Get-Content SHA256SUMS.txt
+          Pop-Location
+
+      - name: Notas (commits desde a última Release)
+        run: |
+          $ultima = git describe --tags --abbrev=0 --match "v*" 2>$null
+          $faixa = if ($LASTEXITCODE -eq 0 -and $ultima) { "$ultima..HEAD" } else { "HEAD" }
+          $msgs = git log $faixa --no-merges --pretty=format:"- %s" | Where-Object { $_ -notmatch '\[sem atualização\]' }
+          if (-not $msgs) { $msgs = @("- Ajustes internos") }
+          [IO.File]::WriteAllText("$PWD/notas.md", (($msgs | Select-Object -First 30) -join "`n") + "`n")
+          Get-Content notas.md
+
+      - name: Publicar a Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "v$env:VERSAO" `
+            "dist/PokeNexus-Setup-$env:VERSAO.exe" "dist/PokeNexus-$env:VERSAO.zip" "dist/SHA256SUMS.txt" `
+            --title "PokeNexus $env:VERSAO" --notes-file notas.md --target "${{ github.sha }}" --latest

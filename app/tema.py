@@ -228,6 +228,9 @@ QScrollBar::handle:horizontal {{ background: {t['moldura']}; border-left: 2px so
                                  border-right: 2px solid {t['moldura_esc']}; min-width: 30px; }}
 QScrollBar::add-line, QScrollBar::sub-line {{ height: 0; width: 0; }}
 QScrollBar::add-page, QScrollBar::sub-page {{ background: transparent; }}
+QProgressBar {{ background: {t['trilho']}; border: 2px solid {t['filete']}; min-height: 18px;
+                color: {t['texto']}; font-size: 12px; font-weight: 700; text-align: center; }}
+QProgressBar::chunk {{ background: {t['moldura_esc']}; }}
 """ + qss_campos()
 
 

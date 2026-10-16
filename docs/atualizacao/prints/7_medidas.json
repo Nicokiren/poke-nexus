@@ -1,0 +1,1038 @@
+{
+ "resumo": {
+  "download_s": 34.6,
+  "download_erro": null,
+  "sha_ok": true,
+  "contas_rodando": 4,
+  "heartbeat_idade_max_s": 2.99,
+  "watchdog_reinicia_acima_de_s": 150,
+  "atraso_tela_max_ms": 9.7,
+  "amostras": 64
+ },
+ "amostras": [
+  {
+   "fase": "contas iniciando",
+   "idades_heartbeat_s": [
+    0.99,
+    0.99,
+    0.99,
+    0.99
+   ],
+   "atraso_tela_ms": -8.5,
+   "status": [
+    "INICIANDO",
+    "INICIANDO",
+    "INICIANDO",
+    "INICIANDO"
+   ]
+  },
+  {
+   "fase": "contas iniciando",
+   "idades_heartbeat_s": [
+    2.0,
+    2.0,
+    2.0,
+    2.0
+   ],
+   "atraso_tela_ms": 7.8,
+   "status": [
+    "INICIANDO",
+    "INICIANDO",
+    "INICIANDO",
+    "INICIANDO"
+   ]
+  },
+  {
+   "fase": "contas iniciando",
+   "idades_heartbeat_s": [
+    2.99,
+    2.98,
+    2.98,
+    2.98
+   ],
+   "atraso_tela_ms": -12.6,
+   "status": [
+    "INICIANDO",
+    "INICIANDO",
+    "INICIANDO",
+    "INICIANDO"
+   ]
+  },
+  {
+   "fase": "contas iniciando",
+   "idades_heartbeat_s": [
+    0.3,
+    3.99,
+    3.99,
+    3.99
+   ],
+   "atraso_tela_ms": 6.5,
+   "status": [
+    "AGUARDANDO",
+    "INICIANDO",
+    "INICIANDO",
+    "INICIANDO"
+   ]
+  },
+  {
+   "fase": "contas iniciando",
+   "idades_heartbeat_s": [
+    1.31,
+    5.0,
+    5.0,
+    5.0
+   ],
+   "atraso_tela_ms": 6.3,
+   "status": [
+    "AGUARDANDO",
+    "INICIANDO",
+    "INICIANDO",
+    "INICIANDO"
+   ]
+  },
+  {
+   "fase": "contas iniciando",
+   "idades_heartbeat_s": [
+    2.3,
+    5.99,
+    5.99,
+    5.99
+   ],
+   "atraso_tela_ms": -4.8,
+   "status": [
+    "AGUARDANDO",
+    "INICIANDO",
+    "INICIANDO",
+    "INICIANDO"
+   ]
+  },
+  {
+   "fase": "contas iniciando",
+   "idades_heartbeat_s": [
+    0.16,
+    6.99,
+    6.99,
+    6.99
+   ],
+   "atraso_tela_ms": 0.3,
+   "status": [
+    "AGUARDANDO",
+    "INICIANDO",
+    "INICIANDO",
+    "INICIANDO"
+   ]
+  },
+  {
+   "fase": "contas iniciando",
+   "idades_heartbeat_s": [
+    1.16,
+    7.99,
+    7.99,
+    7.99
+   ],
+   "atraso_tela_ms": -1.1,
+   "status": [
+    "AGUARDANDO",
+    "INICIANDO",
+    "INICIANDO",
+    "INICIANDO"
+   ]
+  },
+  {
+   "fase": "contas iniciando",
+   "idades_heartbeat_s": [
+    2.16,
+    0.13,
+    0.26,
+    0.3
+   ],
+   "atraso_tela_ms": 0.5,
+   "status": [
+    "AGUARDANDO",
+    "INICIANDO",
+    "AGUARDANDO",
+    "AGUARDANDO"
+   ]
+  },
+  {
+   "fase": "contas iniciando",
+   "idades_heartbeat_s": [
+    0.09,
+    1.14,
+    1.27,
+    1.31
+   ],
+   "atraso_tela_ms": 12.8,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "AGUARDANDO",
+    "AGUARDANDO",
+    "AGUARDANDO"
+   ]
+  },
+  {
+   "fase": "contas iniciando",
+   "idades_heartbeat_s": [
+    1.08,
+    2.13,
+    2.26,
+    2.3
+   ],
+   "atraso_tela_ms": -9.9,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "AGUARDANDO",
+    "AGUARDANDO",
+    "AGUARDANDO"
+   ]
+  },
+  {
+   "fase": "contas iniciando",
+   "idades_heartbeat_s": [
+    2.08,
+    3.13,
+    0.01,
+    0.08
+   ],
+   "atraso_tela_ms": 1.0,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "AGUARDANDO",
+    "AGUARDANDO",
+    "AGUARDANDO"
+   ]
+  },
+  {
+   "fase": "contas iniciando",
+   "idades_heartbeat_s": [
+    3.08,
+    0.85,
+    1.01,
+    1.08
+   ],
+   "atraso_tela_ms": -2.4,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "AGUARDANDO",
+    "AGUARDANDO",
+    "AGUARDANDO"
+   ]
+  },
+  {
+   "fase": "contas iniciando",
+   "idades_heartbeat_s": [
+    0.99,
+    1.85,
+    2.02,
+    2.08
+   ],
+   "atraso_tela_ms": 2.9,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "AGUARDANDO",
+    "AGUARDANDO",
+    "AGUARDANDO"
+   ]
+  },
+  {
+   "fase": "contas iniciando",
+   "idades_heartbeat_s": [
+    1.99,
+    2.84,
+    3.01,
+    3.08
+   ],
+   "atraso_tela_ms": -4.0,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "AGUARDANDO",
+    "AGUARDANDO",
+    "AGUARDANDO"
+   ]
+  },
+  {
+   "fase": "faixa aberta",
+   "idades_heartbeat_s": [
+    2.98,
+    0.75,
+    0.91,
+    0.98
+   ],
+   "atraso_tela_ms": -3.0,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "faixa aberta",
+   "idades_heartbeat_s": [
+    0.91,
+    1.75,
+    1.91,
+    1.99
+   ],
+   "atraso_tela_ms": 0.6,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "faixa aberta",
+   "idades_heartbeat_s": [
+    1.91,
+    2.75,
+    2.91,
+    2.99
+   ],
+   "atraso_tela_ms": 0.3,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "faixa aberta",
+   "idades_heartbeat_s": [
+    2.9,
+    0.72,
+    0.89,
+    0.95
+   ],
+   "atraso_tela_ms": -5.0,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "faixa aberta",
+   "idades_heartbeat_s": [
+    0.9,
+    1.72,
+    1.9,
+    1.96
+   ],
+   "atraso_tela_ms": 5.9,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "faixa aberta",
+   "idades_heartbeat_s": [
+    1.89,
+    2.72,
+    2.89,
+    2.95
+   ],
+   "atraso_tela_ms": -4.8,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "faixa aberta",
+   "idades_heartbeat_s": [
+    2.9,
+    0.7,
+    0.87,
+    0.93
+   ],
+   "atraso_tela_ms": 6.8,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "faixa aberta",
+   "idades_heartbeat_s": [
+    0.88,
+    1.7,
+    1.88,
+    1.94
+   ],
+   "atraso_tela_ms": 4.7,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "faixa aberta",
+   "idades_heartbeat_s": [
+    1.87,
+    2.7,
+    2.87,
+    2.94
+   ],
+   "atraso_tela_ms": -0.8,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "faixa aberta",
+   "idades_heartbeat_s": [
+    2.88,
+    0.68,
+    0.85,
+    0.91
+   ],
+   "atraso_tela_ms": 2.3,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    0.83,
+    1.67,
+    1.84,
+    1.9
+   ],
+   "atraso_tela_ms": -15.7,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    1.83,
+    2.66,
+    2.84,
+    2.9
+   ],
+   "atraso_tela_ms": -1.0,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    2.83,
+    0.64,
+    0.82,
+    0.88
+   ],
+   "atraso_tela_ms": 1.4,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    0.82,
+    1.64,
+    1.82,
+    1.88
+   ],
+   "atraso_tela_ms": 1.4,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    1.81,
+    2.64,
+    2.82,
+    2.88
+   ],
+   "atraso_tela_ms": -1.4,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    2.82,
+    0.63,
+    0.81,
+    0.88
+   ],
+   "atraso_tela_ms": 1.3,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    0.82,
+    1.63,
+    1.82,
+    1.88
+   ],
+   "atraso_tela_ms": 5.5,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    1.82,
+    2.63,
+    2.82,
+    2.88
+   ],
+   "atraso_tela_ms": 1.2,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    2.82,
+    0.62,
+    0.78,
+    0.87
+   ],
+   "atraso_tela_ms": -0.3,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    0.8,
+    1.63,
+    1.78,
+    1.88
+   ],
+   "atraso_tela_ms": 3.7,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    1.8,
+    2.62,
+    2.78,
+    2.87
+   ],
+   "atraso_tela_ms": -2.5,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    2.79,
+    0.6,
+    0.76,
+    0.76
+   ],
+   "atraso_tela_ms": -8.6,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    0.79,
+    1.6,
+    1.76,
+    1.76
+   ],
+   "atraso_tela_ms": 5.0,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    1.8,
+    2.61,
+    2.77,
+    2.77
+   ],
+   "atraso_tela_ms": 5.2,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    2.8,
+    0.59,
+    0.76,
+    0.76
+   ],
+   "atraso_tela_ms": -0.7,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    0.8,
+    1.59,
+    1.76,
+    1.76
+   ],
+   "atraso_tela_ms": -0.7,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    1.79,
+    2.59,
+    2.76,
+    2.76
+   ],
+   "atraso_tela_ms": -1.2,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    2.79,
+    0.57,
+    0.74,
+    0.74
+   ],
+   "atraso_tela_ms": -7.6,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    0.78,
+    1.58,
+    1.75,
+    1.75
+   ],
+   "atraso_tela_ms": 6.9,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    1.78,
+    2.58,
+    2.75,
+    2.75
+   ],
+   "atraso_tela_ms": -1.8,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    2.78,
+    0.56,
+    0.73,
+    0.73
+   ],
+   "atraso_tela_ms": -3.0,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    0.76,
+    1.56,
+    1.73,
+    1.73
+   ],
+   "atraso_tela_ms": -2.2,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    1.77,
+    2.56,
+    2.73,
+    2.73
+   ],
+   "atraso_tela_ms": 0.2,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    2.76,
+    0.55,
+    0.72,
+    0.72
+   ],
+   "atraso_tela_ms": -1.6,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    0.75,
+    1.55,
+    1.72,
+    1.72
+   ],
+   "atraso_tela_ms": -0.1,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    1.75,
+    2.55,
+    2.72,
+    2.72
+   ],
+   "atraso_tela_ms": 0.6,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    2.76,
+    0.55,
+    0.72,
+    0.72
+   ],
+   "atraso_tela_ms": 9.7,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    0.75,
+    1.55,
+    1.72,
+    1.72
+   ],
+   "atraso_tela_ms": -1.0,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    1.74,
+    2.54,
+    2.71,
+    2.71
+   ],
+   "atraso_tela_ms": -7.7,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    2.74,
+    0.53,
+    0.7,
+    0.7
+   ],
+   "atraso_tela_ms": 0.9,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    0.73,
+    1.53,
+    1.7,
+    1.7
+   ],
+   "atraso_tela_ms": -1.0,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    1.74,
+    2.53,
+    2.71,
+    2.7
+   ],
+   "atraso_tela_ms": 4.1,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    2.74,
+    0.53,
+    0.7,
+    0.7
+   ],
+   "atraso_tela_ms": 1.5,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "baixando",
+   "idades_heartbeat_s": [
+    0.74,
+    1.54,
+    1.71,
+    1.71
+   ],
+   "atraso_tela_ms": 3.3,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "depois do download",
+   "idades_heartbeat_s": [
+    1.73,
+    2.53,
+    2.7,
+    2.7
+   ],
+   "atraso_tela_ms": -3.5,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "depois do download",
+   "idades_heartbeat_s": [
+    2.73,
+    0.53,
+    0.7,
+    0.7
+   ],
+   "atraso_tela_ms": -0.1,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "depois do download",
+   "idades_heartbeat_s": [
+    0.72,
+    1.53,
+    1.7,
+    1.7
+   ],
+   "atraso_tela_ms": -1.2,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "depois do download",
+   "idades_heartbeat_s": [
+    1.71,
+    2.52,
+    2.69,
+    2.69
+   ],
+   "atraso_tela_ms": -4.4,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  },
+  {
+   "fase": "depois do download",
+   "idades_heartbeat_s": [
+    2.72,
+    0.5,
+    0.67,
+    0.67
+   ],
+   "atraso_tela_ms": 3.5,
+   "status": [
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA",
+    "SESSÃO EXPIRADA"
+   ]
+  }
+ ]
+}

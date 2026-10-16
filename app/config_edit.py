@@ -34,6 +34,7 @@ CAMPOS = {
     ("janela", "painel_conta"): (bool, None, None, True),
     ("janela", "guia_mercado_visto"): (bool, None, None, True),
     ("desempenho", "modo_leve"): (bool, None, None, False),
+    ("atualizacao", "avisar"): (bool, None, None, True),
 }
 ATALHOS = ("conta_1", "conta_2", "conta_3", "conta_4", "ver_todas", "hunts", "rmt", "pausar_retomar",
            "configuracoes", "painel_conta")
