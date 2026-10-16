@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PokeNexus — pranchas V1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+/* Prancha de direção de arte (V1). Só mostra a aparência: nada aqui é o app de verdade. */
+:root, [data-tema="A"] {
+  --fundo:#1A1016; --painel:#2A1A22; --painel-alto:#3A2430;
+  --moldura:#8C4A3E; --moldura-luz:#C9785C; --moldura-esc:#5A2A2E; --filete:#2B0C14;
+  --texto:#F6E9DC; --dim:#C9AFA4; --destaque:#E8B04A; --destaque-luz:#FFE3A0; --destaque-esc:#9A6A1C;
+  --sobre-destaque:#2B1608; --foco:#3CCFC0; --perigo:#C8473B;
+  --trilho:#1E1219; --xp:#6FC0F0;
+  --st-caca:#6FD08A; --st-batalha:#F0A03C; --st-espera:#6FC0F0; --st-pausa:#C77BE0;
+  --st-manual:#3CCFC0; --st-erro:#F0705F; --st-login:#FFB4A0; --st-parado:#A8979D;
+  --textura: repeating-linear-gradient(0deg, #1A1016 0 30px, #1D1219 30px 32px);
+  --chao:#3E6B34; --chao-luz:#5E9A4C; --nome:"Base do Treinador";
+}
+[data-tema="B"] {
+  --fundo:#0E1430; --painel:#18204A; --painel-alto:#222C5E;
+  --moldura:#2E3A7A; --moldura-luz:#4A5AA8; --moldura-esc:#141A3A; --filete:#070A1C;
+  --texto:#EEF1FF; --dim:#A9B2E0; --destaque:#FFD166; --destaque-luz:#FFF0B8; --destaque-esc:#A07A1E;
+  --sobre-destaque:#2A1E00; --foco:#7BD389; --perigo:#E0604F;
+  --trilho:#0A0F26; --xp:#7BD389;
+  --st-caca:#7BD389; --st-batalha:#FFB054; --st-espera:#8FCBFF; --st-pausa:#D09BFF;
+  --st-manual:#6FE0D2; --st-erro:#FF8A7A; --st-login:#FFC2B0; --st-parado:#A9B2E0;
+  --textura: repeating-conic-gradient(#0E1430 0 25%, #10173A 0 50%) 0 0 / 32px 32px;
+  --chao:#2C5A3A; --chao-luz:#3F7D4F; --nome:"Rota Noturna";
+}
+[data-tema="C"] {
+  --fundo:#E9DCC6; --painel:#F4E9D8; --painel-alto:#FBF4E8;
+  --moldura:#B98E68; --moldura-luz:#E3C9A6; --moldura-esc:#8A6446; --filete:#2B1B17;
+  --texto:#2B1B17; --dim:#6E5A50; --destaque:#B8402F; --destaque-luz:#E07A62; --destaque-esc:#7A2418;
+  --sobre-destaque:#FFF6EF; --foco:#2F6A2E; --perigo:#B8402F;
+  --trilho:#DCCBB0; --xp:#2F6A2E;
+  --st-caca:#2F6A2E; --st-batalha:#8A4E0C; --st-espera:#1F5F8B; --st-pausa:#7A3E99;
+  --st-manual:#1E6B63; --st-erro:#B8402F; --st-login:#9A3B62; --st-parado:#6E5A50;
+  --textura: repeating-linear-gradient(0deg, #E9DCC6 0 23px, #E1D2B9 23px 24px);
+  --chao:#7FA05A; --chao-luz:#A3C27A; --nome:"Caderno de Campo";
+}
+* { box-sizing:border-box; }
+html, body { margin:0; }
+body { background:var(--fundo); background-image:var(--textura); color:var(--texto);
+  font-family:Nunito, "Segoe UI", sans-serif; font-size:14px; min-width:1600px; }
+.px { font-family:"Jersey 10", monospace; }
+svg.ico { image-rendering:pixelated; shape-rendering:crispEdges; display:block; }
+.app { width:1600px; padding:14px 16px 10px; display:flex; flex-direction:column; gap:10px; }
+
+/* moldura de pixel: contorno escuro, bisel claro em cima, degrau escuro embaixo */
+.moldura { background:var(--painel); border:2px solid var(--filete);
+  box-shadow: inset 0 2px 0 var(--moldura-luz), inset 0 -4px 0 var(--moldura-esc),
+              inset 2px 0 0 var(--moldura), inset -2px 0 0 var(--moldura); }
+.moldura.sel { border-color:var(--destaque-esc);
+  box-shadow: inset 0 2px 0 var(--destaque-luz), inset 0 -4px 0 var(--destaque-esc),
+              inset 2px 0 0 var(--destaque), inset -2px 0 0 var(--destaque), 0 0 0 2px var(--destaque); }
+.titulo-tabua { background:var(--moldura); color:#FFF6EF; padding:4px 10px 6px; border-bottom:2px solid var(--filete);
+  box-shadow: inset 0 2px 0 var(--moldura-luz), inset 0 -2px 0 var(--moldura-esc); font-size:20px; }
+[data-tema="C"] .titulo-tabua { color:var(--texto); }
+
+/* botões */
+.bt { display:inline-flex; align-items:center; gap:7px; padding:6px 12px 8px; border:2px solid var(--filete);
+  background:var(--painel-alto); color:var(--texto); font:400 20px "Jersey 10", monospace; cursor:pointer;
+  box-shadow: inset 0 2px 0 var(--moldura-luz), inset 0 -3px 0 var(--moldura-esc); position:relative; }
+.bt:hover { top:-1px; }
+.bt.prim { background:var(--destaque); color:var(--sobre-destaque);
+  box-shadow: inset 0 2px 0 var(--destaque-luz), inset 0 -3px 0 var(--destaque-esc); }
+.bt.perigo { box-shadow: inset 0 2px 0 var(--moldura-luz), inset 0 -3px 0 var(--moldura-esc), inset 0 0 0 2px var(--perigo); }
+.bt.on { background:var(--painel); color:var(--destaque); box-shadow: inset 0 3px 0 var(--moldura-esc), inset 0 0 0 2px var(--destaque); padding-top:8px; padding-bottom:6px; }
+.bt.press { top:2px; box-shadow: inset 0 3px 0 var(--moldura-esc); }
+.bt.off { opacity:.45; }
+.bt.ico-so { padding:6px 8px 8px; }
+
+/* topo */
+.topo { display:flex; align-items:center; gap:14px; }
+.marca { display:flex; align-items:center; gap:12px; }
+.marca .nome { font:400 40px "Jersey 10", monospace; color:var(--destaque); line-height:1;
+  text-shadow: 2px 2px 0 var(--filete); }
+.marca .sub { color:var(--dim); font-size:13px; }
+.espaco { flex:1; }
+.chip { padding:6px 12px 8px; font:400 20px "Jersey 10"; }
+.chip b { color:var(--st-caca); }
+
+/* fichas das contas */
+.fichas { display:grid; grid-template-columns:repeat(4, 1fr) 260px; gap:10px; }
+.ficha { display:flex; gap:10px; align-items:center; padding:8px 10px 10px; }
+.ficha .masc { width:56px; height:56px; background:var(--trilho); border:2px solid var(--filete);
+  display:grid; place-items:center; flex:none; }
+.ficha .info { flex:1; min-width:0; }
+.ficha .linha1 { display:flex; justify-content:space-between; align-items:baseline; }
+.ficha .nome { font:400 30px "Jersey 10"; }
+.ficha .nv { color:var(--dim); font:400 20px "Jersey 10"; }
+.status { display:inline-flex; align-items:center; gap:5px; font:400 20px "Jersey 10"; margin:2px 0 4px; }
+.barra { height:8px; background:var(--trilho); border:2px solid var(--filete); position:relative; }
+.barra i { position:absolute; left:0; top:0; bottom:0; background:var(--xp);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,.35); }
+.barra i::after { content:""; position:absolute; right:0; top:0; bottom:0; width:3px; background:rgba(255,255,255,.7); }
+.todas { display:flex; align-items:center; gap:10px; padding:8px 12px 10px; }
+.todas .mini { display:grid; grid-template-columns:repeat(2, 22px); gap:3px; }
+.todas .mini span { width:22px; height:16px; background:var(--trilho); border:2px solid var(--filete); }
+
+/* centro */
+.centro { display:grid; grid-template-columns:1fr 330px; gap:10px; }
+.jogo { display:flex; flex-direction:column; }
+.barra-jogo { display:flex; align-items:center; gap:8px; padding:6px 10px 8px; }
+.barra-jogo .tit { font:400 30px "Jersey 10"; }
+.barra-jogo .onde { color:var(--dim); }
+.tela { margin:0 10px 12px; border:2px solid var(--filete); line-height:0; }
+.tela img { width:100%; display:block; }
+
+.lado { display:flex; flex-direction:column; }
+.lado .corpo { padding:12px 14px 14px; display:flex; flex-direction:column; gap:10px; }
+.palco { height:150px; position:relative; display:grid; place-items:end center; padding-bottom:18px; }
+.palco .chao { position:absolute; left:40px; right:40px; bottom:10px; height:22px; background:var(--chao);
+  border:2px solid var(--filete); box-shadow: inset 0 3px 0 var(--chao-luz); }
+.palco svg { position:relative; z-index:1; }
+.heroi { text-align:center; }
+.heroi .nome { font:400 40px "Jersey 10"; line-height:1.1; }
+.heroi .nick { color:var(--dim); }
+.numeros { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.num { display:flex; gap:8px; align-items:center; background:var(--trilho); border:2px solid var(--filete); padding:6px 8px; }
+.num .v { font:400 30px "Jersey 10"; line-height:1; }
+.num .r { color:var(--dim); font-size:12px; }
+.acoes { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.acoes .bt { justify-content:center; }
+.acoes .larga { grid-column:1 / -1; }
+
+/* faixa de componentes */
+.comp { display:grid; grid-template-columns:1.1fr 1fr 1fr; gap:10px; }
+.comp .corpo { padding:12px 14px 14px; }
+.paleta { display:grid; grid-template-columns:repeat(4, 1fr); gap:8px; }
+.cor { border:2px solid var(--filete); }
+.cor .amostra { height:34px; }
+.cor .rot { padding:3px 6px; font-size:12px; background:var(--painel-alto); }
+.estados { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+.dialogo { width:100%; }
+.dialogo .corpo { display:flex; gap:12px; }
+.dialogo .txt h3 { margin:0 0 4px; font:400 30px "Jersey 10"; }
+.dialogo .txt p { margin:0 0 12px; color:var(--dim); }
+.lista-status { display:grid; grid-template-columns:1fr 1fr; gap:6px 14px; }
+.rodape { display:flex; gap:18px; color:var(--dim); font-size:12px; padding:0 2px; }
+.cabeca-prancha { font:400 20px "Jersey 10"; color:var(--dim); }
+</style>
+</head>
+<body>
+<div class="app" id="app"></div>
+<script>
+// ---------------------------------------------------------------- arte em pixel (original)
+// Cada desenho é uma grade de letras; cada letra é uma cor do tema. '.' = transparente.
+const COR = { o:'var(--filete)', i:'var(--ic)', l:'var(--ic-luz)', w:'#FFFFFF', k:'#1A1016',
+  g:'#5DB860', G:'#3E8A44', h:'#9BE07A', f:'#F08A3C', F:'#C85A24', y:'#FFD15C', b:'#5AA8E8', B:'#2F6FB0',
+  c:'#BFE6FF', s:'#9A9AA6', S:'#6A6A78', t:'#D8D8E0', p:'#F2A6C8', r:'#E05A4A' };
+function px(mapa, escala, cores) {
+  const linhas = mapa.trim().split('\n').map(l => l.trim());
+  const h = linhas.length, w = linhas[0].length;
+  let r = '';
+  linhas.forEach((l, y) => [...l].forEach((ch, x) => {
+    if (ch === '.') return;
+    const c = (cores && cores[ch]) || COR[ch] || ch;
+    r += `<rect x="${x}" y="${y}" width="1" height="1" fill="${c}"/>`;
+  }));
+  return `<svg class="ico" width="${w * escala}" height="${h * escala}" viewBox="0 0 ${w} ${h}">${r}</svg>`;
+}
+// Ícones 10×10 (contorno 'o', corpo 'i', brilho 'l').
+const ICO = {
+  jogo: `
+..........
+.oooooooo.
+oiiiiiiiio
+oiloiiiloi
+oioooiolii
+oiloiiiloi
+oiiiiiiiio
+.oiioooiio
+..oo...oo.
+..........`,
+  hunts: `
+...oooo...
+..oiiiio..
+.oio..oio.
+.oi.ll.io.
+.oi.lo.io.
+.oio..oio.
+..oiiiio..
+...oooo...
+..........
+..........`,
+  rmt: `
+...oooo...
+....oo....
+..oiiiio..
+.oiillilo.
+.oiliiiio.
+.oiiliiio.
+.oiillilo.
+..oiiiio..
+...oooo...
+..........`,
+  config: `
+...o..o...
+..oiooio..
+.oiiiiiio.
+oiio..oiio
+.oio.loio.
+.oio..oio.
+oiio..oiio
+.oiiiiiio.
+..oiooio..
+...o..o...`,
+  todas: `
+oooo.oooo.
+oilo.oilo.
+oiio.oiio.
+oooo.oooo.
+..........
+oooo.oooo.
+oilo.oilo.
+oiio.oiio.
+oooo.oooo.
+..........`,
+  comecar: `
+.oo.......
+.olo......
+.oilo.....
+.oiilo....
+.oiiilo...
+.oiiio....
+.oiio.....
+.oio......
+.oo.......
+..........`,
+  parar: `
+..........
+.oooooooo.
+.olllllio.
+.oliiiiio.
+.oliiiiio.
+.oliiiiio.
+.oliiiiio.
+.oiiiiiio.
+.oooooooo.
+..........`,
+  pausar: `
+..........
+.ooo..ooo.
+.oli..oli.
+.oii..oii.
+.oii..oii.
+.oii..oii.
+.oii..oii.
+.oii..oii.
+.ooo..ooo.
+..........`,
+  mao: `
+...o.o....
+..olololo.
+..oiioioio
+..oiiiiiio
+.ooiiiiiio
+oiiiiiiio.
+oiiiiiiio.
+.oiiiiiio.
+..oiiiio..
+...oooo...`,
+  chave: `
+..........
+.oooo.....
+olllio....
+oioolioooo
+oioolilili
+olllio.o.o
+.oooo.....
+..........
+..........
+..........`,
+  recarregar: `
+...ooooo..
+..oiiiiio.
+.oio...oo.
+.oi..oooo.
+.oi...oio.
+.oi....o..
+.oio...o..
+..oiiiio..
+...oooo...
+..........`,
+  recolher: `
+..........
+.oo..oo...
+.olo.olo..
+..olo.olo.
+...olo.olo
+..olo.olo.
+.olo.olo..
+.oo..oo...
+..........
+..........`,
+  log: `
+.oooooooo.
+.olllllio.
+.oiooooio.
+.oiiiiiio.
+.oiooooio.
+.oiiiiiio.
+.oioooiio.
+.oiiiiiio.
+.oooooooo.
+..........`,
+};
+// Ícones de status e de dados (10×10), cada um com a sua cor.
+const ST = {
+  caca: [`
+.....oo...
+....oiio..
+...oiliio.
+..oiliiio.
+.oiliiio..
+.oiliio...
+.oiiio....
+oooo......
+o.........
+..........`, 'var(--st-caca)'],
+  batalha: [`
+o.......o.
+olo...olo.
+.olo.olo..
+..olilo...
+...oio....
+..olilo...
+.olo.olo..
+ooo...ooo.
+oo.....oo.
+..........`, 'var(--st-batalha)'],
+  espera: [`
+oooooooo..
+.oiiiio...
+..olio....
+...oo.....
+...oo.....
+..oiio....
+.oiliio...
+oooooooo..
+..........
+..........`, 'var(--st-espera)'],
+  pausa: [`
+..........
+.ooo.ooo..
+.oio.oio..
+.oio.oio..
+.oio.oio..
+.oio.oio..
+.ooo.ooo..
+..........
+..........
+..........`, 'var(--st-pausa)'],
+  manual: [`
+...o.o....
+..olololo.
+..oiioioio
+..oiiiiiio
+.ooiiiiiio
+oiiiiiiio.
+oiiiiiiio.
+.oiiiiiio.
+..oooooo..
+..........`, 'var(--st-manual)'],
+  erro: [`
+...oooo...
+..oiiiio..
+.oiiooiio.
+.oiiooiio.
+.oiiooiio.
+.oiiiiiio.
+.oiiooiio.
+..oiiiio..
+...oooo...
+..........`, 'var(--st-erro)'],
+  login: [`
+.oooo.....
+olllio....
+oioolioooo
+oioolilili
+olllio.o.o
+.oooo.....
+..........
+..........
+..........
+..........`, 'var(--st-login)'],
+  parado: [`
+...ooo....
+..oiio....
+.oiio.....
+.oio......
+.oio......
+.oiio...o.
+..oiiooio.
+...oiiio..
+....ooo...
+..........`, 'var(--st-parado)'],
+};
+const NOME_ST = { caca:'Caçando', batalha:'Em batalha', espera:'Aguardando', pausa:'Pausado',
+  manual:'Você no controle', erro:'Erro', login:'Faça login', parado:'Parado' };
+function ico(nome, esc = 2, cor = 'var(--texto)') {
+  return px(ICO[nome], esc, { i: cor, l: 'var(--destaque-luz)' });
+}
+function st(nome, esc = 2) {
+  const [m, c] = ST[nome];
+  return px(m, esc, { i: c, l: '#FFFFFF' });
+}
+// Mascotes originais (16×16): Broto, Brasa, Gota e Pedrisco.
+const MASC = {
+  broto: `
+.......oo.......
+......ohgo......
+.....ohgGo......
+......oGo.......
+....oooGooo.....
+...ogggggggo....
+..ogghggggggo...
+.oghgggggggggo..
+.oggwkggggwkgo..
+.ogggwgggggwgo..
+.oggggppgggggo..
+.ogggggggggggo..
+..oGggggggggGo..
+...oGGGGGGGGo...
+....oooooooo....
+................`,
+  brasa: `
+......o..o......
+.....oyooyo.....
+....ofyoofyo....
+.....offffo.....
+...oofffffffo...
+..offfffffffffo.
+.offwkfffffwkfo.
+.offfwfffffwffo.
+.offfffppffffo..
+.ofyyfffffffyyo.
+..oyyyfffffyyyo.
+..oFfyyyyyyyfFo.
+...oFFFFFFFFFo..
+....ooooooooo...
+................
+................`,
+  gota: `
+.......oo.......
+......obbo......
+.....obccbo.....
+....obcbbbbo....
+...obcbbbbbbo...
+..obcbbbbbbbbo..
+..obbwkbbbwkbo..
+.obbbbwbbbbwbbo.
+.obbbbbbppbbbbo.
+.obbbbbbbbbbbbo.
+.oBbbbbbbbbbbBo.
+..oBbbbbbbbbBo..
+...oBBBBBBBBo...
+....oooooooo....
+................
+................`,
+  pedrisco: `
+................
+.....oooooo.....
+...oottttsso....
+..ottsssssssso..
+.otssssssssssso.
+.otsswksssswkso.
+.osssswssssswso.
+.osssssssssssso.
+.osSssssppsssSo.
+.oSssssssssssSo.
+..oSSsssssssSo..
+..oSSSSSSSSSSo..
+...oooooooooo...
+....o......o....
+................
+................`,
+};
+function masc(nome, esc) { return px(MASC[nome], esc); }
+
+// ---------------------------------------------------------------- montagem
+const tema = (new URLSearchParams(location.search).get('tema') || 'A').toUpperCase();
+document.documentElement.dataset.tema = tema;
+const cs = getComputedStyle(document.documentElement);
+document.documentElement.style.setProperty('--ic', 'var(--destaque)');
+document.documentElement.style.setProperty('--ic-luz', 'var(--destaque-luz)');
+const nomeTema = cs.getPropertyValue('--nome').replaceAll('"', '').trim();
+
+const contas = [
+  { n:'Conta 1', m:'broto', s:'caca', nv:216, xp:72, sel:true },
+  { n:'Conta 2', m:'brasa', s:'batalha', nv:98, xp:35 },
+  { n:'Conta 3', m:'gota', s:'pausa', nv:124, xp:58 },
+  { n:'Conta 4', m:'pedrisco', s:'login', nv:99, xp:12 },
+];
+const ficha = c => `
+  <div class="moldura ficha ${c.sel ? 'sel' : ''}">
+    <div class="masc">${masc(c.m, 3)}</div>
+    <div class="info">
+      <div class="linha1"><span class="nome">${c.n}</span><span class="nv">Nv ${c.nv}</span></div>
+      <div class="status" style="color:${ST[c.s][1]}">${st(c.s)} ${NOME_ST[c.s]}</div>
+      <div class="barra"><i style="width:${c.xp}%"></i></div>
+    </div>
+  </div>`;
+const cores = [
+  ['fundo','--fundo'], ['painel','--painel'], ['moldura','--moldura'], ['destaque','--destaque'],
+  ['texto','--texto'], ['texto fraco','--dim'], ['foco','--foco'], ['perigo','--perigo'],
+];
+document.getElementById('app').innerHTML = `
+  <div class="cabeca-prancha">Prancha V1, direção ${tema}: ${nomeTema}. Arte original provisória.</div>
+  <div class="topo">
+    <div class="marca">${masc('broto', 3)}<div><div class="nome">PokeNexus</div><div class="sub">base do treinador, 4 contas</div></div></div>
+    <div class="espaco"></div>
+    <div class="moldura chip px"><b>4/4</b> conectadas</div>
+    <span class="bt">${ico('log')} Registro</span>
+    <span class="bt">${ico('config')} Ajustes</span>
+    <span class="bt perigo">${ico('parar', 2, 'var(--perigo)')} Parar tudo</span>
+    <span class="bt prim">${ico('comecar', 2, 'var(--sobre-destaque)')} Começar tudo</span>
+  </div>
+  <div class="fichas">
+    ${contas.map(ficha).join('')}
+    <div class="moldura todas"><div class="mini"><span></span><span></span><span></span><span></span></div>
+      <div><div class="px" style="font:400 30px 'Jersey 10'">Todas as contas</div><div style="color:var(--dim)">ver as 4 juntas</div></div></div>
+  </div>
+  <div class="centro">
+    <div class="moldura jogo">
+      <div class="barra-jogo">
+        <span class="tit">Conta 1</span>
+        <span class="status" style="color:var(--st-caca)">${st('caca')} Caçando</span>
+        <span class="onde">@treinador</span><span class="onde">Rota das Pedras</span>
+        <span class="espaco"></span>
+        <span class="bt on">${ico('jogo', 2, 'var(--destaque)')} Jogo</span>
+        <span class="bt">${ico('hunts')} Hunts</span>
+        <span class="bt">${ico('rmt')} Mercado</span>
+        <span class="bt ico-so">${ico('recarregar')}</span>
+      </div>
+      <div class="tela"><img src="jogo.png" alt="jogo"></div>
+    </div>
+    <div class="moldura lado">
+      <div class="titulo-tabua px" style="display:flex;justify-content:space-between;align-items:center">
+        <span>Ficha do treinador</span>${ico('recolher', 2, '#FFF6EF')}</div>
+      <div class="corpo">
+        <div class="palco"><div class="chao"></div>${masc('broto', 6)}</div>
+        <div class="heroi"><div class="nome">Conta 1</div><div class="nick">@treinador</div></div>
+        <div class="status" style="color:var(--st-caca);justify-content:center;font-size:18px">${st('caca', 3)} Caçando</div>
+        <div><div style="display:flex;justify-content:space-between;color:var(--dim);font-size:12px"><span>Nível 216</span><span>72%</span></div>
+          <div class="barra" style="height:12px"><i style="width:72%"></i></div></div>
+        <div class="numeros">
+          <div class="num">${st('caca')}<div><div class="v">48.120</div><div class="r">XP por hora</div></div></div>
+          <div class="num">${st('batalha')}<div><div class="v">312</div><div class="r">batalhas</div></div></div>
+          <div class="num">${st('espera')}<div><div class="v">02:41</div><div class="r">tempo ativo</div></div></div>
+          <div class="num">${ico('rmt')}<div><div class="v">36.341</div><div class="r">ouro</div></div></div>
+        </div>
+        <div class="acoes">
+          <span class="bt perigo larga">${ico('parar', 2, 'var(--perigo)')} Parar</span>
+          <span class="bt">${ico('mao')} Jogar eu mesmo</span>
+          <span class="bt">${ico('pausar')} Pausar</span>
+          <span class="bt">${ico('recarregar')} Reiniciar</span>
+          <span class="bt">${ico('chave')} Login</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="comp">
+    <div class="moldura"><div class="titulo-tabua px">Paleta</div><div class="corpo">
+      <div class="paleta">${cores.map(([r, v]) => `<div class="cor"><div class="amostra" style="background:var(${v})"></div><div class="rot">${r}<br><span style="color:var(--dim)">${cs.getPropertyValue(v).trim()}</span></div></div>`).join('')}</div>
+      <div class="estados">
+        <span class="bt">Normal</span><span class="bt" style="top:-1px">Em cima</span><span class="bt press">Apertado</span>
+        <span class="bt on">Ligado</span><span class="bt off">Desligado</span><span class="bt prim">Principal</span>
+      </div></div></div>
+    <div class="moldura"><div class="titulo-tabua px">Status</div><div class="corpo">
+      <div class="lista-status">${Object.keys(ST).map(k => `<div class="status" style="color:${ST[k][1]}">${st(k)} ${NOME_ST[k]}</div>`).join('')}</div>
+      <div class="estados" style="margin-top:14px">${['jogo','hunts','rmt','config','todas','comecar','parar','pausar','mao','chave','recarregar','recolher','log'].map(k => `<span class="bt ico-so" title="${k}">${ico(k)}</span>`).join('')}</div>
+    </div></div>
+    <div class="moldura dialogo"><div class="titulo-tabua px">Parar tudo?</div><div class="corpo">
+      ${st('erro', 4)}
+      <div class="txt"><h3>Parar as 4 contas?</h3><p>Elas param de caçar agora. Dá para começar de novo quando quiser.</p>
+        <span class="bt perigo">${ico('parar', 2, 'var(--perigo)')} Parar</span> <span class="bt">Cancelar</span></div>
+    </div></div>
+  </div>
+  <div class="rodape"><span>PokeNexus 1.0</span><span>Ferramenta não oficial</span></div>
+`;
+</script>
+</body>
+</html>

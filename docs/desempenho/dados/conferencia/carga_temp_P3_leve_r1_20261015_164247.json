@@ -1,0 +1,300 @@
+{
+ "quando": "2026-10-15T16:40:03",
+ "modo": "leve",
+ "perfil": "P3",
+ "pagina": "carga",
+ "dados": "temp",
+ "rodada": 1,
+ "flags": "--disable-background-timer-throttling --disable-renderer-backgrounding --disable-backgrounding-occluded-windows --disable-features=IntensiveWakeUpThrottling --force-prefers-reduced-motion --disable-gpu",
+ "ui_leve": true,
+ "env": {
+  "QSG_RHI_PREFER_SOFTWARE_RENDERER": "1",
+  "QT_QUICK_BACKEND": "software"
+ },
+ "tela": {
+  "nome": "24G2W1G3-",
+  "hz": 165.003,
+  "dpr": 1.0,
+  "geo": [
+   1920,
+   1080
+  ]
+ },
+ "janela": [
+  1920,
+  1040
+ ],
+ "segundos": 60,
+ "cenarios": {
+  "C1": {
+   "duracao_s": 60.0,
+   "quadros_mostrados": {
+    "todas": {
+     "n": 2289,
+     "qps": 38.1,
+     "p50_ms": 27.72,
+     "p95_ms": 33.43,
+     "p99_ms": 35.84,
+     "max_ms": 69.3,
+     "acima_33ms": 0.0502
+    },
+    "por_conta": {
+     "0": {
+      "n": 2289,
+      "qps": 38.1,
+      "p50_ms": 27.72,
+      "p95_ms": 33.43,
+      "p99_ms": 35.84,
+      "max_ms": 69.3,
+      "acima_33ms": 0.0502
+     }
+    }
+   },
+   "folga_qt": {
+    "n": 3757,
+    "p50_ms": 0.99,
+    "p95_ms": 2.19,
+    "max_ms": 1247.0
+   },
+   "pagina": {
+    "paginas_visiveis": 1,
+    "raf": {
+     "n": 2284,
+     "qps": 38.1,
+     "p50_ms": 33.3,
+     "p95_ms": 33.4,
+     "p99_ms": 50,
+     "max_ms": 50.1,
+     "acima_33ms": 0.0293
+    },
+    "raf_por_pagina": [
+     {
+      "n": 2284,
+      "qps": 38.1,
+      "p50_ms": 33.3,
+      "p95_ms": 33.4,
+      "p99_ms": 50,
+      "max_ms": 50.1,
+      "acima_33ms": 0.0293,
+      "tam": [
+       1531,
+       802
+      ]
+     }
+    ],
+    "entrada": {
+     "n": 30,
+     "p50_ms": 7.9,
+     "p95_ms": 29.5,
+     "max_ms": 41
+    },
+    "event_timing": {
+     "teclas": 30,
+     "acima_16ms": 30,
+     "p50_ms": 96,
+     "p95_ms": 128,
+     "max_ms": 128
+    },
+    "quadros_longos": {
+     "n": 0,
+     "por_min": 0.0,
+     "p95_ms": null
+    }
+   },
+   "recursos": {
+    "cpu_media_pct": 6.34,
+    "cpu_p95_pct": 7.03,
+    "cpu_nucleos": 1.014,
+    "cpu_por_tipo_pct": {
+     "pagina": 2.14,
+     "principal": 4.2
+    },
+    "ram_media_mb": 370.5,
+    "ram_max_mb": 448.6,
+    "ram_por_tipo_mb": {
+     "pagina": 243.8,
+     "principal": 126.7
+    },
+    "processos": 5,
+    "gpu_3d_pct": 0.0,
+    "gpu_total_pct": 0.0,
+    "gpu_mem_mb": 0.0
+   },
+   "repintura_janela_ms": 4.8,
+   "troca_de_tela_ms": 23.55,
+   "eventos_log": {
+    "reconexoes": 0,
+    "erros": 0,
+    "sessao": 0
+   }
+  },
+  "C3": {
+   "duracao_s": 60.1,
+   "quadros_mostrados": {
+    "todas": {
+     "n": 11381,
+     "qps": 189.4,
+     "p50_ms": 19.63,
+     "p95_ms": 38.2,
+     "p99_ms": 52.88,
+     "max_ms": 116.0,
+     "acima_33ms": 0.0859
+    },
+    "por_conta": {
+     "0": {
+      "n": 2979,
+      "qps": 49.6,
+      "p50_ms": 19.34,
+      "p95_ms": 34.63,
+      "p99_ms": 42.95,
+      "max_ms": 68.7,
+      "acima_33ms": 0.0581
+     },
+     "1": {
+      "n": 2808,
+      "qps": 46.7,
+      "p50_ms": 19.69,
+      "p95_ms": 38.71,
+      "p99_ms": 58.14,
+      "max_ms": 115.2,
+      "acima_33ms": 0.0894
+     },
+     "2": {
+      "n": 2821,
+      "qps": 46.9,
+      "p50_ms": 19.67,
+      "p95_ms": 39.0,
+      "p99_ms": 55.41,
+      "max_ms": 116.0,
+      "acima_33ms": 0.0883
+     },
+     "3": {
+      "n": 2773,
+      "qps": 46.1,
+      "p50_ms": 19.89,
+      "p95_ms": 39.72,
+      "p99_ms": 52.95,
+      "max_ms": 99.2,
+      "acima_33ms": 0.11
+     }
+    }
+   },
+   "folga_qt": {
+    "n": 3759,
+    "p50_ms": 0.07,
+    "p95_ms": 6.8,
+    "max_ms": 1360.3
+   },
+   "pagina": {
+    "paginas_visiveis": 4,
+    "raf": {
+     "n": 11375,
+     "qps": 189.3,
+     "p50_ms": 16.7,
+     "p95_ms": 33.4,
+     "p99_ms": 50,
+     "max_ms": 100,
+     "acima_33ms": 0.0239
+    },
+    "raf_por_pagina": [
+     {
+      "n": 2773,
+      "qps": 46.1,
+      "p50_ms": 16.7,
+      "p95_ms": 33.4,
+      "p99_ms": 50,
+      "max_ms": 83.3,
+      "acima_33ms": 0.0292,
+      "tam": [
+       402,
+       885
+      ]
+     },
+     {
+      "n": 2821,
+      "qps": 46.9,
+      "p50_ms": 16.7,
+      "p95_ms": 33.4,
+      "p99_ms": 50,
+      "max_ms": 83.4,
+      "acima_33ms": 0.0262,
+      "tam": [
+       402,
+       885
+      ]
+     },
+     {
+      "n": 2806,
+      "qps": 46.7,
+      "p50_ms": 16.7,
+      "p95_ms": 33.4,
+      "p99_ms": 50,
+      "max_ms": 100,
+      "acima_33ms": 0.0303,
+      "tam": [
+       402,
+       885
+      ]
+     },
+     {
+      "n": 2975,
+      "qps": 49.5,
+      "p50_ms": 16.7,
+      "p95_ms": 33.4,
+      "p99_ms": 33.5,
+      "max_ms": 66.7,
+      "acima_33ms": 0.0108,
+      "tam": [
+       402,
+       885
+      ]
+     }
+    ],
+    "entrada": {
+     "n": 120,
+     "p50_ms": 1.8,
+     "p95_ms": 31.8,
+     "max_ms": 65.4
+    },
+    "event_timing": {
+     "teclas": 120,
+     "acima_16ms": 120,
+     "p50_ms": 72,
+     "p95_ms": 120,
+     "max_ms": 184
+    },
+    "quadros_longos": {
+     "n": 18,
+     "por_min": 18.0,
+     "p95_ms": 1395
+    }
+   },
+   "recursos": {
+    "cpu_media_pct": 11.12,
+    "cpu_p95_pct": 11.72,
+    "cpu_nucleos": 1.78,
+    "cpu_por_tipo_pct": {
+     "pagina": 6.22,
+     "principal": 4.9
+    },
+    "ram_media_mb": 650.3,
+    "ram_max_mb": 787.6,
+    "ram_por_tipo_mb": {
+     "pagina": 527.0,
+     "principal": 123.3
+    },
+    "processos": 5,
+    "gpu_3d_pct": 0.0,
+    "gpu_total_pct": 0.0,
+    "gpu_mem_mb": 0.0
+   },
+   "repintura_janela_ms": 8.81,
+   "eventos_log": {
+    "reconexoes": 0,
+    "erros": 0,
+    "sessao": 0
+   }
+  }
+ },
+ "afinidade_aplicada": 9
+}

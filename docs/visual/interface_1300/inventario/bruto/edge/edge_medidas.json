@@ -1,0 +1,332 @@
+{
+ "1531x763": {
+  "iw": 1531,
+  "ih": 763,
+  "dpr": 1,
+  "mobile": false,
+  "versao": null,
+  "modal": {
+   "w": 960,
+   "h": 671,
+   "top": 46,
+   "height_css": "671.438px",
+   "max_height": "671.44px",
+   "overflow": "hidden"
+  },
+  "grade": {
+   "h": 533,
+   "scroll_h": 533,
+   "rola": false,
+   "colunas": 3,
+   "linhas": "55.2656px 226.078px 226.094px"
+  },
+  "cards": [
+   {
+    "h": 226,
+    "natural": 311,
+    "botao_fora_px": 84
+   },
+   {
+    "h": 226,
+    "natural": 311,
+    "botao_fora_px": 84
+   },
+   {
+    "h": 226,
+    "natural": 311,
+    "botao_fora_px": 84
+   },
+   {
+    "h": 226,
+    "natural": 311,
+    "botao_fora_px": 84
+   },
+   {
+    "h": 226,
+    "natural": 311,
+    "botao_fora_px": 84
+   },
+   {
+    "h": 226,
+    "natural": 311,
+    "botao_fora_px": 84
+   }
+  ],
+  "cortados": 6
+ },
+ "1147x544": {
+  "iw": 1147,
+  "ih": 544,
+  "dpr": 1,
+  "mobile": false,
+  "versao": null,
+  "modal": {
+   "w": 960,
+   "h": 479,
+   "top": 33,
+   "height_css": "478.719px",
+   "max_height": "478.72px",
+   "overflow": "hidden"
+  },
+  "grade": {
+   "h": 341,
+   "scroll_h": 341,
+   "rola": false,
+   "colunas": 3,
+   "linhas": "55.2656px 129.719px 129.734px"
+  },
+  "cards": [
+   {
+    "h": 130,
+    "natural": 311,
+    "botao_fora_px": 181
+   },
+   {
+    "h": 130,
+    "natural": 311,
+    "botao_fora_px": 181
+   },
+   {
+    "h": 130,
+    "natural": 311,
+    "botao_fora_px": 181
+   },
+   {
+    "h": 130,
+    "natural": 311,
+    "botao_fora_px": 181
+   },
+   {
+    "h": 130,
+    "natural": 311,
+    "botao_fora_px": 181
+   },
+   {
+    "h": 130,
+    "natural": 311,
+    "botao_fora_px": 181
+   }
+  ],
+  "cortados": 6
+ },
+ "1896x908": {
+  "iw": 1896,
+  "ih": 908,
+  "dpr": 1,
+  "mobile": false,
+  "versao": null,
+  "modal": {
+   "w": 960,
+   "h": 799,
+   "top": 54,
+   "height_css": "799.031px",
+   "max_height": "799.04px",
+   "overflow": "hidden"
+  },
+  "grade": {
+   "h": 661,
+   "scroll_h": 661,
+   "rola": false,
+   "colunas": 3,
+   "linhas": "55.2656px 289.875px 289.891px"
+  },
+  "cards": [
+   {
+    "h": 290,
+    "natural": 311,
+    "botao_fora_px": 21
+   },
+   {
+    "h": 290,
+    "natural": 311,
+    "botao_fora_px": 21
+   },
+   {
+    "h": 290,
+    "natural": 311,
+    "botao_fora_px": 21
+   },
+   {
+    "h": 290,
+    "natural": 311,
+    "botao_fora_px": 21
+   },
+   {
+    "h": 290,
+    "natural": 311,
+    "botao_fora_px": 21
+   },
+   {
+    "h": 290,
+    "natural": 311,
+    "botao_fora_px": 21
+   }
+  ],
+  "cortados": 6
+ },
+ "1896x948": {
+  "iw": 1896,
+  "ih": 948,
+  "dpr": 1,
+  "mobile": false,
+  "versao": null,
+  "modal": {
+   "w": 960,
+   "h": 834,
+   "top": 57,
+   "height_css": "834.234px",
+   "max_height": "834.24px",
+   "overflow": "hidden"
+  },
+  "grade": {
+   "h": 696,
+   "scroll_h": 696,
+   "rola": false,
+   "colunas": 3,
+   "linhas": "55.2656px 307.484px 307.484px"
+  },
+  "cards": [
+   {
+    "h": 307,
+    "natural": 311,
+    "botao_fora_px": 3
+   },
+   {
+    "h": 307,
+    "natural": 311,
+    "botao_fora_px": 3
+   },
+   {
+    "h": 307,
+    "natural": 311,
+    "botao_fora_px": 3
+   },
+   {
+    "h": 307,
+    "natural": 311,
+    "botao_fora_px": 3
+   },
+   {
+    "h": 307,
+    "natural": 311,
+    "botao_fora_px": 3
+   },
+   {
+    "h": 307,
+    "natural": 311,
+    "botao_fora_px": 3
+   }
+  ],
+  "cortados": 6
+ },
+ "1896x968": {
+  "iw": 1896,
+  "ih": 968,
+  "dpr": 1,
+  "mobile": false,
+  "versao": null,
+  "modal": {
+   "w": 960,
+   "h": 852,
+   "top": 58,
+   "height_css": "851.828px",
+   "max_height": "851.84px",
+   "overflow": "hidden"
+  },
+  "grade": {
+   "h": 714,
+   "scroll_h": 714,
+   "rola": false,
+   "colunas": 3,
+   "linhas": "55.2656px 316.281px 316.281px"
+  },
+  "cards": [
+   {
+    "h": 316,
+    "natural": 316,
+    "botao_fora_px": 0
+   },
+   {
+    "h": 316,
+    "natural": 316,
+    "botao_fora_px": 0
+   },
+   {
+    "h": 316,
+    "natural": 316,
+    "botao_fora_px": 0
+   },
+   {
+    "h": 316,
+    "natural": 316,
+    "botao_fora_px": 0
+   },
+   {
+    "h": 316,
+    "natural": 316,
+    "botao_fora_px": 0
+   },
+   {
+    "h": 316,
+    "natural": 316,
+    "botao_fora_px": 0
+   }
+  ],
+  "cortados": 0
+ },
+ "1920x985": {
+  "iw": 1920,
+  "ih": 985,
+  "dpr": 1,
+  "mobile": false,
+  "versao": null,
+  "modal": {
+   "w": 960,
+   "h": 864,
+   "top": 61,
+   "height_css": "864px",
+   "max_height": "866.8px",
+   "overflow": "hidden"
+  },
+  "grade": {
+   "h": 726,
+   "scroll_h": 726,
+   "rola": false,
+   "colunas": 3,
+   "linhas": "55.2656px 322.359px 322.375px"
+  },
+  "cards": [
+   {
+    "h": 322,
+    "natural": 322,
+    "botao_fora_px": 0
+   },
+   {
+    "h": 322,
+    "natural": 322,
+    "botao_fora_px": 0
+   },
+   {
+    "h": 322,
+    "natural": 322,
+    "botao_fora_px": 0
+   },
+   {
+    "h": 322,
+    "natural": 322,
+    "botao_fora_px": 0
+   },
+   {
+    "h": 322,
+    "natural": 322,
+    "botao_fora_px": 0
+   },
+   {
+    "h": 322,
+    "natural": 322,
+    "botao_fora_px": 0
+   }
+  ],
+  "cortados": 0
+ }
+}

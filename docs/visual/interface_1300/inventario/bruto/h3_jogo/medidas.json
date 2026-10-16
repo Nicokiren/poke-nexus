@@ -1,0 +1,218 @@
+{
+ "escala": 1.0,
+ "leve": 1,
+ "semgpu": 0,
+ "desenho_leve": "gpu",
+ "pagina": "jogo",
+ "tela": [
+  1920,
+  1080
+ ],
+ "cenarios": [
+  {
+   "cenario": {
+    "nome": "h3_conta4_mostrada",
+    "w": 1920,
+    "h": 1001,
+    "visao": "uma",
+    "conta": 3,
+    "zoom": 1.0,
+    "espera": 2.5
+   },
+   "janela": [
+    1920,
+    1001
+   ],
+   "paginas": [
+    {
+     "conta": 4,
+     "zoom": 1.0,
+     "quadro_px_logicos": [
+      1531,
+      763
+     ],
+     "quadro_px_fisicos": [
+      1531,
+      763
+     ],
+     "iw": 1531,
+     "ih": 763,
+     "dpr": 1,
+     "mobile": false,
+     "versao": "1.300.2"
+    }
+   ],
+   "area_jogo_px": [
+    1539,
+    771
+   ],
+   "print": "h3_conta4_mostrada.png"
+  },
+  {
+   "cenario": {
+    "nome": "h3_celulares",
+    "w": 1920,
+    "h": 1001,
+    "visao": "celulares",
+    "espera": 2.5
+   },
+   "janela": [
+    1920,
+    1001
+   ],
+   "paginas": [
+    {
+     "conta": 1,
+     "zoom": 0.83,
+     "quadro_px_logicos": [
+      334,
+      735
+     ],
+     "quadro_px_fisicos": [
+      334,
+      735
+     ],
+     "iw": 402,
+     "ih": 885,
+     "dpr": 0.8299999833106995,
+     "mobile": true,
+     "versao": "1.300.2"
+    },
+    {
+     "conta": 2,
+     "zoom": 0.83,
+     "quadro_px_logicos": [
+      334,
+      735
+     ],
+     "quadro_px_fisicos": [
+      334,
+      735
+     ],
+     "iw": 402,
+     "ih": 885,
+     "dpr": 0.8299999833106995,
+     "mobile": true,
+     "versao": "1.300.2"
+    },
+    {
+     "conta": 3,
+     "zoom": 0.83,
+     "quadro_px_logicos": [
+      334,
+      735
+     ],
+     "quadro_px_fisicos": [
+      334,
+      735
+     ],
+     "iw": 402,
+     "ih": 885,
+     "dpr": 0.8299999833106995,
+     "mobile": true,
+     "versao": "1.300.2"
+    },
+    {
+     "conta": 4,
+     "zoom": 0.83,
+     "quadro_px_logicos": [
+      334,
+      735
+     ],
+     "quadro_px_fisicos": [
+      334,
+      735
+     ],
+     "iw": 402,
+     "ih": 885,
+     "dpr": 0.8299999833106995,
+     "mobile": true,
+     "versao": "1.300.2"
+    }
+   ],
+   "area_jogo_px": [
+    1539,
+    771
+   ],
+   "print": "h3_celulares.png"
+  },
+  {
+   "cenario": {
+    "nome": "h3_volta_uma",
+    "w": 1920,
+    "h": 1001,
+    "visao": "uma",
+    "conta": 3,
+    "zoom": 1.0,
+    "espera": 2.5
+   },
+   "janela": [
+    1920,
+    1001
+   ],
+   "paginas": [
+    {
+     "conta": 4,
+     "zoom": 1.0,
+     "quadro_px_logicos": [
+      1531,
+      763
+     ],
+     "quadro_px_fisicos": [
+      1531,
+      763
+     ],
+     "iw": 1531,
+     "ih": 763,
+     "dpr": 1,
+     "mobile": false,
+     "versao": "1.300.2"
+    }
+   ],
+   "area_jogo_px": [
+    1539,
+    771
+   ],
+   "print": "h3_volta_uma.png"
+  },
+  {
+   "cenario": {
+    "nome": "h3_conta2_mostrada",
+    "w": 1920,
+    "h": 1001,
+    "visao": "uma",
+    "conta": 1,
+    "zoom": 1.0,
+    "espera": 2.5
+   },
+   "janela": [
+    1920,
+    1001
+   ],
+   "paginas": [
+    {
+     "conta": 2,
+     "zoom": 1.0,
+     "quadro_px_logicos": [
+      1531,
+      763
+     ],
+     "quadro_px_fisicos": [
+      1531,
+      763
+     ],
+     "iw": 1531,
+     "ih": 763,
+     "dpr": 1,
+     "mobile": false,
+     "versao": "1.300.2"
+    }
+   ],
+   "area_jogo_px": [
+    1539,
+    771
+   ],
+   "print": "h3_conta2_mostrada.png"
+  }
+ ]
+}

@@ -1,0 +1,3472 @@
+{
+ "escala": 1.0,
+ "leve": 0,
+ "semgpu": 0,
+ "desenho_leve": "",
+ "pagina": "mercado",
+ "tela": [
+  1920,
+  1080
+ ],
+ "cenarios": [
+  {
+   "cenario": {
+    "nome": "1366x768_uma_ficha1",
+    "w": 1366,
+    "h": 689,
+    "ficha": true,
+    "visao": "uma",
+    "zoom": 1.0
+   },
+   "janela": [
+    1366,
+    689
+   ],
+   "paginas": [
+    {
+     "conta": 4,
+     "zoom": 0.46,
+     "quadro_px_logicos": [
+      977,
+      451
+     ],
+     "quadro_px_fisicos": [
+      977,
+      451
+     ],
+     "iw": 2123,
+     "ih": 980,
+     "dpr": 0.46000000834465027,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 863,
+      "top": 59,
+      "height_css": "862.772px",
+      "max_height": "862.783px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 725,
+      "scroll_h": 725,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.197px 321.875px 321.875px"
+     },
+     "cards": [
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "area_jogo_px": [
+    985,
+    459
+   ],
+   "print": "1366x768_uma_ficha1.png"
+  },
+  {
+   "cenario": {
+    "nome": "1366x768_uma_ficha0",
+    "w": 1366,
+    "h": 689,
+    "ficha": false,
+    "visao": "uma",
+    "zoom": 1.0
+   },
+   "janela": [
+    1366,
+    689
+   ],
+   "paginas": [
+    {
+     "conta": 4,
+     "zoom": 0.46,
+     "quadro_px_logicos": [
+      1302,
+      451
+     ],
+     "quadro_px_fisicos": [
+      1302,
+      451
+     ],
+     "iw": 2830,
+     "ih": 980,
+     "dpr": 0.46000000834465027,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 863,
+      "top": 59,
+      "height_css": "862.772px",
+      "max_height": "862.783px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 725,
+      "scroll_h": 725,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.197px 321.875px 321.875px"
+     },
+     "cards": [
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "area_jogo_px": [
+    1310,
+    459
+   ],
+   "print": "1366x768_uma_ficha0.png"
+  },
+  {
+   "cenario": {
+    "nome": "1600x900_uma_ficha1",
+    "w": 1600,
+    "h": 821,
+    "ficha": true,
+    "visao": "uma",
+    "zoom": 1.0
+   },
+   "janela": [
+    1600,
+    821
+   ],
+   "paginas": [
+    {
+     "conta": 4,
+     "zoom": 0.59,
+     "quadro_px_logicos": [
+      1211,
+      583
+     ],
+     "quadro_px_fisicos": [
+      1211,
+      583
+     ],
+     "iw": 2052,
+     "ih": 988,
+     "dpr": 0.5899999737739563,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 864,
+      "top": 62,
+      "height_css": "863.983px",
+      "max_height": "869.559px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 725,
+      "scroll_h": 725,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.1907px 321.954px 321.954px"
+     },
+     "cards": [
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "area_jogo_px": [
+    1219,
+    591
+   ],
+   "print": "1600x900_uma_ficha1.png"
+  },
+  {
+   "cenario": {
+    "nome": "1600x900_uma_ficha0",
+    "w": 1600,
+    "h": 821,
+    "ficha": false,
+    "visao": "uma",
+    "zoom": 1.0
+   },
+   "janela": [
+    1600,
+    821
+   ],
+   "paginas": [
+    {
+     "conta": 4,
+     "zoom": 0.59,
+     "quadro_px_logicos": [
+      1536,
+      583
+     ],
+     "quadro_px_fisicos": [
+      1536,
+      583
+     ],
+     "iw": 2603,
+     "ih": 988,
+     "dpr": 0.5899999737739563,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 864,
+      "top": 62,
+      "height_css": "863.983px",
+      "max_height": "869.559px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 725,
+      "scroll_h": 725,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.1907px 321.954px 321.954px"
+     },
+     "cards": [
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "area_jogo_px": [
+    1544,
+    591
+   ],
+   "print": "1600x900_uma_ficha0.png"
+  },
+  {
+   "cenario": {
+    "nome": "1920x1080_uma_ficha1",
+    "w": 1920,
+    "h": 1001,
+    "ficha": true,
+    "visao": "uma",
+    "zoom": 1.0
+   },
+   "janela": [
+    1920,
+    1001
+   ],
+   "paginas": [
+    {
+     "conta": 4,
+     "zoom": 0.78,
+     "quadro_px_logicos": [
+      1531,
+      763
+     ],
+     "quadro_px_fisicos": [
+      1531,
+      763
+     ],
+     "iw": 1962,
+     "ih": 978,
+     "dpr": 0.7799999713897705,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 861,
+      "top": 59,
+      "height_css": "860.817px",
+      "max_height": "860.821px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 723,
+      "scroll_h": 723,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.2284px 320.833px 320.833px"
+     },
+     "cards": [
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "area_jogo_px": [
+    1539,
+    771
+   ],
+   "print": "1920x1080_uma_ficha1.png"
+  },
+  {
+   "cenario": {
+    "nome": "1920x1080_uma_ficha0",
+    "w": 1920,
+    "h": 1001,
+    "ficha": false,
+    "visao": "uma",
+    "zoom": 1.0
+   },
+   "janela": [
+    1920,
+    1001
+   ],
+   "paginas": [
+    {
+     "conta": 4,
+     "zoom": 0.78,
+     "quadro_px_logicos": [
+      1856,
+      763
+     ],
+     "quadro_px_fisicos": [
+      1856,
+      763
+     ],
+     "iw": 2379,
+     "ih": 978,
+     "dpr": 0.7799999713897705,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 861,
+      "top": 59,
+      "height_css": "860.817px",
+      "max_height": "860.821px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 723,
+      "scroll_h": 723,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.2284px 320.833px 320.833px"
+     },
+     "cards": [
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "area_jogo_px": [
+    1864,
+    771
+   ],
+   "print": "1920x1080_uma_ficha0.png"
+  },
+  {
+   "cenario": {
+    "nome": "2560x1440_uma_ficha1",
+    "w": 2560,
+    "h": 1361,
+    "ficha": true,
+    "visao": "uma",
+    "zoom": 1.0
+   },
+   "janela": [
+    2560,
+    1361
+   ],
+   "paginas": [
+    {
+     "conta": 4,
+     "zoom": 1.0,
+     "quadro_px_logicos": [
+      2171,
+      1123
+     ],
+     "quadro_px_fisicos": [
+      2171,
+      1123
+     ],
+     "iw": 2171,
+     "ih": 1123,
+     "dpr": 1,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 864,
+      "top": 130,
+      "height_css": "864px",
+      "max_height": "988.24px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 726,
+      "scroll_h": 726,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.2656px 322.359px 322.375px"
+     },
+     "cards": [
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "area_jogo_px": [
+    2179,
+    1131
+   ],
+   "print": "2560x1440_uma_ficha1.png"
+  },
+  {
+   "cenario": {
+    "nome": "2560x1440_uma_ficha0",
+    "w": 2560,
+    "h": 1361,
+    "ficha": false,
+    "visao": "uma",
+    "zoom": 1.0
+   },
+   "janela": [
+    2560,
+    1361
+   ],
+   "paginas": [
+    {
+     "conta": 4,
+     "zoom": 1.0,
+     "quadro_px_logicos": [
+      2496,
+      1123
+     ],
+     "quadro_px_fisicos": [
+      2496,
+      1123
+     ],
+     "iw": 2496,
+     "ih": 1123,
+     "dpr": 1,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 864,
+      "top": 130,
+      "height_css": "864px",
+      "max_height": "988.24px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 726,
+      "scroll_h": 726,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.2656px 322.359px 322.375px"
+     },
+     "cards": [
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "area_jogo_px": [
+    2504,
+    1131
+   ],
+   "print": "2560x1440_uma_ficha0.png"
+  },
+  {
+   "cenario": {
+    "nome": "minimo_uma",
+    "w": 760,
+    "h": 600,
+    "visao": "uma",
+    "zoom": 1.0
+   },
+   "janela": [
+    760,
+    600
+   ],
+   "paginas": [
+    {
+     "conta": 4,
+     "zoom": 1.0,
+     "quadro_px_logicos": [
+      696,
+      360
+     ],
+     "quadro_px_fisicos": [
+      696,
+      360
+     ],
+     "iw": 696,
+     "ih": 360,
+     "dpr": 1,
+     "mobile": true,
+     "versao": null,
+     "modal": {
+      "w": 668,
+      "h": 344,
+      "top": 8,
+      "height_css": "344px",
+      "max_height": "344px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 741,
+      "scroll_h": 741,
+      "rola": false,
+      "colunas": 4,
+      "linhas": "51.1406px 336.844px 336.844px"
+     },
+     "cards": [
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "area_jogo_px": [
+    704,
+    368
+   ],
+   "print": "minimo_uma.png"
+  },
+  {
+   "cenario": {
+    "nome": "1920x1080_zoom50",
+    "w": 1920,
+    "h": 1001,
+    "visao": "uma",
+    "zoom": 0.5
+   },
+   "janela": [
+    1920,
+    1001
+   ],
+   "paginas": [
+    {
+     "conta": 4,
+     "zoom": 0.5,
+     "quadro_px_logicos": [
+      1531,
+      763
+     ],
+     "quadro_px_fisicos": [
+      1531,
+      763
+     ],
+     "iw": 3062,
+     "ih": 1526,
+     "dpr": 0.5,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 864,
+      "top": 331,
+      "height_css": "864px",
+      "max_height": "1342.88px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 726,
+      "scroll_h": 726,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.25px 322.125px 322.125px"
+     },
+     "cards": [
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "area_jogo_px": [
+    1539,
+    771
+   ],
+   "print": "1920x1080_zoom50.png"
+  },
+  {
+   "cenario": {
+    "nome": "1920x1080_zoom80",
+    "w": 1920,
+    "h": 1001,
+    "visao": "uma",
+    "zoom": 0.8
+   },
+   "janela": [
+    1920,
+    1001
+   ],
+   "paginas": [
+    {
+     "conta": 4,
+     "zoom": 0.78,
+     "quadro_px_logicos": [
+      1531,
+      763
+     ],
+     "quadro_px_fisicos": [
+      1531,
+      763
+     ],
+     "iw": 1962,
+     "ih": 978,
+     "dpr": 0.7799999713897705,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 861,
+      "top": 59,
+      "height_css": "860.817px",
+      "max_height": "860.821px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 723,
+      "scroll_h": 723,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.2284px 320.833px 320.833px"
+     },
+     "cards": [
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "area_jogo_px": [
+    1539,
+    771
+   ],
+   "print": "1920x1080_zoom80.png"
+  },
+  {
+   "cenario": {
+    "nome": "1920x1080_zoom150",
+    "w": 1920,
+    "h": 1001,
+    "visao": "uma",
+    "zoom": 1.5
+   },
+   "janela": [
+    1920,
+    1001
+   ],
+   "paginas": [
+    {
+     "conta": 4,
+     "zoom": 0.78,
+     "quadro_px_logicos": [
+      1531,
+      763
+     ],
+     "quadro_px_fisicos": [
+      1531,
+      763
+     ],
+     "iw": 1962,
+     "ih": 978,
+     "dpr": 0.7799999713897705,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 861,
+      "top": 59,
+      "height_css": "860.817px",
+      "max_height": "860.821px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 723,
+      "scroll_h": 723,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.2284px 320.833px 320.833px"
+     },
+     "cards": [
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "area_jogo_px": [
+    1539,
+    771
+   ],
+   "print": "1920x1080_zoom150.png"
+  },
+  {
+   "cenario": {
+    "nome": "1920x1080_zoom200",
+    "w": 1920,
+    "h": 1001,
+    "visao": "uma",
+    "zoom": 2.0
+   },
+   "janela": [
+    1920,
+    1001
+   ],
+   "paginas": [
+    {
+     "conta": 4,
+     "zoom": 0.78,
+     "quadro_px_logicos": [
+      1531,
+      763
+     ],
+     "quadro_px_fisicos": [
+      1531,
+      763
+     ],
+     "iw": 1962,
+     "ih": 978,
+     "dpr": 0.7799999713897705,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 861,
+      "top": 59,
+      "height_css": "860.817px",
+      "max_height": "860.821px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 723,
+      "scroll_h": 723,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.2284px 320.833px 320.833px"
+     },
+     "cards": [
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "area_jogo_px": [
+    1539,
+    771
+   ],
+   "print": "1920x1080_zoom200.png"
+  },
+  {
+   "cenario": {
+    "nome": "1920x1080_grade",
+    "w": 1920,
+    "h": 1001,
+    "visao": "grade"
+   },
+   "janela": [
+    1920,
+    1001
+   ],
+   "paginas": [
+    {
+     "conta": 1,
+     "zoom": 0.35,
+     "quadro_px_logicos": [
+      757,
+      345
+     ],
+     "quadro_px_fisicos": [
+      757,
+      345
+     ],
+     "iw": 2162,
+     "ih": 985,
+     "dpr": 0.3499999940395355,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 864,
+      "top": 61,
+      "height_css": "863.973px",
+      "max_height": "867.429px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 725,
+      "scroll_h": 725,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.2232px 321.92px 321.964px"
+     },
+     "cards": [
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    },
+    {
+     "conta": 2,
+     "zoom": 0.35,
+     "quadro_px_logicos": [
+      757,
+      345
+     ],
+     "quadro_px_fisicos": [
+      757,
+      345
+     ],
+     "iw": 2162,
+     "ih": 985,
+     "dpr": 0.3499999940395355,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 864,
+      "top": 61,
+      "height_css": "863.973px",
+      "max_height": "867.429px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 725,
+      "scroll_h": 725,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.2232px 321.92px 321.964px"
+     },
+     "cards": [
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    },
+    {
+     "conta": 3,
+     "zoom": 0.35,
+     "quadro_px_logicos": [
+      757,
+      345
+     ],
+     "quadro_px_fisicos": [
+      757,
+      345
+     ],
+     "iw": 2162,
+     "ih": 985,
+     "dpr": 0.3499999940395355,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 864,
+      "top": 61,
+      "height_css": "863.973px",
+      "max_height": "867.429px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 725,
+      "scroll_h": 725,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.2232px 321.92px 321.964px"
+     },
+     "cards": [
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    },
+    {
+     "conta": 4,
+     "zoom": 0.35,
+     "quadro_px_logicos": [
+      757,
+      345
+     ],
+     "quadro_px_fisicos": [
+      757,
+      345
+     ],
+     "iw": 2162,
+     "ih": 985,
+     "dpr": 0.3499999940395355,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 864,
+      "top": 61,
+      "height_css": "863.973px",
+      "max_height": "867.429px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 725,
+      "scroll_h": 725,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.2232px 321.92px 321.964px"
+     },
+     "cards": [
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 322,
+       "natural": 322,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "area_jogo_px": [
+    1539,
+    771
+   ],
+   "print": "1920x1080_grade.png"
+  },
+  {
+   "cenario": {
+    "nome": "1920x1080_celulares",
+    "w": 1920,
+    "h": 1001,
+    "visao": "celulares"
+   },
+   "janela": [
+    1920,
+    1001
+   ],
+   "paginas": [
+    {
+     "conta": 1,
+     "zoom": 0.83,
+     "quadro_px_logicos": [
+      334,
+      735
+     ],
+     "quadro_px_fisicos": [
+      334,
+      735
+     ],
+     "iw": 402,
+     "ih": 885,
+     "dpr": 0.8299999833106995,
+     "mobile": true,
+     "versao": null,
+     "modal": {
+      "w": 402,
+      "h": 860,
+      "top": 26,
+      "height_css": "859.526px",
+      "max_height": "859.542px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 1102,
+      "scroll_h": 1102,
+      "rola": false,
+      "colunas": 2,
+      "linhas": "65.9262px 337.312px 337.312px 337.312px"
+     },
+     "cards": [
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    },
+    {
+     "conta": 2,
+     "zoom": 0.83,
+     "quadro_px_logicos": [
+      334,
+      735
+     ],
+     "quadro_px_fisicos": [
+      334,
+      735
+     ],
+     "iw": 402,
+     "ih": 885,
+     "dpr": 0.8299999833106995,
+     "mobile": true,
+     "versao": null,
+     "modal": {
+      "w": 402,
+      "h": 860,
+      "top": 26,
+      "height_css": "859.526px",
+      "max_height": "859.542px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 1102,
+      "scroll_h": 1102,
+      "rola": false,
+      "colunas": 2,
+      "linhas": "65.9262px 337.312px 337.312px 337.312px"
+     },
+     "cards": [
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    },
+    {
+     "conta": 3,
+     "zoom": 0.83,
+     "quadro_px_logicos": [
+      334,
+      735
+     ],
+     "quadro_px_fisicos": [
+      334,
+      735
+     ],
+     "iw": 402,
+     "ih": 885,
+     "dpr": 0.8299999833106995,
+     "mobile": true,
+     "versao": null,
+     "modal": {
+      "w": 402,
+      "h": 860,
+      "top": 26,
+      "height_css": "859.526px",
+      "max_height": "859.542px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 1102,
+      "scroll_h": 1102,
+      "rola": false,
+      "colunas": 2,
+      "linhas": "65.9262px 337.312px 337.312px 337.312px"
+     },
+     "cards": [
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    },
+    {
+     "conta": 4,
+     "zoom": 0.83,
+     "quadro_px_logicos": [
+      334,
+      735
+     ],
+     "quadro_px_fisicos": [
+      334,
+      735
+     ],
+     "iw": 402,
+     "ih": 885,
+     "dpr": 0.8299999833106995,
+     "mobile": true,
+     "versao": null,
+     "modal": {
+      "w": 402,
+      "h": 860,
+      "top": 26,
+      "height_css": "859.526px",
+      "max_height": "859.542px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 1102,
+      "scroll_h": 1102,
+      "rola": false,
+      "colunas": 2,
+      "linhas": "65.9262px 337.312px 337.312px 337.312px"
+     },
+     "cards": [
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "area_jogo_px": [
+    1539,
+    771
+   ],
+   "print": "1920x1080_celulares.png"
+  },
+  {
+   "cenario": {
+    "nome": "1920x1080_registro",
+    "w": 1920,
+    "h": 1001,
+    "visao": "uma",
+    "zoom": 1.0,
+    "registro": true
+   },
+   "janela": [
+    1920,
+    1001
+   ],
+   "paginas": [
+    {
+     "conta": 4,
+     "zoom": 0.54,
+     "quadro_px_logicos": [
+      1531,
+      528
+     ],
+     "quadro_px_fisicos": [
+      1531,
+      528
+     ],
+     "iw": 2835,
+     "ih": 977,
+     "dpr": 0.5400000214576721,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 860,
+      "top": 59,
+      "height_css": "860.417px",
+      "max_height": "860.444px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 723,
+      "scroll_h": 723,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.1794px 320.718px 320.718px"
+     },
+     "cards": [
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 321,
+       "natural": 321,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "area_jogo_px": [
+    1539,
+    536
+   ],
+   "print": "1920x1080_registro.png"
+  },
+  {
+   "cenario": {
+    "nome": "1920x1080_hunts",
+    "w": 1920,
+    "h": 1001,
+    "visao": "uma",
+    "zoom": 1.0,
+    "area": "hunts"
+   },
+   "janela": [
+    1920,
+    1001
+   ],
+   "paginas": [],
+   "area_jogo_px": [
+    1539,
+    536
+   ],
+   "print": "1920x1080_hunts.png"
+  },
+  {
+   "cenario": {
+    "nome": "1920x1080_rmt",
+    "w": 1920,
+    "h": 1001,
+    "visao": "uma",
+    "zoom": 1.0,
+    "area": "rmt"
+   },
+   "janela": [
+    1920,
+    1001
+   ],
+   "paginas": [],
+   "area_jogo_px": [
+    1539,
+    536
+   ],
+   "print": "1920x1080_rmt.png"
+  },
+  {
+   "cenario": {
+    "nome": "1920x1080_guia",
+    "w": 1920,
+    "h": 1001,
+    "visao": "uma",
+    "zoom": 1.0,
+    "area": "guia"
+   },
+   "janela": [
+    1920,
+    1001
+   ],
+   "paginas": [],
+   "area_jogo_px": [
+    1539,
+    536
+   ],
+   "print": "1920x1080_guia.png"
+  },
+  {
+   "cenario": {
+    "nome": "1920x1080_f1",
+    "w": 1920,
+    "h": 1001,
+    "visao": "uma",
+    "zoom": 1.0,
+    "area": "f1"
+   },
+   "janela": [
+    1920,
+    1001
+   ],
+   "paginas": [],
+   "dialogo": {
+    "tam": [
+     495,
+     297
+    ],
+    "moldura": [
+     -1217,
+     312,
+     495,
+     328
+    ],
+    "tela_util": [
+     -1920,
+     0,
+     1920,
+     1032
+    ],
+    "cabe_na_tela": true
+   },
+   "area_jogo_px": [
+    1539,
+    536
+   ],
+   "print": "1920x1080_f1.png"
+  },
+  {
+   "cenario": {
+    "nome": "1920x1080_ajustes",
+    "w": 1920,
+    "h": 1001,
+    "visao": "uma",
+    "zoom": 1.0,
+    "area": "ajustes"
+   },
+   "janela": [
+    1920,
+    1001
+   ],
+   "paginas": [],
+   "dialogo": {
+    "tam": [
+     880,
+     780
+    ],
+    "moldura": [
+     -1410,
+     70,
+     880,
+     811
+    ],
+    "tela_util": [
+     -1920,
+     0,
+     1920,
+     1032
+    ],
+    "cabe_na_tela": true
+   },
+   "area_jogo_px": [
+    1539,
+    536
+   ],
+   "print": "1920x1080_ajustes.png"
+  },
+  {
+   "cenario": {
+    "nome": "1920x1080_perguntar",
+    "w": 1920,
+    "h": 1001,
+    "visao": "uma",
+    "zoom": 1.0,
+    "area": "perguntar"
+   },
+   "janela": [
+    1920,
+    1001
+   ],
+   "paginas": [],
+   "dialogo": {
+    "tam": [
+     380,
+     171
+    ],
+    "moldura": [
+     -1160,
+     375,
+     380,
+     202
+    ],
+    "tela_util": [
+     -1920,
+     0,
+     1920,
+     1032
+    ],
+    "cabe_na_tela": true
+   },
+   "area_jogo_px": [
+    1539,
+    536
+   ],
+   "print": "1920x1080_perguntar.png"
+  },
+  {
+   "cenario": {
+    "nome": "1366x768_grade",
+    "w": 1366,
+    "h": 689,
+    "visao": "grade"
+   },
+   "janela": [
+    1366,
+    689
+   ],
+   "paginas": [
+    {
+     "conta": 1,
+     "zoom": 0.25,
+     "quadro_px_logicos": [
+      480,
+      189
+     ],
+     "quadro_px_fisicos": [
+      480,
+      189
+     ],
+     "iw": 1920,
+     "ih": 756,
+     "dpr": 0.25,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 665,
+      "top": 45,
+      "height_css": "665.25px",
+      "max_height": "665.28px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 527,
+      "scroll_h": 527,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.25px 222.75px 222.75px"
+     },
+     "cards": [
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      },
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      },
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      },
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      },
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      },
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      }
+     ],
+     "cortados": 6
+    },
+    {
+     "conta": 2,
+     "zoom": 0.25,
+     "quadro_px_logicos": [
+      480,
+      189
+     ],
+     "quadro_px_fisicos": [
+      480,
+      189
+     ],
+     "iw": 1920,
+     "ih": 756,
+     "dpr": 0.25,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 665,
+      "top": 45,
+      "height_css": "665.25px",
+      "max_height": "665.28px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 527,
+      "scroll_h": 527,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.25px 222.75px 222.75px"
+     },
+     "cards": [
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      },
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      },
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      },
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      },
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      },
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      }
+     ],
+     "cortados": 6
+    },
+    {
+     "conta": 3,
+     "zoom": 0.25,
+     "quadro_px_logicos": [
+      480,
+      189
+     ],
+     "quadro_px_fisicos": [
+      480,
+      189
+     ],
+     "iw": 1920,
+     "ih": 756,
+     "dpr": 0.25,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 665,
+      "top": 45,
+      "height_css": "665.25px",
+      "max_height": "665.28px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 527,
+      "scroll_h": 527,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.25px 222.75px 222.75px"
+     },
+     "cards": [
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      },
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      },
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      },
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      },
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      },
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      }
+     ],
+     "cortados": 6
+    },
+    {
+     "conta": 4,
+     "zoom": 0.25,
+     "quadro_px_logicos": [
+      480,
+      189
+     ],
+     "quadro_px_fisicos": [
+      480,
+      189
+     ],
+     "iw": 1920,
+     "ih": 756,
+     "dpr": 0.25,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 665,
+      "top": 45,
+      "height_css": "665.25px",
+      "max_height": "665.28px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 527,
+      "scroll_h": 527,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.25px 222.75px 222.75px"
+     },
+     "cards": [
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      },
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      },
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      },
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      },
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      },
+      {
+       "h": 223,
+       "natural": 312,
+       "botao_fora_px": 89
+      }
+     ],
+     "cortados": 6
+    }
+   ],
+   "area_jogo_px": [
+    985,
+    459
+   ],
+   "print": "1366x768_grade.png"
+  },
+  {
+   "cenario": {
+    "nome": "1366x768_celulares",
+    "w": 1366,
+    "h": 689,
+    "visao": "celulares"
+   },
+   "janela": [
+    1366,
+    689
+   ],
+   "paginas": [
+    {
+     "conta": 1,
+     "zoom": 0.481,
+     "quadro_px_logicos": [
+      190,
+      423
+     ],
+     "quadro_px_fisicos": [
+      190,
+      423
+     ],
+     "iw": 395,
+     "ih": 879,
+     "dpr": 0.48100000619888306,
+     "mobile": true,
+     "versao": null,
+     "modal": {
+      "w": 395,
+      "h": 853,
+      "top": 26,
+      "height_css": "853.398px",
+      "max_height": "853.418px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 1103,
+      "scroll_h": 1103,
+      "rola": false,
+      "colunas": 2,
+      "linhas": "65.9109px 337.643px 337.643px 337.643px"
+     },
+     "cards": [
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    },
+    {
+     "conta": 2,
+     "zoom": 0.481,
+     "quadro_px_logicos": [
+      190,
+      423
+     ],
+     "quadro_px_fisicos": [
+      190,
+      423
+     ],
+     "iw": 395,
+     "ih": 879,
+     "dpr": 0.48100000619888306,
+     "mobile": true,
+     "versao": null,
+     "modal": {
+      "w": 395,
+      "h": 853,
+      "top": 26,
+      "height_css": "853.398px",
+      "max_height": "853.418px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 1103,
+      "scroll_h": 1103,
+      "rola": false,
+      "colunas": 2,
+      "linhas": "65.9109px 337.643px 337.643px 337.643px"
+     },
+     "cards": [
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    },
+    {
+     "conta": 3,
+     "zoom": 0.481,
+     "quadro_px_logicos": [
+      190,
+      423
+     ],
+     "quadro_px_fisicos": [
+      190,
+      423
+     ],
+     "iw": 395,
+     "ih": 879,
+     "dpr": 0.48100000619888306,
+     "mobile": true,
+     "versao": null,
+     "modal": {
+      "w": 395,
+      "h": 853,
+      "top": 26,
+      "height_css": "853.398px",
+      "max_height": "853.418px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 1103,
+      "scroll_h": 1103,
+      "rola": false,
+      "colunas": 2,
+      "linhas": "65.9109px 337.643px 337.643px 337.643px"
+     },
+     "cards": [
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    },
+    {
+     "conta": 4,
+     "zoom": 0.481,
+     "quadro_px_logicos": [
+      190,
+      423
+     ],
+     "quadro_px_fisicos": [
+      190,
+      423
+     ],
+     "iw": 395,
+     "ih": 879,
+     "dpr": 0.48100000619888306,
+     "mobile": true,
+     "versao": null,
+     "modal": {
+      "w": 395,
+      "h": 853,
+      "top": 26,
+      "height_css": "853.398px",
+      "max_height": "853.418px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 1103,
+      "scroll_h": 1103,
+      "rola": false,
+      "colunas": 2,
+      "linhas": "65.9109px 337.643px 337.643px 337.643px"
+     },
+     "cards": [
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 338,
+       "natural": 338,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "area_jogo_px": [
+    985,
+    459
+   ],
+   "print": "1366x768_celulares.png"
+  },
+  {
+   "cenario": {
+    "nome": "1366x768_registro",
+    "w": 1366,
+    "h": 689,
+    "visao": "uma",
+    "zoom": 1.0,
+    "registro": true
+   },
+   "janela": [
+    1366,
+    689
+   ],
+   "paginas": [
+    {
+     "conta": 4,
+     "zoom": 0.37,
+     "quadro_px_logicos": [
+      977,
+      360
+     ],
+     "quadro_px_fisicos": [
+      977,
+      360
+     ],
+     "iw": 2640,
+     "ih": 972,
+     "dpr": 0.3700000047683716,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 856,
+      "top": 58,
+      "height_css": "856.208px",
+      "max_height": "856.216px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 718,
+      "scroll_h": 718,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.152px 318.285px 318.285px"
+     },
+     "cards": [
+      {
+       "h": 318,
+       "natural": 318,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 318,
+       "natural": 318,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 318,
+       "natural": 318,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 318,
+       "natural": 318,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 318,
+       "natural": 318,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 318,
+       "natural": 318,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "area_jogo_px": [
+    985,
+    368
+   ],
+   "print": "1366x768_registro.png"
+  },
+  {
+   "cenario": {
+    "nome": "1366x768_hunts",
+    "w": 1366,
+    "h": 689,
+    "visao": "uma",
+    "zoom": 1.0,
+    "area": "hunts"
+   },
+   "janela": [
+    1366,
+    689
+   ],
+   "paginas": [],
+   "area_jogo_px": [
+    985,
+    368
+   ],
+   "print": "1366x768_hunts.png"
+  },
+  {
+   "cenario": {
+    "nome": "1366x768_rmt",
+    "w": 1366,
+    "h": 689,
+    "visao": "uma",
+    "zoom": 1.0,
+    "area": "rmt"
+   },
+   "janela": [
+    1366,
+    689
+   ],
+   "paginas": [],
+   "area_jogo_px": [
+    985,
+    368
+   ],
+   "print": "1366x768_rmt.png"
+  },
+  {
+   "cenario": {
+    "nome": "1366x768_guia",
+    "w": 1366,
+    "h": 689,
+    "visao": "uma",
+    "zoom": 1.0,
+    "area": "guia"
+   },
+   "janela": [
+    1366,
+    689
+   ],
+   "paginas": [],
+   "area_jogo_px": [
+    985,
+    368
+   ],
+   "print": "1366x768_guia.png"
+  },
+  {
+   "cenario": {
+    "nome": "1366x768_ajustes",
+    "w": 1366,
+    "h": 689,
+    "visao": "uma",
+    "zoom": 1.0,
+    "area": "ajustes"
+   },
+   "janela": [
+    1366,
+    689
+   ],
+   "paginas": [],
+   "dialogo": {
+    "tam": [
+     880,
+     780
+    ],
+    "moldura": [
+     -1687,
+     0,
+     880,
+     811
+    ],
+    "tela_util": [
+     -1920,
+     0,
+     1920,
+     1032
+    ],
+    "cabe_na_tela": true
+   },
+   "area_jogo_px": [
+    985,
+    368
+   ],
+   "print": "1366x768_ajustes.png"
+  },
+  {
+   "cenario": {
+    "nome": "1366x768_f1",
+    "w": 1366,
+    "h": 689,
+    "visao": "uma",
+    "zoom": 1.0,
+    "area": "f1"
+   },
+   "janela": [
+    1366,
+    689
+   ],
+   "paginas": [],
+   "dialogo": {
+    "tam": [
+     495,
+     297
+    ],
+    "moldura": [
+     -1494,
+     156,
+     495,
+     328
+    ],
+    "tela_util": [
+     -1920,
+     0,
+     1920,
+     1032
+    ],
+    "cabe_na_tela": true
+   },
+   "area_jogo_px": [
+    985,
+    368
+   ],
+   "print": "1366x768_f1.png"
+  },
+  {
+   "cenario": {
+    "nome": "minimo_grade",
+    "w": 760,
+    "h": 600,
+    "visao": "grade"
+   },
+   "janela": [
+    760,
+    600
+   ],
+   "paginas": [
+    {
+     "conta": 1,
+     "zoom": 0.25,
+     "quadro_px_logicos": [
+      340,
+      144
+     ],
+     "quadro_px_fisicos": [
+      340,
+      144
+     ],
+     "iw": 1360,
+     "ih": 576,
+     "dpr": 0.25,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 507,
+      "top": 35,
+      "height_css": "506.875px",
+      "max_height": "506.88px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 368,
+      "scroll_h": 368,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.25px 143.562px 143.562px"
+     },
+     "cards": [
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      },
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      },
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      },
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      },
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      },
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      }
+     ],
+     "cortados": 6
+    },
+    {
+     "conta": 2,
+     "zoom": 0.25,
+     "quadro_px_logicos": [
+      340,
+      144
+     ],
+     "quadro_px_fisicos": [
+      340,
+      144
+     ],
+     "iw": 1360,
+     "ih": 576,
+     "dpr": 0.25,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 507,
+      "top": 35,
+      "height_css": "506.875px",
+      "max_height": "506.88px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 368,
+      "scroll_h": 368,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.25px 143.562px 143.562px"
+     },
+     "cards": [
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      },
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      },
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      },
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      },
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      },
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      }
+     ],
+     "cortados": 6
+    },
+    {
+     "conta": 3,
+     "zoom": 0.25,
+     "quadro_px_logicos": [
+      340,
+      144
+     ],
+     "quadro_px_fisicos": [
+      340,
+      144
+     ],
+     "iw": 1360,
+     "ih": 576,
+     "dpr": 0.25,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 507,
+      "top": 35,
+      "height_css": "506.875px",
+      "max_height": "506.88px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 368,
+      "scroll_h": 368,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.25px 143.562px 143.562px"
+     },
+     "cards": [
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      },
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      },
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      },
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      },
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      },
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      }
+     ],
+     "cortados": 6
+    },
+    {
+     "conta": 4,
+     "zoom": 0.25,
+     "quadro_px_logicos": [
+      340,
+      144
+     ],
+     "quadro_px_fisicos": [
+      340,
+      144
+     ],
+     "iw": 1360,
+     "ih": 576,
+     "dpr": 0.25,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 507,
+      "top": 35,
+      "height_css": "506.875px",
+      "max_height": "506.88px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 368,
+      "scroll_h": 368,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.25px 143.562px 143.562px"
+     },
+     "cards": [
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      },
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      },
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      },
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      },
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      },
+      {
+       "h": 144,
+       "natural": 312,
+       "botao_fora_px": 168
+      }
+     ],
+     "cortados": 6
+    }
+   ],
+   "area_jogo_px": [
+    704,
+    368
+   ],
+   "print": "minimo_grade.png"
+  },
+  {
+   "cenario": {
+    "nome": "minimo_celulares",
+    "w": 760,
+    "h": 600,
+    "visao": "celulares"
+   },
+   "janela": [
+    760,
+    600
+   ],
+   "paginas": [
+    {
+     "conta": 1,
+     "zoom": 0.379,
+     "quadro_px_logicos": [
+      148,
+      332
+     ],
+     "quadro_px_fisicos": [
+      148,
+      332
+     ],
+     "iw": 390,
+     "ih": 875,
+     "dpr": 0.3790000081062317,
+     "mobile": true,
+     "versao": null,
+     "modal": {
+      "w": 391,
+      "h": 850,
+      "top": 26,
+      "height_css": "849.975px",
+      "max_height": "849.989px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 1099,
+      "scroll_h": 1099,
+      "rola": false,
+      "colunas": 2,
+      "linhas": "65.9218px 336.205px 336.205px 336.205px"
+     },
+     "cards": [
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    },
+    {
+     "conta": 2,
+     "zoom": 0.379,
+     "quadro_px_logicos": [
+      148,
+      332
+     ],
+     "quadro_px_fisicos": [
+      148,
+      332
+     ],
+     "iw": 390,
+     "ih": 875,
+     "dpr": 0.3790000081062317,
+     "mobile": true,
+     "versao": null,
+     "modal": {
+      "w": 391,
+      "h": 850,
+      "top": 26,
+      "height_css": "849.975px",
+      "max_height": "849.989px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 1099,
+      "scroll_h": 1099,
+      "rola": false,
+      "colunas": 2,
+      "linhas": "65.9218px 336.205px 336.205px 336.205px"
+     },
+     "cards": [
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    },
+    {
+     "conta": 3,
+     "zoom": 0.379,
+     "quadro_px_logicos": [
+      148,
+      332
+     ],
+     "quadro_px_fisicos": [
+      148,
+      332
+     ],
+     "iw": 390,
+     "ih": 875,
+     "dpr": 0.3790000081062317,
+     "mobile": true,
+     "versao": null,
+     "modal": {
+      "w": 391,
+      "h": 850,
+      "top": 26,
+      "height_css": "849.975px",
+      "max_height": "849.989px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 1099,
+      "scroll_h": 1099,
+      "rola": false,
+      "colunas": 2,
+      "linhas": "65.9218px 336.205px 336.205px 336.205px"
+     },
+     "cards": [
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    },
+    {
+     "conta": 4,
+     "zoom": 0.379,
+     "quadro_px_logicos": [
+      148,
+      332
+     ],
+     "quadro_px_fisicos": [
+      148,
+      332
+     ],
+     "iw": 390,
+     "ih": 875,
+     "dpr": 0.3790000081062317,
+     "mobile": true,
+     "versao": null,
+     "modal": {
+      "w": 391,
+      "h": 850,
+      "top": 26,
+      "height_css": "849.975px",
+      "max_height": "849.989px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 1099,
+      "scroll_h": 1099,
+      "rola": false,
+      "colunas": 2,
+      "linhas": "65.9218px 336.205px 336.205px 336.205px"
+     },
+     "cards": [
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 336,
+       "natural": 336,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "area_jogo_px": [
+    704,
+    368
+   ],
+   "print": "minimo_celulares.png"
+  },
+  {
+   "cenario": {
+    "nome": "minimo_registro",
+    "w": 760,
+    "h": 600,
+    "visao": "uma",
+    "zoom": 1.0,
+    "registro": true
+   },
+   "janela": [
+    760,
+    600
+   ],
+   "paginas": [
+    {
+     "conta": 4,
+     "zoom": 1.0,
+     "quadro_px_logicos": [
+      696,
+      360
+     ],
+     "quadro_px_fisicos": [
+      696,
+      360
+     ],
+     "iw": 696,
+     "ih": 360,
+     "dpr": 1,
+     "mobile": true,
+     "versao": null,
+     "modal": {
+      "w": 668,
+      "h": 344,
+      "top": 8,
+      "height_css": "344px",
+      "max_height": "344px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 741,
+      "scroll_h": 741,
+      "rola": false,
+      "colunas": 4,
+      "linhas": "51.1406px 336.844px 336.844px"
+     },
+     "cards": [
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "area_jogo_px": [
+    704,
+    368
+   ],
+   "print": "minimo_registro.png"
+  },
+  {
+   "cenario": {
+    "nome": "minimo_hunts",
+    "w": 760,
+    "h": 600,
+    "visao": "uma",
+    "zoom": 1.0,
+    "area": "hunts"
+   },
+   "janela": [
+    760,
+    600
+   ],
+   "paginas": [],
+   "area_jogo_px": [
+    704,
+    368
+   ],
+   "print": "minimo_hunts.png"
+  },
+  {
+   "cenario": {
+    "nome": "minimo_rmt",
+    "w": 760,
+    "h": 600,
+    "visao": "uma",
+    "zoom": 1.0,
+    "area": "rmt"
+   },
+   "janela": [
+    760,
+    600
+   ],
+   "paginas": [],
+   "area_jogo_px": [
+    704,
+    368
+   ],
+   "print": "minimo_rmt.png"
+  },
+  {
+   "cenario": {
+    "nome": "minimo_guia",
+    "w": 760,
+    "h": 600,
+    "visao": "uma",
+    "zoom": 1.0,
+    "area": "guia"
+   },
+   "janela": [
+    760,
+    600
+   ],
+   "paginas": [],
+   "area_jogo_px": [
+    704,
+    368
+   ],
+   "print": "minimo_guia.png"
+  },
+  {
+   "cenario": {
+    "nome": "minimo_ajustes",
+    "w": 760,
+    "h": 600,
+    "visao": "uma",
+    "zoom": 1.0,
+    "area": "ajustes"
+   },
+   "janela": [
+    760,
+    600
+   ],
+   "paginas": [],
+   "dialogo": {
+    "tam": [
+     880,
+     780
+    ],
+    "moldura": [
+     -1920,
+     0,
+     880,
+     811
+    ],
+    "tela_util": [
+     -1920,
+     0,
+     1920,
+     1032
+    ],
+    "cabe_na_tela": true
+   },
+   "area_jogo_px": [
+    704,
+    368
+   ],
+   "print": "minimo_ajustes.png"
+  }
+ ]
+}

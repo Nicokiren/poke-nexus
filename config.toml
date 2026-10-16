@@ -1,0 +1,118 @@
+# ===========================================================
+#  PokeNexus - configuração
+#  Edite com o Bloco de Notas e reabra o programa.
+#  Linhas que começam com # são comentários.
+#  NUNCA coloque email, senha, token ou cookie aqui.
+# ===========================================================
+
+url = "https://pokeidle.io/app"
+
+# Quantas contas aparecem no programa (1 a 4).
+# Os Termos do PokeIdle (seção 5) permitem no máximo 4 contas conectadas
+# por rede e no máximo 4 contas por aparelho.
+quantidade_contas = 4
+
+# Quantas contas podem ficar conectadas AO MESMO TEMPO (no máximo 4).
+max_simultaneas = 4
+
+# true = ao abrir o programa, já inicia todas as contas ativas.
+iniciar_contas_ao_abrir = false
+
+[intervalos]
+# De quanto em quanto tempo cada conta confere o estado do jogo (segundos).
+verificacao_segundos = 3
+# Sem nenhuma mensagem do servidor por este tempo => recarrega a página.
+sem_resposta_recarregar_segundos = 60
+# Na hunt mas sem nenhuma batalha por este tempo => recarrega a página.
+sem_batalha_recarregar_segundos = 180
+# Depois do time desmaiar, quanto esperar a "volta automática" do próprio jogo
+# antes de o programa voltar para a hunt sozinho.
+espera_volta_automatica_segundos = 20
+
+[farm]
+# Voltar para a hunt depois que o time for nocauteado.
+voltar_apos_derrota = true
+# Proteção contra "laço de morte" (cada nocaute tira XP de treinador):
+# se o time cair este número de vezes dentro da janela, a conta é PAUSADA.
+max_derrotas = 3
+janela_derrotas_minutos = 15
+# Escrever no log cada batalha iniciada/concluída.
+log_cada_batalha = true
+# Reabrir a sessão da conta sozinho se a página dela travar.
+reabrir_navegador = true
+# Se a página de uma conta passar deste tanto de memória (MB) por vários minutos, ela é
+# reaberta sozinha entre uma batalha e outra (libera a memória que o jogo vai acumulando).
+# 0 = desligado.
+limite_memoria_pagina_mb = 2000
+
+[janela]
+# Zoom inicial do jogo dentro do programa (1.0 = 100%, 0.8 = 80%).
+# Também dá para mudar na hora pelos botões - e + em cima do jogo.
+zoom = 1.0
+# Como o VER TODAS mostra as contas: "grade" (lado a lado e em linhas, com o jogo de computador)
+# ou "celulares" (as contas em pé, lado a lado, cada uma no layout de celular do próprio jogo).
+# Também dá para trocar no próprio VER TODAS.
+layout_ver_todas = "grade"
+# true = mostra o painel "Conta selecionada" à direita do jogo; false = escondido (o jogo fica maior).
+# Também dá para esconder pelo botão » do painel e mostrar de novo pelo "« Conta" (ou Ctrl+B).
+painel_conta = true
+# true = você já viu (ou dispensou) o guia do Mercado: o convite "Primeira vez aqui?" não aparece.
+# O guia continua no botão "Guia" do Mercado.
+guia_mercado_visto = false
+
+[desempenho]
+# true = Modo Leve: tudo funciona igual, mas sem animações (sprites paradas, selos sem piscar,
+# fundo liso) e "reduzir movimento" no jogo. Usa a placa de vídeo se o PC tiver; sem placa, desenha
+# pelo modo mais barato para a CPU.
+# Liga e desliga em ⚙ Configurações → Desempenho. Só vale depois de REINICIAR o programa.
+modo_leve = false
+
+[atalhos]
+configuracoes = "Ctrl+,"
+conta_1 = "Ctrl+1"
+conta_2 = "Ctrl+2"
+conta_3 = "Ctrl+3"
+conta_4 = "Ctrl+4"
+ver_todas = "Ctrl+0"
+hunts = "Ctrl+H"
+rmt = "Ctrl+M"
+pausar_retomar = "F8"
+painel_conta = "Ctrl+B"
+
+# -----------------------------------------------------------
+#  Contas
+#  nome   = nome que aparece no programa
+#  pasta  = pasta do perfil dentro de "profiles" (cookies e login ficam lá)
+#  sprite = número da Pokédex do mascote do card (1 a 386)
+#  hunt   = (opcional) código do mapa para farmar. Deixe "" para o programa
+#           usar o último mapa que a conta caçou.
+#  ativa  = false deixa a conta desativada (não pode ser iniciada)
+# -----------------------------------------------------------
+
+[[contas]]
+nome = "Conta 1"
+pasta = "conta_01"
+sprite = 25
+hunt = ""
+ativa = true
+
+[[contas]]
+nome = "Conta 2"
+pasta = "conta_02"
+sprite = 1
+hunt = ""
+ativa = true
+
+[[contas]]
+nome = "Conta 3"
+pasta = "conta_03"
+sprite = 4
+hunt = ""
+ativa = true
+
+[[contas]]
+nome = "Conta 4"
+pasta = "conta_04"
+sprite = 258
+hunt = ""
+ativa = true

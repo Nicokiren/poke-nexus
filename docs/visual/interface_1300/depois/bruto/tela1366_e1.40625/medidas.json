@@ -1,0 +1,393 @@
+{
+ "escala": 1.40625,
+ "leve": 1,
+ "semgpu": 0,
+ "desenho_leve": "gpu",
+ "pagina": "mercado",
+ "tela": [
+  1365,
+  768
+ ],
+ "cenarios": [
+  {
+   "cenario": {
+    "nome": "t1366_ajustes",
+    "w": 1366,
+    "h": 689,
+    "visao": "uma",
+    "zoom": 1.0,
+    "area": "ajustes"
+   },
+   "janela": [
+    1366,
+    689
+   ],
+   "paginas": [
+    {
+     "conta": 4,
+     "zoom": 0.46,
+     "quadro_px_logicos": [
+      977,
+      448
+     ],
+     "quadro_px_fisicos": [
+      1374,
+      630
+     ],
+     "iw": 2124,
+     "ih": 973,
+     "dpr": 0.6468750238418579,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 857,
+      "top": 58,
+      "height_css": "857.029px",
+      "max_height": "857.043px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 719,
+      "scroll_h": 719,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.2174px 318.986px 319.01px"
+     },
+     "cards": [
+      {
+       "h": 319,
+       "natural": 319,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 319,
+       "natural": 319,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 319,
+       "natural": 319,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 319,
+       "natural": 319,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 319,
+       "natural": 319,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 319,
+       "natural": 319,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "dialogo": {
+    "tam": [
+     880,
+     686
+    ],
+    "moldura": [
+     -1687,
+     0,
+     880,
+     708
+    ],
+    "tela_util": [
+     -1920,
+     0,
+     1365,
+     734
+    ],
+    "cabe_na_tela": true
+   },
+   "area_jogo_px": [
+    985,
+    456
+   ],
+   "print": "t1366_ajustes.png"
+  },
+  {
+   "cenario": {
+    "nome": "t1366_f1",
+    "w": 1366,
+    "h": 689,
+    "visao": "uma",
+    "zoom": 1.0,
+    "area": "f1"
+   },
+   "janela": [
+    1366,
+    689
+   ],
+   "paginas": [
+    {
+     "conta": 4,
+     "zoom": 0.46,
+     "quadro_px_logicos": [
+      977,
+      448
+     ],
+     "quadro_px_fisicos": [
+      1374,
+      630
+     ],
+     "iw": 2124,
+     "ih": 973,
+     "dpr": 0.6468750238418579,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 857,
+      "top": 58,
+      "height_css": "857.029px",
+      "max_height": "857.043px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 719,
+      "scroll_h": 719,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.2174px 318.986px 319.01px"
+     },
+     "cards": [
+      {
+       "h": 319,
+       "natural": 319,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 319,
+       "natural": 319,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 319,
+       "natural": 319,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 319,
+       "natural": 319,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 319,
+       "natural": 319,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 319,
+       "natural": 319,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "dialogo": {
+    "tam": [
+     496,
+     298
+    ],
+    "moldura": [
+     -1495,
+     155,
+     496,
+     320
+    ],
+    "tela_util": [
+     -1920,
+     0,
+     1365,
+     734
+    ],
+    "cabe_na_tela": true
+   },
+   "area_jogo_px": [
+    985,
+    456
+   ],
+   "print": "t1366_f1.png"
+  },
+  {
+   "cenario": {
+    "nome": "t1366_uma",
+    "w": 1366,
+    "h": 689,
+    "visao": "uma",
+    "zoom": 1.0
+   },
+   "janela": [
+    1366,
+    689
+   ],
+   "paginas": [
+    {
+     "conta": 4,
+     "zoom": 0.46,
+     "quadro_px_logicos": [
+      977,
+      448
+     ],
+     "quadro_px_fisicos": [
+      1374,
+      630
+     ],
+     "iw": 2124,
+     "ih": 973,
+     "dpr": 0.6468750238418579,
+     "mobile": false,
+     "versao": null,
+     "modal": {
+      "w": 960,
+      "h": 857,
+      "top": 58,
+      "height_css": "857.029px",
+      "max_height": "857.043px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 719,
+      "scroll_h": 719,
+      "rola": false,
+      "colunas": 3,
+      "linhas": "55.2174px 318.986px 319.01px"
+     },
+     "cards": [
+      {
+       "h": 319,
+       "natural": 319,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 319,
+       "natural": 319,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 319,
+       "natural": 319,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 319,
+       "natural": 319,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 319,
+       "natural": 319,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 319,
+       "natural": 319,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "area_jogo_px": [
+    985,
+    456
+   ],
+   "print": "t1366_uma.png"
+  },
+  {
+   "cenario": {
+    "nome": "t1366_minimo",
+    "w": 760,
+    "h": 600,
+    "visao": "uma",
+    "zoom": 1.0
+   },
+   "janela": [
+    760,
+    600
+   ],
+   "paginas": [
+    {
+     "conta": 4,
+     "zoom": 1.0,
+     "quadro_px_logicos": [
+      696,
+      360
+     ],
+     "quadro_px_fisicos": [
+      979,
+      506
+     ],
+     "iw": 696,
+     "ih": 360,
+     "dpr": 1.40625,
+     "mobile": true,
+     "versao": null,
+     "modal": {
+      "w": 668,
+      "h": 345,
+      "top": 8,
+      "height_css": "344.533px",
+      "max_height": "344.533px",
+      "overflow": "hidden"
+     },
+     "grade": {
+      "h": 742,
+      "scroll_h": 742,
+      "rola": false,
+      "colunas": 4,
+      "linhas": "51.1444px 337.4px 337.4px"
+     },
+     "cards": [
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      },
+      {
+       "h": 337,
+       "natural": 337,
+       "botao_fora_px": 0
+      }
+     ],
+     "cortados": 0
+    }
+   ],
+   "area_jogo_px": [
+    704,
+    368
+   ],
+   "print": "t1366_minimo.png"
+  }
+ ]
+}

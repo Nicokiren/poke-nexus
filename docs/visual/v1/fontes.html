@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Fontes candidatas</title>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600&family=Silkscreen&family=Jersey+10&family=Tiny5&family=Press+Start+2P&family=VT323&family=Nunito:wght@500;700&display=swap" rel="stylesheet">
+<style>
+body { background:#1A1016; color:#F6E9DC; margin:0; padding:16px; font-family:Nunito; width:1568px; }
+.f { display:grid; grid-template-columns:180px 1fr; align-items:center; gap:10px; padding:8px 0; border-bottom:2px solid #2B0C14; }
+.f .n { color:#C9AFA4; font-size:13px; }
+.l { display:flex; gap:28px; align-items:baseline; flex-wrap:wrap; }
+</style></head><body><div id="r"></div>
+<script>
+const fontes = ['Pixelify Sans', 'Silkscreen', 'Jersey 10', 'Tiny5', 'Press Start 2P', 'VT323'];
+const txt = 'Conta 2 Nv 98 312 36.341 Começar ação Ç ã õ é';
+document.getElementById('r').innerHTML = fontes.map(f => `<div class="f"><div class="n">${f}</div><div class="l">` +
+  [12, 16, 20, 24, 32].map(s => `<span style="font-family:'${f}';font-size:${s}px">${s}px ${txt}</span>`).join('') + '</div></div>').join('');
+</script></body></html>

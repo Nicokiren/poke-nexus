@@ -1,0 +1,784 @@
+[
+ {
+  "nome": "00_jogo",
+  "zoom": 1.0,
+  "rotulo_zoom": "100%",
+  "cortes": {
+   "aberto": false
+  },
+  "market": {
+   "iw": 704,
+   "ih": 360,
+   "dpr": 1.25,
+   "mobile": true,
+   "versao": "1.300.2"
+  }
+ },
+ {
+  "nome": "01_market_antes",
+  "zoom": 1.0,
+  "rotulo_zoom": "100%",
+  "cortes": {
+   "aberto": true,
+   "modal": "market",
+   "ih": 360,
+   "iw": 704,
+   "mobile": true,
+   "caixa": [
+    8,
+    352,
+    344
+   ],
+   "fora_da_tela": false,
+   "cortes": [
+    {
+     "cls": "mk-pal-palco",
+     "h": 104,
+     "conteudo": 173
+    },
+    {
+     "cls": "mk-pal-palco",
+     "h": 104,
+     "conteudo": 173
+    }
+   ],
+   "n_cortes": 2
+  },
+  "market": {
+   "iw": 704,
+   "ih": 360,
+   "dpr": 1.25,
+   "mobile": true,
+   "versao": "1.300.2",
+   "modal": {
+    "w": 676,
+    "h": 344,
+    "top": 8,
+    "height_css": "344px",
+    "max_height": "344px",
+    "overflow": "hidden"
+   },
+   "grade": {
+    "h": 386,
+    "scroll_h": 386,
+    "rola": false,
+    "colunas": 4,
+    "linhas": "51.15px 326.65px"
+   },
+   "cards": [
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    }
+   ],
+   "cortados": 0
+  }
+ },
+ {
+  "nome": "02_market_depois",
+  "zoom": 1.0,
+  "rotulo_zoom": "100%",
+  "cortes": {
+   "aberto": true,
+   "modal": "market",
+   "ih": 360,
+   "iw": 704,
+   "mobile": true,
+   "caixa": [
+    8,
+    352,
+    344
+   ],
+   "fora_da_tela": false,
+   "cortes": [
+    {
+     "cls": "mk-pal-palco",
+     "h": 104,
+     "conteudo": 173
+    },
+    {
+     "cls": "mk-pal-palco",
+     "h": 104,
+     "conteudo": 173
+    }
+   ],
+   "n_cortes": 2
+  },
+  "market": {
+   "iw": 704,
+   "ih": 360,
+   "dpr": 1.25,
+   "mobile": true,
+   "versao": "1.300.2",
+   "modal": {
+    "w": 676,
+    "h": 344,
+    "top": 8,
+    "height_css": "344px",
+    "max_height": "344px",
+    "overflow": "hidden"
+   },
+   "grade": {
+    "h": 386,
+    "scroll_h": 386,
+    "rola": false,
+    "colunas": 4,
+    "linhas": "51.15px 326.65px"
+   },
+   "cards": [
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    }
+   ],
+   "cortados": 0
+  }
+ },
+ {
+  "nome": "03_market_cat1",
+  "zoom": 1.0,
+  "rotulo_zoom": "100%",
+  "cortes": {
+   "aberto": true,
+   "modal": "market",
+   "ih": 360,
+   "iw": 704,
+   "mobile": true,
+   "caixa": [
+    8,
+    352,
+    344
+   ],
+   "fora_da_tela": false,
+   "cortes": [
+    {
+     "cls": "mk-pal-palco",
+     "h": 104,
+     "conteudo": 173
+    },
+    {
+     "cls": "mk-pal-palco",
+     "h": 104,
+     "conteudo": 173
+    }
+   ],
+   "n_cortes": 2
+  },
+  "market": {
+   "iw": 704,
+   "ih": 360,
+   "dpr": 1.25,
+   "mobile": true,
+   "versao": "1.300.2",
+   "modal": {
+    "w": 676,
+    "h": 344,
+    "top": 8,
+    "height_css": "344px",
+    "max_height": "344px",
+    "overflow": "hidden"
+   },
+   "grade": {
+    "h": 386,
+    "scroll_h": 386,
+    "rola": false,
+    "colunas": 4,
+    "linhas": "51.15px 326.65px"
+   },
+   "cards": [
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    }
+   ],
+   "cortados": 0
+  },
+  "categoria": "PokébolasPara capturar"
+ },
+ {
+  "nome": "03_market_cat2",
+  "zoom": 1.0,
+  "rotulo_zoom": "100%",
+  "cortes": {
+   "aberto": true,
+   "modal": "market",
+   "ih": 360,
+   "iw": 704,
+   "mobile": true,
+   "caixa": [
+    8,
+    352,
+    344
+   ],
+   "fora_da_tela": false,
+   "cortes": [
+    {
+     "cls": "mk-pal-palco",
+     "h": 104,
+     "conteudo": 173
+    },
+    {
+     "cls": "mk-pal-palco",
+     "h": 104,
+     "conteudo": 173
+    }
+   ],
+   "n_cortes": 2
+  },
+  "market": {
+   "iw": 704,
+   "ih": 360,
+   "dpr": 1.25,
+   "mobile": true,
+   "versao": "1.300.2",
+   "modal": {
+    "w": 676,
+    "h": 344,
+    "top": 8,
+    "height_css": "344px",
+    "max_height": "344px",
+    "overflow": "hidden"
+   },
+   "grade": {
+    "h": 720,
+    "scroll_h": 720,
+    "rola": false,
+    "colunas": 4,
+    "linhas": "51.15px 326.65px 326.65px"
+   },
+   "cards": [
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    }
+   ],
+   "cortados": 0
+  },
+  "categoria": "PoçõesCuram em campo"
+ },
+ {
+  "nome": "03_market_cat3",
+  "zoom": 1.0,
+  "rotulo_zoom": "100%",
+  "cortes": {
+   "aberto": true,
+   "modal": "market",
+   "ih": 360,
+   "iw": 704,
+   "mobile": true,
+   "caixa": [
+    8,
+    352,
+    344
+   ],
+   "fora_da_tela": false,
+   "cortes": [
+    {
+     "cls": "mk-pal-palco",
+     "h": 104,
+     "conteudo": 173
+    }
+   ],
+   "n_cortes": 1
+  },
+  "market": {
+   "iw": 704,
+   "ih": 360,
+   "dpr": 1.25,
+   "mobile": true,
+   "versao": "1.300.2",
+   "modal": {
+    "w": 676,
+    "h": 344,
+    "top": 8,
+    "height_css": "344px",
+    "max_height": "344px",
+    "overflow": "hidden"
+   },
+   "grade": {
+    "h": 386,
+    "scroll_h": 386,
+    "rola": false,
+    "colunas": 4,
+    "linhas": "51.15px 326.65px"
+   },
+   "cards": [
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    }
+   ],
+   "cortados": 0
+  },
+  "categoria": "RevivesLevantam quem caiu"
+ },
+ {
+  "nome": "03_market_cat4",
+  "zoom": 1.0,
+  "rotulo_zoom": "100%",
+  "cortes": {
+   "aberto": true,
+   "modal": "market",
+   "ih": 360,
+   "iw": 704,
+   "mobile": true,
+   "caixa": [
+    8,
+    352,
+    344
+   ],
+   "fora_da_tela": false,
+   "cortes": [
+    {
+     "cls": "mk-pal-palco",
+     "h": 104,
+     "conteudo": 173
+    }
+   ],
+   "n_cortes": 1
+  },
+  "market": {
+   "iw": 704,
+   "ih": 360,
+   "dpr": 1.25,
+   "mobile": true,
+   "versao": "1.300.2",
+   "modal": {
+    "w": 676,
+    "h": 344,
+    "top": 8,
+    "height_css": "344px",
+    "max_height": "344px",
+    "overflow": "hidden"
+   },
+   "grade": {
+    "h": 442,
+    "scroll_h": 442,
+    "rola": false,
+    "colunas": 4,
+    "linhas": "51.15px 33.4px 341.875px"
+   },
+   "cards": [
+    {
+     "h": 342,
+     "natural": 342,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 342,
+     "natural": 342,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 342,
+     "natural": 342,
+     "botao_fora_px": 0
+    }
+   ],
+   "cortados": 0
+  },
+  "categoria": "OvosPokémon surpresa"
+ },
+ {
+  "nome": "04_market_venda",
+  "zoom": 1.0,
+  "rotulo_zoom": "100%",
+  "cortes": {
+   "aberto": true,
+   "modal": "market",
+   "ih": 360,
+   "iw": 704,
+   "mobile": true,
+   "caixa": [
+    8,
+    352,
+    344
+   ],
+   "fora_da_tela": false,
+   "cortes": [],
+   "n_cortes": 0
+  },
+  "market": {
+   "iw": 704,
+   "ih": 360,
+   "dpr": 1.25,
+   "mobile": true,
+   "versao": "1.300.2",
+   "modal": {
+    "w": 676,
+    "h": 344,
+    "top": 8,
+    "height_css": "344px",
+    "max_height": "344px",
+    "overflow": "hidden"
+   },
+   "grade": {
+    "h": 21001,
+    "scroll_h": 21001,
+    "rola": false,
+    "colunas": 4,
+    "linhas": "190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px 190.325px"
+   },
+   "cards": [],
+   "cortados": 0
+  }
+ },
+ {
+  "nome": "05_market_grade",
+  "zoom": 0.25,
+  "rotulo_zoom": "auto",
+  "cortes": {
+   "aberto": true,
+   "modal": "market",
+   "ih": 576,
+   "iw": 1376,
+   "mobile": false,
+   "caixa": [
+    35,
+    541,
+    507
+   ],
+   "fora_da_tela": false,
+   "cortes": [
+    {
+     "cls": "mk-card mk-pal pal-n0",
+     "h": 143,
+     "conteudo": 302
+    },
+    {
+     "cls": "mk-card mk-pal pal-n1",
+     "h": 143,
+     "conteudo": 302
+    },
+    {
+     "cls": "mk-card mk-pal pal-n3",
+     "h": 143,
+     "conteudo": 302
+    },
+    {
+     "cls": "mk-pal-palco",
+     "h": 122,
+     "conteudo": 183
+    },
+    {
+     "cls": "mk-card mk-pal pal-n4",
+     "h": 143,
+     "conteudo": 302
+    },
+    {
+     "cls": "mk-pal-palco",
+     "h": 122,
+     "conteudo": 183
+    }
+   ],
+   "n_cortes": 6
+  },
+  "market": {
+   "iw": 1376,
+   "ih": 576,
+   "dpr": 0.3125,
+   "mobile": false,
+   "versao": "1.300.2",
+   "modal": {
+    "w": 960,
+    "h": 507,
+    "top": 35,
+    "height_css": "506.85px",
+    "max_height": "506.88px",
+    "overflow": "hidden"
+   },
+   "grade": {
+    "h": 367,
+    "scroll_h": 367,
+    "rola": false,
+    "colunas": 3,
+    "linhas": "55.25px 142.8px 142.8px"
+   },
+   "cards": [
+    {
+     "h": 143,
+     "natural": 302,
+     "botao_fora_px": 159
+    },
+    {
+     "h": 143,
+     "natural": 302,
+     "botao_fora_px": 159
+    },
+    {
+     "h": 143,
+     "natural": 302,
+     "botao_fora_px": 159
+    },
+    {
+     "h": 143,
+     "natural": 302,
+     "botao_fora_px": 159
+    }
+   ],
+   "cortados": 4
+  }
+ },
+ {
+  "nome": "06_market_celulares",
+  "zoom": 0.379,
+  "rotulo_zoom": "auto",
+  "cortes": {
+   "aberto": true,
+   "modal": "market",
+   "ih": 875,
+   "iw": 390,
+   "mobile": true,
+   "caixa": [
+    26,
+    876,
+    850
+   ],
+   "fora_da_tela": false,
+   "cortes": [
+    {
+     "cls": "mk-pal-palco",
+     "h": 104,
+     "conteudo": 173
+    },
+    {
+     "cls": "mk-pal-palco",
+     "h": 104,
+     "conteudo": 173
+    }
+   ],
+   "n_cortes": 2
+  },
+  "market": {
+   "iw": 390,
+   "ih": 875,
+   "dpr": 0.4737499952316284,
+   "mobile": true,
+   "versao": "1.300.2",
+   "modal": {
+    "w": 391,
+    "h": 850,
+    "top": 26,
+    "height_css": "850px",
+    "max_height": "850px",
+    "overflow": "hidden"
+   },
+   "grade": {
+    "h": 736,
+    "scroll_h": 736,
+    "rola": false,
+    "colunas": 2,
+    "linhas": "65.8971px 326.979px 326.979px"
+   },
+   "cards": [
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    }
+   ],
+   "cortados": 0
+  }
+ },
+ {
+  "nome": "07_market_volta_uma",
+  "zoom": 1.0,
+  "rotulo_zoom": "100%",
+  "cortes": {
+   "aberto": true,
+   "modal": "market",
+   "ih": 360,
+   "iw": 704,
+   "mobile": true,
+   "caixa": [
+    8,
+    352,
+    344
+   ],
+   "fora_da_tela": false,
+   "cortes": [
+    {
+     "cls": "mk-pal-palco",
+     "h": 104,
+     "conteudo": 173
+    },
+    {
+     "cls": "mk-pal-palco",
+     "h": 104,
+     "conteudo": 173
+    }
+   ],
+   "n_cortes": 2
+  },
+  "market": {
+   "iw": 704,
+   "ih": 360,
+   "dpr": 1.25,
+   "mobile": true,
+   "versao": "1.300.2",
+   "modal": {
+    "w": 676,
+    "h": 344,
+    "top": 8,
+    "height_css": "344px",
+    "max_height": "344px",
+    "overflow": "hidden"
+   },
+   "grade": {
+    "h": 386,
+    "scroll_h": 386,
+    "rola": false,
+    "colunas": 4,
+    "linhas": "51.15px 326.65px"
+   },
+   "cards": [
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    },
+    {
+     "h": 327,
+     "natural": 327,
+     "botao_fora_px": 0
+    }
+   ],
+   "cortados": 0
+  }
+ },
+ {
+  "nome": "08_market_fechado",
+  "zoom": 1.0,
+  "rotulo_zoom": "100%",
+  "cortes": {
+   "aberto": false
+  },
+  "market": {
+   "iw": 704,
+   "ih": 360,
+   "dpr": 1.25,
+   "mobile": true,
+   "versao": "1.300.2"
+  }
+ },
+ {
+  "nome": "99_fim",
+  "zoom": 1.0,
+  "rotulo_zoom": "100%",
+  "cortes": {
+   "aberto": false
+  },
+  "market": {
+   "iw": 704,
+   "ih": 360,
+   "dpr": 1.25,
+   "mobile": true,
+   "versao": "1.300.2"
+  }
+ }
+]

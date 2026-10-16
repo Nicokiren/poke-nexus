@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carga de teste do PokeNexus</title>
+<!--
+Página de CARGA para medir desempenho sem contas reais (ferramentas/desempenho/medir.py).
+Imita o que pesa na cena do PokeIdle (campo.mjs do jogo 1.295): um canvas 2D com a resolução interna
+igual ao tamanho do palco em px CSS (o jogo faz `cv.width = clientWidth`), redesenhado INTEIRO a cada
+requestAnimationFrame, sem suavização (pixel art): chão de ladrilhos de 32 px seguindo a câmera,
+criaturas andando, números flutuando e um rótulo. Em volta, um painel de números que muda várias vezes
+por segundo e enfeites em CSS que respeitam "reduzir movimento". Abaixo de 720 px CSS de largura vira o
+layout de celular (como o jogo). Não é o jogo e não fala com servidor nenhum.
+-->
+<style>
+  html, body { margin: 0; height: 100%; background: #1d1620; color: #f2e6d0; font: 14px sans-serif; overflow: hidden; }
+  #palco { position: absolute; left: 0; top: 0; right: 300px; bottom: 0; }
+  #cena { width: 100%; height: 100%; display: block; image-rendering: pixelated; }
+  #lado { position: absolute; top: 0; right: 0; bottom: 0; width: 300px; display: flex; flex-direction: column; gap: 8px;
+          padding: 8px; box-sizing: border-box; background: #2b2030; }
+  .caixa { border: 3px solid #6b4a3a; border-radius: 4px; padding: 6px; background: #35283a; }
+  .pisca { animation: pisca 1.2s ease-in-out infinite; }
+  .gira { display: inline-block; animation: gira 2s linear infinite; }
+  @keyframes pisca { 50% { opacity: .35; transform: scale(1.04); } }
+  @keyframes gira { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .pisca, .gira { animation: none; } }
+  @media (max-width: 720px) {
+    #palco { right: 0; bottom: 190px; }
+    #lado { top: auto; width: auto; left: 0; height: 190px; flex-direction: row; flex-wrap: wrap; }
+    .caixa { flex: 1 1 40%; }
+  }
+</style>
+</head>
+<body>
+<div id="palco"><canvas id="cena"></canvas></div>
+<div id="lado">
+  <div class="caixa pisca">Batalha <b id="n1">0</b></div>
+  <div class="caixa">XP <b id="n2">0</b> <span class="gira">*</span></div>
+  <div class="caixa">Ouro <b id="n3">0</b></div>
+  <div class="caixa pisca">Ondas <b id="n4">0</b></div>
+  <div class="caixa">Equipe <b id="n5">6</b></div>
+</div>
+<script>
+(() => {
+  const cv = document.getElementById("cena"), g = cv.getContext("2d");
+  // Atlas gerado aqui mesmo: 16 ladrilhos e 8 criaturas de 16x16 px (desenhados em 32 px, zoom 2).
+  const atlas = document.createElement("canvas"); atlas.width = 256; atlas.height = 32;
+  const a = atlas.getContext("2d");
+  let s = 7; const rnd = () => (s = (s * 16807) % 2147483647) / 2147483647;
+  for (let t = 0; t < 16; t++) for (let y = 0; y < 16; y++) for (let x = 0; x < 16; x++) {
+    const v = 60 + ((t * 13 + x * 3 + y * 5) % 40) + rnd() * 30;
+    a.fillStyle = `rgb(${v * 0.6 | 0},${v | 0},${v * 0.5 | 0})`; a.fillRect(t * 16 + x, y, 1, 1);
+  }
+  for (let c = 0; c < 8; c++) for (let y = 2; y < 14; y++) for (let x = 3; x < 13; x++) {
+    if (rnd() < 0.75) { a.fillStyle = `hsl(${c * 45},70%,${40 + rnd() * 30}%)`; a.fillRect(c * 16 + x, 16 + y, 1, 1); }
+  }
+  const MW = 120, MH = 80, T = 32;
+  const mapa = Array.from({length: MW * MH}, () => (rnd() * 16) | 0);
+  const bichos = Array.from({length: 30}, (_, i) => ({x: rnd() * MW * T, y: rnd() * MH * T, vx: rnd() * 80 - 40, vy: rnd() * 60 - 30, c: i % 8}));
+  const flut = [];
+  function medir() {   // como o jogo: resolução interna = tamanho do palco em px CSS
+    const w = Math.max(320, Math.round(cv.clientWidth)), h = Math.max(200, Math.round(cv.clientHeight));
+    if (cv.width !== w || cv.height !== h) { cv.width = w; cv.height = h; }
+  }
+  new ResizeObserver(medir).observe(cv.parentElement); medir();
+  let ant = performance.now(), cx = MW * T / 2, cy = MH * T / 2, n = 0;
+  function quadro(t) {
+    requestAnimationFrame(quadro);
+    const dt = Math.min(0.1, (t - ant) / 1000); ant = t;
+    g.imageSmoothingEnabled = false;
+    const W = cv.width, H = cv.height;
+    cx += dt * 20; cy += Math.sin(t / 3000) * dt * 15;
+    const x0 = cx - W / 2, y0 = cy - H / 2;
+    const tx0 = Math.floor(x0 / T), ty0 = Math.floor(y0 / T);
+    for (let ty = ty0; ty * T < y0 + H + T; ty++) for (let tx = tx0; tx * T < x0 + W + T; tx++) {
+      const k = mapa[((ty % MH + MH) % MH) * MW + ((tx % MW + MW) % MW)];
+      g.drawImage(atlas, k * 16, 0, 16, 16, Math.round(tx * T - x0), Math.round(ty * T - y0), T, T);
+    }
+    for (const b of bichos) {
+      b.x += b.vx * dt; b.y += b.vy * dt;
+      if (b.x < 0 || b.x > MW * T) b.vx *= -1; if (b.y < 0 || b.y > MH * T) b.vy *= -1;
+      const px = b.x - x0, py = b.y - y0;
+      if (px > -T && px < W + T && py > -T && py < H + T) g.drawImage(atlas, b.c * 16, 16, 16, 16, px | 0, py | 0, T, T);
+    }
+    if (n % 20 === 0) flut.push({x: W / 2 + (rnd() - .5) * 200, y: H / 2, v: 1.4, txt: "+" + (100 + (rnd() * 900 | 0)) + " XP"});
+    g.font = "bold 14px monospace";
+    for (let i = flut.length - 1; i >= 0; i--) {
+      const f = flut[i]; f.y -= 30 * dt; f.v -= dt;
+      if (f.v <= 0) { flut.splice(i, 1); continue; }
+      g.fillStyle = `rgba(255,207,92,${Math.min(1, f.v)})`; g.fillText(f.txt, f.x, f.y);
+    }
+    g.fillStyle = "rgba(0,0,0,.45)"; g.fillRect(8, 8, 190, 26);
+    g.fillStyle = "#f2e6d0"; g.font = "16px monospace"; g.fillText("Rota 7   onda " + (n >> 6), 14, 26);
+    n++;
+  }
+  requestAnimationFrame(quadro);
+  let v = 0;
+  setInterval(() => { v++; for (const [id, m] of [["n1", 1], ["n2", 37], ["n3", 5], ["n4", 1]]) document.getElementById(id).textContent = (v * m).toLocaleString("pt-BR"); }, 150);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1010 @@
+[
+ {
+  "tipo": "QShortcut",
+  "onde": "MainWindow._shortcuts",
+  "args": [
+   "QKeySequence(seq)",
+   "self"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "addAction",
+  "onde": "SidePanel.__init__",
+  "args": [
+   "\"Entrar aqui, na tela do jogo\"",
+   "lambda: self.action.emit(\"login_here\")"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "addAction",
+  "onde": "SidePanel.__init__",
+  "args": [
+   "\"Entrar sem automação (se a verificação falhar)\"",
+   "lambda: self.action.emit(\"login_window\")"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "Dialogo.__init__",
+  "sinal": "self.marcar.toggled",
+  "metodo": [
+   "b.setEnabled"
+  ],
+  "arquivo": "dialogos.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "Dialogo.__init__",
+  "sinal": "b.clicked",
+  "metodo": [
+   "lambda _=False, v=valor: self._fim(v)"
+  ],
+  "arquivo": "dialogos.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "Dialogo.__init__",
+  "texto": "rotulo",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "dialogos.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "SidePanel.__init__",
+  "texto": "\"Jogar eu mesmo\"",
+  "obj": "None",
+  "metodo": "emit(\"manual\")",
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "SidePanel.__init__",
+  "texto": "\"Pausar\"",
+  "obj": "None",
+  "metodo": "emit(\"pause\")",
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "SidePanel.__init__",
+  "texto": "\"Reiniciar\"",
+  "obj": "\"danger\"",
+  "metodo": "emit(\"restart\")",
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "SidePanel.__init__",
+  "texto": "\"Retomar\"",
+  "obj": "\"primary\"",
+  "metodo": "emit(\"resume\")",
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "SidePanel.__init__",
+  "texto": "\"Iniciar\"",
+  "obj": "\"primary\"",
+  "metodo": "emit(\"start\")",
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "SidePanel.__init__",
+  "texto": "\"\"",
+  "obj": "\"tool\"",
+  "metodo": "lambda: self.action.emit(\"recolher\")",
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "GameArea.__init__",
+  "texto": "\"\"",
+  "obj": "\"tool\"",
+  "metodo": "lambda: self.change_zoom(-0.1)",
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "GameArea.__init__",
+  "texto": "\"\"",
+  "obj": "\"tool\"",
+  "metodo": "lambda: self.change_zoom(0.1)",
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "GameArea.__init__",
+  "texto": "\"Celulares\"",
+  "obj": "\"tool\"",
+  "metodo": "lambda: self.layout_todas.emit(\"celulares\")",
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "GameArea.__init__",
+  "texto": "\"Grade\"",
+  "obj": "\"tool\"",
+  "metodo": "lambda: self.layout_todas.emit(\"grade\")",
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "GameArea.__init__",
+  "texto": "\"Ficha\"",
+  "obj": "\"tool\"",
+  "metodo": "lambda: self.mostrar_painel.emit()",
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "GameArea.__init__",
+  "texto": "\"Mercado\"",
+  "obj": "\"tool\"",
+  "metodo": "lambda: self.set_area(\"rmt\")",
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "GameArea.__init__",
+  "texto": "\"Jogo\"",
+  "obj": "\"tool\"",
+  "metodo": "lambda: self.set_hunts(False)",
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "GameArea.__init__",
+  "texto": "\"Hunts\"",
+  "obj": "\"tool\"",
+  "metodo": "lambda: self.set_hunts(True)",
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "MainWindow._build_header",
+  "texto": "\"Parar tudo\"",
+  "obj": "\"danger\"",
+  "metodo": "self._stop_all",
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "MainWindow._build_header",
+  "texto": "\"Começar tudo\"",
+  "obj": "\"primary\"",
+  "metodo": "self.m.start_all",
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "MainWindow._build_header",
+  "texto": "\"Ajustes\"",
+  "obj": "None",
+  "metodo": "self.open_settings",
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "GameArea.__init__",
+  "texto": "\"\"",
+  "obj": "\"tool\"",
+  "metodo": "self.reload",
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "Placeholder.__init__",
+  "texto": "\"Iniciar\"",
+  "obj": "\"primary\"",
+  "metodo": "self.start.emit",
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "MainWindow.__init__",
+  "sinal": "self.all_tab.clicked",
+  "metodo": [
+   "lambda _i: self.view_all()"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "MainWindow.__init__",
+  "sinal": "self.game.selected",
+  "metodo": [
+   "lambda i: self.select(i, keep_mode=True)"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "MainWindow.__init__",
+  "sinal": "hp.pref",
+  "metodo": [
+   "lambda k, v: (self.m.hunt_set_pref(self.selected, k, v), self._render_hunts())"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "MainWindow._build_header",
+  "sinal": "self.b_bottom.toggled",
+  "metodo": [
+   "lambda on: self.bottom.setVisible(on)"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "MainWindow._build_dashboard",
+  "sinal": "t.cellClicked",
+  "metodo": [
+   "lambda r, _c: self.select(r)"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "MainWindow.__init__",
+  "sinal": "hp.cacar",
+  "metodo": [
+   "lambda slug: self.m.go_hunt(self.selected, slug)"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "MainWindow.__init__",
+  "sinal": "self.game.mostrar_painel",
+  "metodo": [
+   "lambda: self._painel_conta(True)"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "MainWindow.__init__",
+  "sinal": "hp.recalcular",
+  "metodo": [
+   "lambda: self.m.hunt_refresh(self.selected, force=True)"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "AccountCell.__init__",
+  "sinal": "self.placeholder.start",
+  "metodo": [
+   "lambda: self.start.emit(self.index)"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "MainWindow.open_settings",
+  "sinal": "self._settings.salvo",
+  "metodo": [
+   "self._aplicar_config"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "MainWindow.__init__",
+  "sinal": "rp.guia_visto",
+  "metodo": [
+   "self._guia_mercado_visto"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "GameArea.__init__",
+  "sinal": "self._market_timer.timeout",
+  "metodo": [
+   "self._olhar_market"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "MainWindow.__init__",
+  "sinal": "self.side.action",
+  "metodo": [
+   "self._on_action"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "MainWindow.__init__",
+  "sinal": "QApplication.instance().focusChanged",
+  "metodo": [
+   "self._on_focus"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "MainWindow._build_log",
+  "sinal": "cb.toggled",
+  "metodo": [
+   "self._rerender_log"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "MainWindow.__init__",
+  "sinal": "self.game.start",
+  "metodo": [
+   "self._start_from_cell"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "MainWindow.__init__",
+  "sinal": "self.game.layout_todas",
+  "metodo": [
+   "self._trocar_layout_todas"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "MainWindow.__init__",
+  "sinal": "self.web.view_added",
+  "metodo": [
+   "self.game.add_view"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "MainWindow.__init__",
+  "sinal": "self.web.view_removed",
+  "metodo": [
+   "self.game.remove_view"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "MainWindow.__init__",
+  "sinal": "rp.parar_todos",
+  "metodo": [
+   "self.m.rmt_parar_todos"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "MainWindow.__init__",
+  "sinal": "self.timer.timeout",
+  "metodo": [
+   "self.refresh"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "MainWindow.__init__",
+  "sinal": "self.game.single",
+  "metodo": [
+   "self.select"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "MainWindow.__init__",
+  "sinal": "t.clicked",
+  "metodo": [
+   "self.select"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "GameArea.__init__",
+  "sinal": "c.clicked",
+  "metodo": [
+   "self.selected.emit"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "GameArea.__init__",
+  "sinal": "c.activated",
+  "metodo": [
+   "self.single.emit"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "GameArea.__init__",
+  "sinal": "c.start",
+  "metodo": [
+   "self.start.emit"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "MainWindow._shortcuts",
+  "sinal": "sc.activated",
+  "metodo": [
+   "slot"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "button",
+  "sinal": "b.clicked",
+  "metodo": [
+   "slot"
+  ],
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "MainWindow._build_header",
+  "texto": "\"Registro\"",
+  "obj": "None",
+  "metodo": null,
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "SidePanel.__init__",
+  "texto": "\"Login\"",
+  "obj": "None",
+  "metodo": null,
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "AccountTab.mousePressEvent",
+  "texto": null,
+  "obj": null,
+  "metodo": null,
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "AllTab.mousePressEvent",
+  "texto": null,
+  "obj": null,
+  "metodo": null,
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "button",
+  "texto": "(\" \" + text) if ico and text else text",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "atalhos+",
+  "onde": "MainWindow._shortcuts",
+  "pares": "[(a.get(\"ver_todas\"), self.view_all), (a.get(\"pausar_retomar\", \"F8\"), self._toggle_pause), (a.get(\"hunts\", \"Ctrl+H\"), lambda: self.game.set_hunts(not self.game.hunts)), (a.get(\"rmt\", \"Ctrl+M\"), self._alternar_rmt), (a.get(\"configuracoes\", \"Ctrl+,\"), self.open_settings), (a.get(\"painel_conta\", \"Ctrl+B\"), lambda: self._painel_conta(self.side.isHidden())), (\"F1\", self._ajuda)]",
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "atalhos",
+  "onde": "MainWindow._shortcuts",
+  "pares": "[(a.get(f\"conta_{i + 1}\"), lambda i=i: self.select(i)) for i in range(n)]",
+  "arquivo": "gui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "Guia._montar_caixa",
+  "sinal": "self.b_pular.clicked",
+  "metodo": [
+   "lambda: self.fechar(\"pulou\")"
+  ],
+  "arquivo": "guia.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "Guia.__init__",
+  "sinal": "painel.verticalScrollBar().valueChanged",
+  "metodo": [
+   "self._reposicionar"
+  ],
+  "arquivo": "guia.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "Guia._montar_caixa",
+  "sinal": "self.b_proximo.clicked",
+  "metodo": [
+   "self.avancar"
+  ],
+  "arquivo": "guia.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "Guia._montar_caixa",
+  "sinal": "self.b_voltar.clicked",
+  "metodo": [
+   "self.voltar"
+  ],
+  "arquivo": "guia.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "Guia._montar_caixa",
+  "texto": "\" Próximo\"",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "guia.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "Guia._montar_caixa",
+  "texto": "\" Pular guia\"",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "guia.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "Guia._montar_caixa",
+  "texto": "\" Voltar\"",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "guia.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "HuntPanel.__init__",
+  "sinal": "bt.clicked",
+  "metodo": [
+   "lambda _c=False, k=chave: self.pref.emit(\"ordem\", k)"
+  ],
+  "arquivo": "hunt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "HuntPanel.__init__",
+  "sinal": "self.cb_pocao.clicked",
+  "metodo": [
+   "lambda v: self.pref.emit(\"com_pocao\", bool(v))"
+  ],
+  "arquivo": "hunt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "HuntPanel.__init__",
+  "sinal": "self.cb_liberadas.clicked",
+  "metodo": [
+   "lambda v: self.pref.emit(\"so_liberadas\", bool(v))"
+  ],
+  "arquivo": "hunt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "HuntPanel.__init__",
+  "sinal": "self.b_cacar_top.clicked",
+  "metodo": [
+   "lambda: self._top and self.cacar.emit(self._top)"
+  ],
+  "arquivo": "hunt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "HuntPanel.__init__",
+  "sinal": "b.clicked",
+  "metodo": [
+   "self.recalcular.emit"
+  ],
+  "arquivo": "hunt_ui.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "HuntPanel.__init__",
+  "texto": "\" Caçar aqui\"",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "hunt_ui.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "HuntPanel.__init__",
+  "texto": "\" Recalcular\"",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "hunt_ui.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "HuntPanel.__init__",
+  "texto": "texto",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "hunt_ui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "_BotaoCacar.eventFilter",
+  "texto": null,
+  "obj": null,
+  "metodo": null,
+  "arquivo": "hunt_ui.py"
+ },
+ {
+  "tipo": "button",
+  "onde": "_BotaoCacar.eventFilter",
+  "texto": null,
+  "obj": null,
+  "metodo": null,
+  "arquivo": "hunt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "CartaoItem.__init__",
+  "sinal": "self.interruptor.clicked",
+  "metodo": [
+   "lambda: painel.alternar(self.iid)"
+  ],
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "CartaoItem.__init__",
+  "sinal": "self.b_editar.clicked",
+  "metodo": [
+   "lambda: painel.editar(self.iid)"
+  ],
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "CartaoItem.__init__",
+  "sinal": "self.b_remover.clicked",
+  "metodo": [
+   "lambda: painel.remover(self.iid)"
+  ],
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "RmtPanel.__init__",
+  "sinal": "self.b_adicionar.clicked",
+  "metodo": [
+   "lambda: self.editar(None)"
+  ],
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "CompraDialog.__init__",
+  "sinal": "c.toggled",
+  "metodo": [
+   "s.setEnabled"
+  ],
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "RmtPanel.__init__",
+  "sinal": "b_fechar.clicked",
+  "metodo": [
+   "self._dispensar_convite"
+  ],
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "CompraDialog.__init__",
+  "sinal": "self.busca.textChanged",
+  "metodo": [
+   "self._filtrar"
+  ],
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "RmtPanel.abrir_guia",
+  "sinal": "self._guia.fechado",
+  "metodo": [
+   "self._guia_fechou"
+  ],
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "CompraDialog.__init__",
+  "sinal": "c.toggled",
+  "metodo": [
+   "self._resumo"
+  ],
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "CompraDialog.__init__",
+  "sinal": "s.valueChanged",
+  "metodo": [
+   "self._resumo"
+  ],
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "CompraDialog.__init__",
+  "sinal": "self.moeda.currentIndexChanged",
+  "metodo": [
+   "self._resumo"
+  ],
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "CompraDialog.__init__",
+  "sinal": "s.clicked",
+  "metodo": [
+   "self._salvar"
+  ],
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "RmtPanel.__init__",
+  "sinal": "self.bloquear.toggled",
+  "metodo": [
+   "self._salvar_ajustes"
+  ],
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "RmtPanel.__init__",
+  "sinal": "self.intervalo.valueChanged",
+  "metodo": [
+   "self._salvar_ajustes"
+  ],
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "RmtPanel.__init__",
+  "sinal": "b_ver.clicked",
+  "metodo": [
+   "self.abrir_guia"
+  ],
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "RmtPanel.__init__",
+  "sinal": "self.b_guia.clicked",
+  "metodo": [
+   "self.abrir_guia"
+  ],
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "RmtPanel.__init__",
+  "sinal": "self.b_parar.clicked",
+  "metodo": [
+   "self.parar_todos.emit"
+  ],
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "CompraDialog.__init__",
+  "sinal": "c.clicked",
+  "metodo": [
+   "self.reject"
+  ],
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "CartaoItem.__init__",
+  "texto": "\"Editar\"",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "CartaoItem.__init__",
+  "texto": "\"Remover\"",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "CartaoItem.__init__",
+  "texto": "\"\"",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "CompraDialog.__init__",
+  "texto": "\"Cancelar\"",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "CompraDialog.__init__",
+  "texto": "\"Salvar\"",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "RmtPanel.__init__",
+  "texto": "\"Adicionar item\"",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "RmtPanel.__init__",
+  "texto": "\"Guia\"",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "RmtPanel.__init__",
+  "texto": "\"Parar todas as compras\"",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "RmtPanel.__init__",
+  "texto": "\"Ver o guia\"",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "RmtPanel.__init__",
+  "texto": "\"\"",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "rmt_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "SettingsDialog._pastas",
+  "sinal": "ba.clicked",
+  "metodo": [
+   "lambda _c=False, p=p: self._abrir(p)"
+  ],
+  "arquivo": "settings_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "SettingsDialog._pastas",
+  "sinal": "bc.clicked",
+  "metodo": [
+   "lambda _c=False, p=p: self.copiar(str(p))"
+  ],
+  "arquivo": "settings_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "SettingsDialog._contas",
+  "sinal": "sprite.valueChanged",
+  "metodo": [
+   "lambda v, l=previa: l.setPixmap(_icone(v))"
+  ],
+  "arquivo": "settings_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "SettingsDialog._card",
+  "sinal": "b.clicked",
+  "metodo": [
+   "lambda: self._restaurar(titulo, padrao)"
+  ],
+  "arquivo": "settings_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "SettingsDialog.__init__",
+  "sinal": "cancelar.clicked",
+  "metodo": [
+   "self.reject"
+  ],
+  "arquivo": "settings_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "SettingsDialog.__init__",
+  "sinal": "self.b_salvar.clicked",
+  "metodo": [
+   "self.salvar"
+  ],
+  "arquivo": "settings_ui.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "SettingsDialog.__init__",
+  "texto": "\" Salvar\"",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "settings_ui.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "SettingsDialog.__init__",
+  "texto": "\"Cancelar\"",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "settings_ui.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "SettingsDialog._card",
+  "texto": "\"Restaurar padrão\"",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "settings_ui.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "SettingsDialog._pastas",
+  "texto": "\" Abrir\"",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "settings_ui.py"
+ },
+ {
+  "tipo": "Botao",
+  "onde": "SettingsDialog._pastas",
+  "texto": "\" Copiar\"",
+  "obj": null,
+  "metodo": null,
+  "arquivo": "settings_ui.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "PixelSprite.set_dex",
+  "sinal": "self._movie.frameChanged",
+  "metodo": [
+   "self._render"
+  ],
+  "arquivo": "widgets.py"
+ },
+ {
+  "tipo": "connect",
+  "onde": "StatusPill.__init__",
+  "sinal": "self._timer.timeout",
+  "metodo": [
+   "self._tick"
+  ],
+  "arquivo": "widgets.py"
+ }
+]

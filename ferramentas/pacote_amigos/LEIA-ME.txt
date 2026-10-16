@@ -1,0 +1,57 @@
+POKENEXUS {VERSAO}  (versão de teste, {DATA})
+=================================================
+
+O PokeNexus abre até 4 contas do PokeIdle ao mesmo tempo, com o jogo de cada uma dentro da janela,
+e deixa elas caçando sozinhas.
+
+
+1. INSTALAR
+-----------
+- Extraia este ZIP inteiro numa pasta sua (ex.: Documentos\PokeNexus).
+  Não rode de dentro do ZIP: clique com o botão direito no ZIP > "Extrair tudo".
+- Abra a pasta PokeNexus e dê dois cliques em PokeNexus.exe.
+- Não precisa instalar nada (nem Python): tudo já vem na pasta. Só funciona no Windows 10 ou 11.
+- Se aparecer "O Windows protegeu o computador": clique em "Mais informações" e depois em
+  "Executar assim mesmo". O aviso aparece porque o programa não tem assinatura paga; ele não
+  instala nada no PC.
+- Se o antivírus reclamar, é o mesmo motivo (programa novo, sem assinatura). Libere a pasta.
+
+
+2. PRIMEIRO USO
+---------------
+- Clique em "Começar tudo" (ou "Iniciar" em cada conta).
+- Cada conta abre na tela de login do jogo: faça o login direto ali, marque "Confirme que é humano"
+  e clique em LOGAR. O login fica salvo; nas próximas vezes a conta já entra sozinha.
+- Na primeira vez de cada conta, escolha uma área no Mapa do jogo: depois disso o farm é sozinho.
+- F1 mostra os atalhos. "Ajustes" tem as opções (nomes, mascotes, Modo Leve...).
+
+
+3. REGRAS DO JOGO (importante)
+------------------------------
+- No máximo 4 contas conectadas por rede (Termos do PokeIdle). O programa não deixa passar disso.
+- Não abra a mesma conta no navegador ou no celular com o PokeNexus ligado: a sessão cai.
+- O Mercado mexe com dinheiro de verdade quando usa Gema. Leia o Guia dentro do Mercado antes.
+
+
+4. PC FRACO OU TRAVANDO?
+------------------------
+Ajustes > Desempenho > Modo Leve. Salve e feche/abra o PokeNexus (só vale ao reabrir).
+Com placa de vídeo ele continua usando a placa; sem placa, desenha do jeito mais leve para a CPU.
+
+
+5. ATUALIZAR PARA UMA VERSÃO NOVA
+---------------------------------
+Feche o PokeNexus, apague a pasta antiga do programa e extraia a nova no lugar.
+Logins e configurações NÃO ficam na pasta do programa (ficam em %LOCALAPPDATA%\PokeNexus), então
+nada se perde. Para começar do zero, feche o programa e apague essa pasta de dados.
+
+
+6. ACHOU UM PROBLEMA?
+---------------------
+- Dê dois cliques em "Juntar relatorio para enviar.bat" (nesta pasta). Ele cria o arquivo
+  PokeNexus-relatorio.zip na sua Área de Trabalho, com os registros (logs) e a configuração.
+  Ele NÃO leva seus logins nem senhas.
+- Mande esse arquivo junto com o que aconteceu, a hora e, se der, um print da tela.
+- A versão aparece no rodapé da janela (PokeNexus {VERSAO}).
+
+O PokeNexus é uma ferramenta não oficial, sem ligação com o PokeIdle.

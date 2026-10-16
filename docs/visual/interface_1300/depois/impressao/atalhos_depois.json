@@ -1,0 +1,600 @@
+[
+ {
+  "acao": "começar tudo",
+  "selecionada": 0,
+  "ver_todas": false,
+  "layout_todas": "grade",
+  "area": "jogo",
+  "ficha_visivel": true,
+  "dialogos": [],
+  "contas": [
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "AGUARDANDO"
+   ],
+   [
+    true,
+    "auto",
+    "AGUARDANDO"
+   ],
+   [
+    true,
+    "auto",
+    "AGUARDANDO"
+   ]
+  ]
+ },
+ {
+  "acao": "Ctrl+2",
+  "selecionada": 1,
+  "ver_todas": false,
+  "layout_todas": "grade",
+  "area": "jogo",
+  "ficha_visivel": true,
+  "dialogos": [],
+  "contas": [
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "AGUARDANDO"
+   ],
+   [
+    true,
+    "auto",
+    "AGUARDANDO"
+   ],
+   [
+    true,
+    "auto",
+    "AGUARDANDO"
+   ]
+  ]
+ },
+ {
+  "acao": "Ctrl+3",
+  "selecionada": 2,
+  "ver_todas": false,
+  "layout_todas": "grade",
+  "area": "jogo",
+  "ficha_visivel": true,
+  "dialogos": [],
+  "contas": [
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ]
+  ]
+ },
+ {
+  "acao": "Ctrl+4",
+  "selecionada": 3,
+  "ver_todas": false,
+  "layout_todas": "grade",
+  "area": "jogo",
+  "ficha_visivel": true,
+  "dialogos": [],
+  "contas": [
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ]
+  ]
+ },
+ {
+  "acao": "Ctrl+1",
+  "selecionada": 0,
+  "ver_todas": false,
+  "layout_todas": "grade",
+  "area": "jogo",
+  "ficha_visivel": true,
+  "dialogos": [],
+  "contas": [
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ]
+  ]
+ },
+ {
+  "acao": "Ctrl+0",
+  "selecionada": 0,
+  "ver_todas": true,
+  "layout_todas": "grade",
+  "area": "jogo",
+  "ficha_visivel": true,
+  "dialogos": [],
+  "contas": [
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ]
+  ]
+ },
+ {
+  "acao": "Celulares",
+  "selecionada": 0,
+  "ver_todas": true,
+  "layout_todas": "celulares",
+  "area": "jogo",
+  "ficha_visivel": true,
+  "dialogos": [],
+  "contas": [
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ]
+  ]
+ },
+ {
+  "acao": "Grade",
+  "selecionada": 0,
+  "ver_todas": true,
+  "layout_todas": "grade",
+  "area": "jogo",
+  "ficha_visivel": true,
+  "dialogos": [],
+  "contas": [
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ]
+  ]
+ },
+ {
+  "acao": "Ctrl+H",
+  "selecionada": 0,
+  "ver_todas": false,
+  "layout_todas": "grade",
+  "area": "hunts",
+  "ficha_visivel": true,
+  "dialogos": [],
+  "contas": [
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ]
+  ]
+ },
+ {
+  "acao": "Ctrl+H",
+  "selecionada": 0,
+  "ver_todas": false,
+  "layout_todas": "grade",
+  "area": "jogo",
+  "ficha_visivel": true,
+  "dialogos": [],
+  "contas": [
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ]
+  ]
+ },
+ {
+  "acao": "Ctrl+M",
+  "selecionada": 0,
+  "ver_todas": false,
+  "layout_todas": "grade",
+  "area": "rmt",
+  "ficha_visivel": true,
+  "dialogos": [],
+  "contas": [
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ]
+  ]
+ },
+ {
+  "acao": "Ctrl+M",
+  "selecionada": 0,
+  "ver_todas": false,
+  "layout_todas": "grade",
+  "area": "jogo",
+  "ficha_visivel": true,
+  "dialogos": [],
+  "contas": [
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ]
+  ]
+ },
+ {
+  "acao": "Ctrl+B",
+  "selecionada": 0,
+  "ver_todas": false,
+  "layout_todas": "grade",
+  "area": "jogo",
+  "ficha_visivel": false,
+  "dialogos": [],
+  "contas": [
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ]
+  ]
+ },
+ {
+  "acao": "Ctrl+B",
+  "selecionada": 0,
+  "ver_todas": false,
+  "layout_todas": "grade",
+  "area": "jogo",
+  "ficha_visivel": true,
+  "dialogos": [],
+  "contas": [
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ]
+  ]
+ },
+ {
+  "acao": "F8",
+  "selecionada": 0,
+  "ver_todas": false,
+  "layout_todas": "grade",
+  "area": "jogo",
+  "ficha_visivel": true,
+  "dialogos": [],
+  "contas": [
+   [
+    true,
+    "pausado",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ]
+  ]
+ },
+ {
+  "acao": "F8",
+  "selecionada": 0,
+  "ver_todas": false,
+  "layout_todas": "grade",
+  "area": "jogo",
+  "ficha_visivel": true,
+  "dialogos": [],
+  "contas": [
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ]
+  ]
+ },
+ {
+  "acao": "Ctrl+,",
+  "selecionada": 0,
+  "ver_todas": false,
+  "layout_todas": "grade",
+  "area": "jogo",
+  "ficha_visivel": true,
+  "dialogos": [
+   "Ajustes do PokeNexus"
+  ],
+  "contas": [
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ]
+  ]
+ },
+ {
+  "acao": "F1",
+  "selecionada": 0,
+  "ver_todas": false,
+  "layout_todas": "grade",
+  "area": "jogo",
+  "ficha_visivel": true,
+  "dialogos": [
+   "Ajustes do PokeNexus",
+   "Atalhos e ajuda"
+  ],
+  "contas": [
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ],
+   [
+    true,
+    "auto",
+    "SESSÃO EXPIRADA"
+   ]
+  ]
+ },
+ {
+  "acao": "Parar tudo",
+  "selecionada": 0,
+  "ver_todas": false,
+  "layout_todas": "grade",
+  "area": "jogo",
+  "ficha_visivel": true,
+  "dialogos": [
+   "Ajustes do PokeNexus",
+   "Atalhos e ajuda",
+   "Parar tudo?"
+  ],
+  "contas": [
+   [
+    false,
+    "auto",
+    "OFFLINE"
+   ],
+   [
+    false,
+    "auto",
+    "OFFLINE"
+   ],
+   [
+    false,
+    "auto",
+    "OFFLINE"
+   ],
+   [
+    false,
+    "auto",
+    "OFFLINE"
+   ]
+  ]
+ }
+]

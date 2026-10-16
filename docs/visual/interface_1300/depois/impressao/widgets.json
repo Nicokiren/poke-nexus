@@ -1,0 +1,859 @@
+{
+ "janela": [
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "danger",
+   "texto": "Parar tudo",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "primary",
+   "texto": "Adicionar item",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "primary",
+   "texto": "Caçar aqui",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "primary",
+   "texto": "Começar tudo",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "primary",
+   "texto": "Iniciar Conta 1",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "primary",
+   "texto": "Iniciar Conta 2",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "primary",
+   "texto": "Iniciar Conta 3",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "primary",
+   "texto": "Iniciar Conta 4",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Ver o guia",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "primary",
+   "texto": "Iniciar",
+   "dica": "Abre a sessão desta conta e começa o farm",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "",
+   "dica": "Aumentar o zoom do jogo",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "",
+   "texto": "Login",
+   "dica": "Como entrar na conta",
+   "checavel": false,
+   "ligados_clicked": 0,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "primary",
+   "texto": "Retomar",
+   "dica": "Confere o estado atual do jogo e volta a automatizar (F8)",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "danger",
+   "texto": "Parar todas as compras",
+   "dica": "Desliga todos os itens da lista, em todas as contas",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "",
+   "dica": "Diminuir o zoom do jogo",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "",
+   "dica": "Dispensar",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "",
+   "dica": "Esconder a ficha: o jogo fica maior (volta pelo botão \"Ficha\" em cima do jogo, ou Ctrl+B)",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "danger",
+   "texto": "Reiniciar",
+   "dica": "Fecha e reabre a sessão desta conta",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Guia",
+   "dica": "Mostra, passo a passo, para que serve cada parte do Mercado",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Ficha",
+   "dica": "Mostrar a ficha do treinador (Ctrl+B)",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "",
+   "texto": "Ajustes",
+   "dica": "Opções do programa, pastas (dados, perfis e logs) e Modo Leve (Ctrl+,). Abrir não para nenhuma conta",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "",
+   "texto": "Jogar eu mesmo",
+   "dica": "Para a automação SÓ desta conta; você joga direto na tela ao lado",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "",
+   "texto": "Pausar",
+   "dica": "Pausa a automação desta conta (F8)",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Recalcular",
+   "dica": "Recalcula agora (o cálculo já se refaz sozinho quando algo da conta muda)",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "",
+   "dica": "Recarregar a página da conta selecionada",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "QAbstractButton",
+   "obj": "qt_tableview_cornerbutton",
+   "texto": "",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "QAbstractButton",
+   "obj": "qt_tableview_cornerbutton",
+   "texto": "",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "_ModeloBotao",
+   "obj": "tool",
+   "texto": "Caçar",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 0,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Abates/h",
+   "dica": "",
+   "checavel": true,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Ouro/h",
+   "dica": "",
+   "checavel": true,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Risco",
+   "dica": "",
+   "checavel": true,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "XP/h",
+   "dica": "",
+   "checavel": true,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Celulares",
+   "dica": "As contas em pé, lado a lado, cada uma no layout de celular do próprio jogo (nada recarrega)",
+   "checavel": true,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Hunts",
+   "dica": "Hunt Analyzer: as melhores hunts para o pokémon em campo desta conta (Ctrl+H alterna)",
+   "checavel": true,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Mercado",
+   "dica": "Mercado da Comunidade (RMT): compra e venda automáticas desta conta, com simulação e limites",
+   "checavel": true,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Jogo",
+   "dica": "Mostra o jogo (Ctrl+H alterna)",
+   "checavel": true,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "",
+   "texto": "Registro",
+   "dica": "Mostra/esconde o dashboard e o log (esconder deixa mais espaço para o jogo)",
+   "checavel": true,
+   "ligados_clicked": 0,
+   "ligados_toggled": 1
+  },
+  {
+   "tela": "janela",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Grade",
+   "dica": "Todas as contas em grade, com o jogo de computador",
+   "checavel": true,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "QCheckBox",
+   "obj": "",
+   "texto": "Mostrar batalhas",
+   "dica": "",
+   "checavel": true,
+   "ligados_clicked": 0,
+   "ligados_toggled": 1
+  },
+  {
+   "tela": "janela",
+   "classe": "QCheckBox",
+   "obj": "",
+   "texto": "Só conta selecionada",
+   "dica": "",
+   "checavel": true,
+   "ligados_clicked": 0,
+   "ligados_toggled": 1
+  },
+  {
+   "tela": "janela",
+   "classe": "QCheckBox",
+   "obj": "",
+   "texto": "Considerar poção automática",
+   "dica": "Com a poção automática ligada, só morre quem leva um golpe maior que o HP inteiro",
+   "checavel": true,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "QCheckBox",
+   "obj": "",
+   "texto": "Mostrar apenas hunts disponíveis",
+   "dica": "Desmarcado: mostra todas, inclusive as que exigem um nível de treinador maior",
+   "checavel": true,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "janela",
+   "classe": "QCheckBox",
+   "obj": "",
+   "texto": "Nunca comprar anúncio das minhas outras contas do PokeNexus",
+   "dica": "Os Termos do PokeIdle permitem negociar entre as suas contas pelo Mercado; com isto ligado o Mercado nunca faz isso sozinho (evita pagar taxa à toa)",
+   "checavel": true,
+   "ligados_clicked": 0,
+   "ligados_toggled": 1
+  }
+ ],
+ "atalhos": [
+  "Ctrl+,",
+  "Ctrl+0",
+  "Ctrl+1",
+  "Ctrl+2",
+  "Ctrl+3",
+  "Ctrl+4",
+  "Ctrl+B",
+  "Ctrl+H",
+  "Ctrl+M",
+  "F1",
+  "F8"
+ ],
+ "ajustes": [
+  {
+   "tela": "ajustes",
+   "classe": "Botao",
+   "obj": "",
+   "texto": "Cancelar",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "Botao",
+   "obj": "primary",
+   "texto": "Abrir",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "Botao",
+   "obj": "primary",
+   "texto": "Salvar",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Abrir",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Abrir",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Abrir",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Abrir",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Abrir",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Abrir",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Copiar",
+   "dica": "Copia o caminho",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Copiar",
+   "dica": "Copia o caminho",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Copiar",
+   "dica": "Copia o caminho",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Copiar",
+   "dica": "Copia o caminho",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Copiar",
+   "dica": "Copia o caminho",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Copiar",
+   "dica": "Copia o caminho",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Copiar",
+   "dica": "Copia o caminho",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Restaurar padrão",
+   "dica": "Volta os valores desta seção para o padrão (só grava ao clicar em Salvar)",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Restaurar padrão",
+   "dica": "Volta os valores desta seção para o padrão (só grava ao clicar em Salvar)",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Restaurar padrão",
+   "dica": "Volta os valores desta seção para o padrão (só grava ao clicar em Salvar)",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Restaurar padrão",
+   "dica": "Volta os valores desta seção para o padrão (só grava ao clicar em Salvar)",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Restaurar padrão",
+   "dica": "Volta os valores desta seção para o padrão (só grava ao clicar em Salvar)",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "Botao",
+   "obj": "tool",
+   "texto": "Restaurar padrão",
+   "dica": "Volta os valores desta seção para o padrão (só grava ao clicar em Salvar)",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "QToolButton",
+   "obj": "",
+   "texto": "",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "QToolButton",
+   "obj": "",
+   "texto": "",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "QToolButton",
+   "obj": "",
+   "texto": "",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "QToolButton",
+   "obj": "",
+   "texto": "",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "QToolButton",
+   "obj": "",
+   "texto": "",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "QToolButton",
+   "obj": "",
+   "texto": "",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "QToolButton",
+   "obj": "",
+   "texto": "",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "QToolButton",
+   "obj": "",
+   "texto": "",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "QToolButton",
+   "obj": "",
+   "texto": "",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "QToolButton",
+   "obj": "",
+   "texto": "",
+   "dica": "",
+   "checavel": false,
+   "ligados_clicked": 2,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "QCheckBox",
+   "obj": "",
+   "texto": "",
+   "dica": "",
+   "checavel": true,
+   "ligados_clicked": 0,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "QCheckBox",
+   "obj": "",
+   "texto": "",
+   "dica": "",
+   "checavel": true,
+   "ligados_clicked": 0,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "QCheckBox",
+   "obj": "",
+   "texto": "",
+   "dica": "",
+   "checavel": true,
+   "ligados_clicked": 0,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "QCheckBox",
+   "obj": "",
+   "texto": "",
+   "dica": "",
+   "checavel": true,
+   "ligados_clicked": 0,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "QCheckBox",
+   "obj": "",
+   "texto": "Escrever cada batalha no log",
+   "dica": "",
+   "checavel": true,
+   "ligados_clicked": 0,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "QCheckBox",
+   "obj": "",
+   "texto": "Iniciar as contas ativas ao abrir o programa",
+   "dica": "",
+   "checavel": true,
+   "ligados_clicked": 0,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "QCheckBox",
+   "obj": "",
+   "texto": "Modo Leve",
+   "dica": "",
+   "checavel": true,
+   "ligados_clicked": 0,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "QCheckBox",
+   "obj": "",
+   "texto": "Reabrir a sessão sozinho se a página travar",
+   "dica": "",
+   "checavel": true,
+   "ligados_clicked": 0,
+   "ligados_toggled": 0
+  },
+  {
+   "tela": "ajustes",
+   "classe": "QCheckBox",
+   "obj": "",
+   "texto": "Voltar para a hunt depois de um nocaute",
+   "dica": "",
+   "checavel": true,
+   "ligados_clicked": 0,
+   "ligados_toggled": 0
+  }
+ ]
+}
