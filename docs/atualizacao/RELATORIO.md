@@ -40,7 +40,7 @@ publicado. Nenhuma conta real: todas as pastas de dados foram temporárias (as c
 | 7 | regressão: farm com a faixa aberta e durante o download | **ok**: 4 contas rodando; idade máxima do `heartbeat` 2,99 s (as contas checam a cada 3 s; o vigia só age acima de 150 s); atraso máximo da thread da tela 9,7 ms; download de 34,6 s com SHA ok | `prints/7a_faixa_com_4_contas.png`, `7b_baixando_*.png`, `prints/7_medidas.json` |
 | 7 | pastas proibidas | **ok**: `workers/`, `game/`, `rmt/`, `hunts/`, `browser/` com os mesmos SHA-256 da linha de base (`docs/visual/interface_1300/linha_de_base/hashes.json`): 21 arquivos, 0 diferentes, 0 novos | |
 | — | Trava 2 (fumaça) local | **ok**: "abriu, ficou 25 s de pé, sem crash.log, fechou e não sobrou processo" | |
-| 8 | publicar de verdade no GitHub | **pendente: precisa do OK do usuário** | |
+| 8 | publicar de verdade no GitHub (com o OK do usuário) | **ok**: o commit `d6562ba` na `main` rodou o Actions (execução nº 1, sucesso: Trava 1, build, Trava 2, ZIP, instalador) e criou a Release **v1.1.1** "Latest" com `PokeNexus-Setup-1.1.1.exe` (95,6 MB), `PokeNexus-1.1.1.zip` (138,4 MB) e `SHA256SUMS.txt`; os dois arquivos baixados do GitHub conferem com o SHA256SUMS; o download real redireciona para `release-assets.githubusercontent.com` (aceito pelo programa). Um commit com `[sem atualização]` não publicou (ver abaixo) | https://github.com/PauloAfonsoGR/poke-nexus/releases/tag/v1.1.1 |
 
 ## Defeito achado e corrigido durante os testes
 
