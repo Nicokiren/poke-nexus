@@ -1,7 +1,7 @@
 # Versões EXATAS do build de publicação (GitHub Actions): as mesmas do .venv do desenvolvedor, para o
 # programa da Release ser igual ao testado aqui. O PokeNexus.spec escolhe DLLs do Qt pelo nome; um
 # PySide6 mais novo pode mudar isso. Ao atualizar o .venv, atualize aqui (pip freeze).
-# Conferido na primeira Release (v1.1.1, 16/10/2026).
+# Conferido na primeira Release (v1.1.1, 16/10/2026) e no teste do aviso de atualização.
 PySide6==6.12.0
 PySide6_Addons==6.12.0
 PySide6_Essentials==6.12.0
