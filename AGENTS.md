@@ -31,6 +31,12 @@ App desktop para Windows (Python 3.11+, PySide6/Qt WebEngine) que roda até **4 
   `app/widgets.py`, `app/hunt_ui.py` (Hunt Analyzer), `app/rmt_ui.py` + `rmt/` (RMT/Mercado),
   `app/settings_ui.py` + `app/config_edit.py` (Configurações; grava o `config.toml` mantendo os
   comentários).
+- Calculadora de Gemas no Mercado (16/10/2026): `app/conversor_gemas.py` (a conta, com `Decimal`, sem Qt;
+  teste em `ferramentas/calculadora/teste_conta.py`) + `CalculadoraGemas` em `app/rmt_ui.py` (recolhida no
+  cartão do Saldo, botão "Calculadora", escolha do usuário; mascote Meowth Nº 52; falas em
+  `app/textos_guia.py` `FRASES_MEOWTH`). **A taxa da calculadora é a de referência do usuário
+  (1.000 Gemas = US$ 9,00), num lugar só (`GEMAS_REF`, `CENTAVOS_REF`)**: não use o preço do jogo
+  (`welcome.economia`) nem espalhe o número pelo código. Ela só calcula: não compra, não grava, sem rede.
 - `hunts/` — motor do Hunt Analyzer; `hunts/bridge.js` usa os módulos do próprio jogo.
 - Modo Leve: só a opção `[desempenho] modo_leve` nas Configurações (vale ao reiniciar). **Não existe**
   mais executável separado "Leve" — o usuário não quer. **Leve 2.0** (`browser/web_host.py`): NÃO
@@ -144,5 +150,8 @@ App desktop para Windows (Python 3.11+, PySide6/Qt WebEngine) que roda até **4 
 7. Instalador + aviso de atualização — **feito no código e testado na máquina** (16/10/2026), relatório
    em `docs/atualizacao/RELATORIO.md`. Falta a primeira publicação de verdade no GitHub (teste 8, com o
    OK do usuário).
+
+8. Calculadora Gemas ⇄ Dólares no Mercado — **feita e testada** (16/10/2026), relatório em
+   `docs/visual/calculadora/RELATORIO.md`. Falta só o push (com o OK do usuário: publica atualização).
 
 Prompts antigos já executados: `PROMPT_CONFIG_MODO_LEVE.md`, `PROMPT_RMT_VERTICAL.md`.

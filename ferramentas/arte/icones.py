@@ -260,6 +260,18 @@ ACOES["guia"] = """
 ...oooo...
 .........."""
 ACOES["mostrar"] ="\n".join(linha[::-1] for linha in ACOES["recolher"].split("\n"))
+# duas setas, uma para cada lado (inverter a conta da calculadora do Mercado)
+ACOES["inverter"] = """
+.....oo...
+oooooolo..
+oiiiiiiio.
+oooooolo..
+.....oo...
+...oo.....
+..oioooooo
+.oiiiiiiio
+..oioooooo
+...oo....."""
 
 # Ícones de status (cada um pintado com a cor do status).
 STATUS = {

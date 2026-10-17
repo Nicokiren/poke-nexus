@@ -9,17 +9,20 @@ Gema: dinheiro de verdade, com uma caixa para marcar).
 import time
 
 from PySide6.QtCore import Qt, Signal
+from PySide6.QtGui import QColor, QPainter, QValidator
 from PySide6.QtWidgets import (QCheckBox, QComboBox, QDialog, QFormLayout, QFrame, QGridLayout, QHBoxLayout,
-                               QLabel, QLineEdit, QListWidget, QListWidgetItem, QScrollArea, QSpinBox, QVBoxLayout,
-                               QWidget)
+                               QLabel, QLineEdit, QListWidget, QListWidgetItem, QScrollArea, QSizePolicy, QSpinBox,
+                               QVBoxLayout, QWidget)
 
+from app import conversor_gemas as cg
+from app.config import MODO_LEVE
 from app.dialogos import avisar, perguntar
 from app.guia import Guia
 from app.icones import TAM as ICO_TAM, icone, por_nome_do_botao
 from app.molduras import Botao, Moldura
-from app.tema import T, carregar_fontes, qss_campos, qss_dialogo
+from app.tema import T, carregar_fontes, px, qss_campos, qss_dialogo
 from app.textos_guia import CONVITE_MERCADO, MERCADO as PASSOS_GUIA
-from app.widgets import travar_roda
+from app.widgets import PixelSprite, travar_roda
 from rmt.compras import ErroItem, ItemCompra, validar_item
 from rmt.regras import NOME_MOEDA
 from rmt.rotina import INTERVALO_MIN_S, INTERVALO_PADRAO_S
@@ -274,11 +277,200 @@ class CartaoItem(Moldura):
                                 f"Total: {num(item.comprado_total)} comprados, {num(item.gasto_total)} {m} gastos.{ultima}")
 
 
+# ============================================================ calculadora Gemas ⇄ dólares
+class _Numero(QValidator):
+    """Só deixa digitar o que app/conversor_gemas.py aceita (o resto o campo simplesmente não aceita)."""
+
+    def __init__(self, dolares: bool, parent=None):
+        super().__init__(parent)
+        self.dolares = dolares
+
+    def validate(self, texto, pos):
+        ok = cg.entrada_valida(texto, self.dolares)
+        return (QValidator.Acceptable if ok else QValidator.Invalid), texto, pos
+
+
+class _Mascote(PixelSprite):
+    """O Meowth da calculadora: anima como os outros mascotes, mas só com o Mercado à vista (escondido,
+    animar é trabalho à toa). No Modo Leve fica parado no 1º quadro (o PixelSprite já faz isso)."""
+
+    def _aplicar_pausa(self):
+        if self._movie and not MODO_LEVE:
+            self._movie.setPaused(not self._active or PixelSprite._pausa_global or not self.isVisible())
+
+    def showEvent(self, ev):
+        super().showEvent(ev)
+        self._aplicar_pausa()
+
+    def hideEvent(self, ev):
+        super().hideEvent(ev)
+        self._aplicar_pausa()
+
+
+class Balao(QLabel):
+    """Balão de fala do mascote, em pixel: corpo creme com contorno e um rabinho de degraus para a esquerda."""
+    RABO = 8
+
+    def __init__(self):
+        super().__init__()
+        self.setStyleSheet(f"color:{T['sobre_destaque']}; font-size:12px; font-weight:800; background:transparent;")
+        self.setContentsMargins(self.RABO + 8, 3, 10, 5)
+        self.setSizePolicy(QSizePolicy.Maximum, QSizePolicy.Fixed)
+
+    def paintEvent(self, ev):
+        p = QPainter(self)
+        w, h, r = self.width(), self.height(), self.RABO
+        borda, miolo = QColor(T["filete"]), QColor(T["texto"])
+        p.fillRect(r + 2, 0, w - r - 4, h, borda)          # corpo, com os cantos de pixel cortados
+        p.fillRect(r, 2, w - r, h - 4, borda)
+        p.fillRect(r + 2, 2, w - r - 4, h - 4, miolo)
+        cy = h // 2 - 1                                      # o rabinho aponta para o Meowth
+        p.fillRect(4, cy - 4, r - 2, 2, borda)
+        p.fillRect(2, cy - 2, 2, 2, borda)
+        p.fillRect(0, cy, 2, 2, borda)
+        p.fillRect(2, cy + 2, 2, 2, borda)
+        p.fillRect(4, cy + 4, r - 2, 2, borda)
+        p.fillRect(4, cy - 2, r, 2, miolo)
+        p.fillRect(2, cy, r + 2, 2, miolo)
+        p.fillRect(4, cy + 2, r, 2, miolo)
+        p.end()
+        super().paintEvent(ev)
+
+
+class CalculadoraGemas(Moldura):
+    """Gemas ⇄ dólares pela taxa de referência do usuário (app/conversor_gemas.py, num lugar só).
+
+    SÓ CALCULA: não compra, não vende, não liga item, não mexe em Gema, USDT, carteira ou Pix, não grava
+    nada em disco e não acessa a internet. A única coisa que lê é o saldo de Gemas que o painel já mostra
+    (ficha "Meu saldo"). Digitar num campo atualiza o outro; o botão de setas troca qual fica de entrada."""
+
+    def __init__(self):
+        super().__init__()
+        self.setObjectName("card")
+        self._saldo: int | None = None
+        v = QVBoxLayout(self)
+        v.setContentsMargins(14, 10, 14, 12)
+        v.setSpacing(6)
+        v.addWidget(_rot("Calculadora de Gemas", "cardTitle"))
+
+        meio = QHBoxLayout()
+        meio.setSpacing(10)
+        self.mascote = _Mascote(52, 56)                      # Meowth, o Pokémon que vive atrás de moedas
+        meio.addWidget(self.mascote, 0, Qt.AlignTop)        # ao lado do balão (o rabinho aponta para ele)
+        col = QVBoxLayout()
+        col.setSpacing(4)
+        self.balao = Balao()
+        col.addWidget(self.balao, 0, Qt.AlignLeft)
+        self.campos = QHBoxLayout()
+        self.campos.setSpacing(6)
+        self.c_gemas, self.e_gemas = self._campo("Gemas", False)
+        self.c_dolares, self.e_dolares = self._campo("Dólares (US$)", True)
+        self.b_inverter = Botao("")
+        self.b_inverter.setIcon(icone("inverter"))
+        self.b_inverter.setIconSize(ICO_TAM)
+        self.b_inverter.setObjectName("tool")
+        self.b_inverter.setCursor(Qt.PointingHandCursor)
+        self.b_inverter.setToolTip("Inverter: troca qual campo é a entrada")
+        self.b_inverter.clicked.connect(self.inverter)
+        self.campos.addWidget(self.c_gemas, 1)
+        self.campos.addWidget(self.b_inverter, 0, Qt.AlignBottom)
+        self.campos.addWidget(self.c_dolares, 1)
+        col.addLayout(self.campos)
+        meio.addLayout(col, 1)
+        v.addLayout(meio)
+
+        fichas = QHBoxLayout()
+        fichas.setSpacing(6)
+        for n in (100, 1000, 10_000):
+            b = Botao(cg.formatar_gemas(n))
+            b.setObjectName("tool")
+            b.setToolTip(f"{cg.formatar_gemas(n)} Gemas")
+            b.clicked.connect(lambda _=False, n=n: self.usar_gemas(n))
+            fichas.addWidget(b)
+        self.b_saldo = Botao("Meu saldo")
+        self.b_saldo.setObjectName("tool")
+        self.b_saldo.clicked.connect(lambda: self._saldo is not None and self.usar_gemas(self._saldo))
+        fichas.addWidget(self.b_saldo)
+        fichas.addStretch()
+        for b in (fichas.itemAt(i).widget() for i in range(fichas.count())):
+            if b:
+                b.setCursor(Qt.PointingHandCursor)
+        v.addLayout(fichas)
+
+        base = QHBoxLayout()
+        base.addWidget(_rot(cg.taxa_txt(), None, f"color:{T['texto']}; font-size:12px; font-weight:800;"))
+        base.addStretch()
+        base.addWidget(_rot("Valor de referência. Não é cotação nem saque.", "muted", "font-size:11px;"))
+        v.addLayout(base)
+        self.set_saldo(None)
+        self._calcular("gemas")
+
+    def _campo(self, rotulo: str, dolares: bool):
+        caixa = QWidget()
+        cv = QVBoxLayout(caixa)
+        cv.setContentsMargins(0, 0, 0, 0)
+        cv.setSpacing(2)
+        cv.addWidget(_rot(rotulo, "muted", "font-size:11px; font-weight:700;"))
+        e = QLineEdit()
+        e.setAccessibleName(rotulo)                # leitores de tela (e a automação dos testes) acham pelo nome
+        e.setValidator(_Numero(dolares, e))
+        e.setPlaceholderText("0,00" if dolares else "0")
+        e.setStyleSheet(px(30))                    # números na fonte de pixel (uma vez só, aqui)
+        e.setMinimumWidth(110)
+        e.setToolTip("Dólares, com vírgula (até 2 casas)" if dolares else "Gemas (números inteiros)")
+        e.textEdited.connect(lambda _t, q="dolares" if dolares else "gemas": self._calcular(q))
+        cv.addWidget(e)
+        return caixa, e
+
+    # ------------------------------------------------------------ a conta
+    def _calcular(self, fonte: str):
+        """`fonte` é o campo que a pessoa mexeu; só o texto do outro muda (nada de estilo novo)."""
+        if fonte == "gemas":
+            texto = self.e_gemas.text()
+            d = cg.gemas_para_dolares(cg.ler_gemas(texto))
+            self.e_dolares.setText(cg.formatar_dolares(d) if texto else "")
+        else:
+            texto = self.e_dolares.text()
+            d = cg.ler_dolares(texto)
+            self.e_gemas.setText(cg.formatar_gemas(cg.dolares_para_gemas(d)) if texto else "")
+        self.balao.setText(cg.frase_do_mascote(d))
+
+    def usar_gemas(self, gemas: int):
+        self.e_gemas.setText(cg.formatar_gemas(max(0, int(gemas))))
+        self._calcular("gemas")
+
+    def inverter(self):
+        """Troca os campos de lugar: o da esquerda vira a entrada (recebe o cursor). Os números ficam."""
+        esq, dir_ = self.campos.itemAt(0).widget(), self.campos.itemAt(2).widget()
+        self.campos.removeWidget(esq)
+        self.campos.removeWidget(dir_)
+        self.campos.insertWidget(0, dir_, 1)
+        self.campos.addWidget(esq, 1)
+        e = self.e_gemas if dir_ is self.c_gemas else self.e_dolares
+        e.setFocus(Qt.OtherFocusReason)
+        e.selectAll()
+
+    def entrada(self) -> str:
+        """Qual campo está à esquerda (a entrada): "gemas" ou "dolares"."""
+        return "gemas" if self.campos.itemAt(0).widget() is self.c_gemas else "dolares"
+
+    def set_saldo(self, gemas):
+        """As Gemas da conta selecionada que o painel já mostra (None = sem conta conectada)."""
+        gemas = None if gemas is None else int(gemas)
+        if gemas == self._saldo and self.b_saldo.toolTip():
+            return
+        self._saldo = gemas
+        self.b_saldo.setEnabled(gemas is not None)
+        self.b_saldo.setToolTip("Conecte a conta para usar o saldo dela" if gemas is None
+                                else f"Usa as Gemas desta conta ({cg.formatar_gemas(gemas)})")
+
+
 # ============================================================ o painel
 class RmtPanel(QScrollArea):
     """Os sinais levam a conta junto: o painel nunca mistura uma conta com outra."""
     parar_todos = Signal()         # desliga todas as compras, em todas as contas
     guia_visto = Signal()          # a pessoa já viu (ou dispensou) o guia
+    _calc_aberta = False           # calculadora aberta ou fechada: só na memória (não vai para o config.toml)
 
     def __init__(self):
         super().__init__()
@@ -359,6 +551,23 @@ class RmtPanel(QScrollArea):
         cl.addWidget(self.situacao)
         lay.addWidget(c)
 
+        # a calculadora de Gemas, perto do Saldo (os dois falam de dinheiro). Começa recolhida (escolha do
+        # usuário, 16/10/2026): o botão Calculadora no Saldo abre e fecha, e lembra só enquanto o programa
+        # está aberto. Fechada, o Mercado fica como era.
+        self.b_calc = Botao("Calculadora")
+        _ico(self.b_calc, "inverter")
+        self.b_calc.setObjectName("tool")
+        self.b_calc.setCheckable(True)
+        self.b_calc.setCursor(Qt.PointingHandCursor)
+        self.b_calc.setToolTip("Mostra ou esconde a calculadora de Gemas")
+        self.b_calc.toggled.connect(self._mostrar_calc)
+        linha.addWidget(self.b_calc, 0, Qt.AlignTop)
+        self.calc = CalculadoraGemas()
+        self.calc.setMaximumWidth(640)                       # em tela larga os campos não esticam à toa
+        self.calc.hide()
+        lay.addWidget(self.calc, 0, Qt.AlignLeft)
+        self.b_calc.setChecked(RmtPanel._calc_aberta)
+
         # a lista de compras
         c, cl = _card("Lista de compras")
         self.card_lista = c
@@ -418,6 +627,7 @@ class RmtPanel(QScrollArea):
         return {
             "topo": [self._titulo, self._descricao],
             "saldo": [self.card_saldo],
+            "calculadora": [self.calc] if self.calc.isVisible() else [self.b_calc],   # fechada: o botão dela
             "adicionar": [self.b_adicionar],
             "interruptor": [primeiro.interruptor] if primeiro else [self.b_adicionar],
             "limites": [primeiro.limites] if primeiro else [self.vazio],
@@ -442,6 +652,10 @@ class RmtPanel(QScrollArea):
     def _guia_fechou(self, _motivo):
         self._guia = None
 
+    def _mostrar_calc(self, aberta: bool):
+        RmtPanel._calc_aberta = aberta
+        self.calc.setVisible(aberta)
+
     # ------------------------------------------------------------ desenho
     def render(self, conta: int, worker):
         """Atualiza a tela (chamado a cada atualização; só refaz os cartões quando a lista muda)."""
@@ -459,6 +673,7 @@ class RmtPanel(QScrollArea):
             self.bloquear.blockSignals(False)
         s = v["saldo"]
         self.saldo.setText(f"{num(s['gold'])} ouro  {num(s['orb'])} gema")
+        self.calc.set_saldo(s["orb"] if v["conectada"] else None)
         parada = rot._conta_parada() if any(i.ligado for i in v["itens"]) else None
         if not v["conectada"]:
             sit, cor = "A conta não está conectada: inicie a conta para o Mercado poder comprar.", T["dim"]

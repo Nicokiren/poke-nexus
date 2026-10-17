@@ -1,0 +1,3085 @@
+{
+ "tem_calculadora": false,
+ "passos": [
+  {
+   "passo": "inicio",
+   "conta": 0,
+   "area": "rmt",
+   "ordem": [
+    "saldo",
+    "lista",
+    "seguranca"
+   ],
+   "tela": [
+    [
+     "QLabel",
+     "Mercado da Comunidade",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Guia",
+     "Mostra, passo a passo, para que serve cada parte do Mercado",
+     true
+    ],
+    [
+     "Botao",
+     "Parar todas as compras",
+     "Desliga todos os itens da lista, em todas as contas",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra itens sozinho para esta conta assim que o anúncio libera, sem abrir nada na tela. Mexe com Ouro e Gema (que vale dinheiro de verdade).",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Primeira vez aqui? Veja o guia do Mercado.",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Ver o guia",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "",
+     "Dispensar",
+     true
+    ],
+    [
+     "QLabel",
+     "Saldo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "? ouro  ? gema",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "A conta não está conectada: inicie a conta para o Mercado poder comprar.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Lista de compras",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Adicionar item",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Nenhum item ainda. Clique em Adicionar item, escolha o item e o preço máximo.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Segurança e ritmo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Olhar a vitrine a cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Sem abrir nada na tela. Todo anúncio novo fica retido 2 min, então olhar a cada minuto já pega todos antes de liberar.",
+     "",
+     true
+    ],
+    [
+     "QCheckBox",
+     "Nunca comprar anúncio das minhas outras contas do PokeNexus",
+     "Os Termos do PokeIdle permitem negociar entre as suas contas pelo Mercado; com isto ligado o Mercado nunca faz isso sozinho (evita pagar taxa à toa)",
+     true
+    ],
+    [
+     "QLabel",
+     "Mudou, já vale (fica salvo no perfil desta conta).",
+     "",
+     true
+    ]
+   ],
+   "lista": []
+  },
+  {
+   "passo": "adicionou",
+   "conta": 0,
+   "area": "rmt",
+   "ordem": [
+    "saldo",
+    "lista",
+    "seguranca"
+   ],
+   "tela": [
+    [
+     "QLabel",
+     "Mercado da Comunidade",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Guia",
+     "Mostra, passo a passo, para que serve cada parte do Mercado",
+     true
+    ],
+    [
+     "Botao",
+     "Parar todas as compras",
+     "Desliga todos os itens da lista, em todas as contas",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra itens sozinho para esta conta assim que o anúncio libera, sem abrir nada na tela. Mexe com Ouro e Gema (que vale dinheiro de verdade).",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Primeira vez aqui? Veja o guia do Mercado.",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Ver o guia",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "",
+     "Dispensar",
+     true
+    ],
+    [
+     "QLabel",
+     "Saldo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "? ouro  ? gema",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "A conta não está conectada: inicie a conta para o Mercado poder comprar.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Lista de compras",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Adicionar item",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Rare Candy   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 7 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Segurança e ritmo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Olhar a vitrine a cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Sem abrir nada na tela. Todo anúncio novo fica retido 2 min, então olhar a cada minuto já pega todos antes de liberar.",
+     "",
+     true
+    ],
+    [
+     "QCheckBox",
+     "Nunca comprar anúncio das minhas outras contas do PokeNexus",
+     "Os Termos do PokeIdle permitem negociar entre as suas contas pelo Mercado; com isto ligado o Mercado nunca faz isso sozinho (evita pagar taxa à toa)",
+     true
+    ],
+    [
+     "QLabel",
+     "Mudou, já vale (fica salvo no perfil desta conta).",
+     "",
+     true
+    ]
+   ],
+   "lista": [
+    {
+     "item_id": 50,
+     "item_nome": "Rare Candy",
+     "moeda": "gold",
+     "preco_max": 7,
+     "ligado": false,
+     "lim_unidades": 5,
+     "lim_gasto": 0,
+     "lim_dia": 0,
+     "comprado_total": 0,
+     "gasto_total": 0,
+     "dia": "2026-10-16",
+     "comprado_hoje": 0,
+     "gasto_hoje": 0,
+     "ultima_compra": null,
+     "desligado_por": ""
+    }
+   ]
+  },
+  {
+   "passo": "editou",
+   "conta": 0,
+   "area": "rmt",
+   "ordem": [
+    "saldo",
+    "lista",
+    "seguranca"
+   ],
+   "tela": [
+    [
+     "QLabel",
+     "Mercado da Comunidade",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Guia",
+     "Mostra, passo a passo, para que serve cada parte do Mercado",
+     true
+    ],
+    [
+     "Botao",
+     "Parar todas as compras",
+     "Desliga todos os itens da lista, em todas as contas",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra itens sozinho para esta conta assim que o anúncio libera, sem abrir nada na tela. Mexe com Ouro e Gema (que vale dinheiro de verdade).",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Primeira vez aqui? Veja o guia do Mercado.",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Ver o guia",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "",
+     "Dispensar",
+     true
+    ],
+    [
+     "QLabel",
+     "Saldo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "? ouro  ? gema",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "A conta não está conectada: inicie a conta para o Mercado poder comprar.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Lista de compras",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Adicionar item",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Rare Candy   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 7 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Segurança e ritmo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Olhar a vitrine a cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Sem abrir nada na tela. Todo anúncio novo fica retido 2 min, então olhar a cada minuto já pega todos antes de liberar.",
+     "",
+     true
+    ],
+    [
+     "QCheckBox",
+     "Nunca comprar anúncio das minhas outras contas do PokeNexus",
+     "Os Termos do PokeIdle permitem negociar entre as suas contas pelo Mercado; com isto ligado o Mercado nunca faz isso sozinho (evita pagar taxa à toa)",
+     true
+    ],
+    [
+     "QLabel",
+     "Mudou, já vale (fica salvo no perfil desta conta).",
+     "",
+     true
+    ]
+   ],
+   "lista": [
+    {
+     "item_id": 7,
+     "item_nome": "Potion",
+     "moeda": "gold",
+     "preco_max": 12,
+     "ligado": false,
+     "lim_unidades": 5,
+     "lim_gasto": 0,
+     "lim_dia": 0,
+     "comprado_total": 0,
+     "gasto_total": 0,
+     "dia": "2026-10-16",
+     "comprado_hoje": 0,
+     "gasto_hoje": 0,
+     "ultima_compra": null,
+     "desligado_por": ""
+    }
+   ]
+  },
+  {
+   "passo": "ligou",
+   "conta": 0,
+   "area": "rmt",
+   "ordem": [
+    "saldo",
+    "lista",
+    "seguranca"
+   ],
+   "tela": [
+    [
+     "QLabel",
+     "Mercado da Comunidade",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Guia",
+     "Mostra, passo a passo, para que serve cada parte do Mercado",
+     true
+    ],
+    [
+     "Botao",
+     "Parar todas as compras",
+     "Desliga todos os itens da lista, em todas as contas",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra itens sozinho para esta conta assim que o anúncio libera, sem abrir nada na tela. Mexe com Ouro e Gema (que vale dinheiro de verdade).",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Primeira vez aqui? Veja o guia do Mercado.",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Ver o guia",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "",
+     "Dispensar",
+     true
+    ],
+    [
+     "QLabel",
+     "Saldo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "? ouro  ? gema",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "A conta não está conectada: inicie a conta para o Mercado poder comprar.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Lista de compras",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Adicionar item",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Desligue o item para editar",
+     false
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "Botao",
+     "Ligado",
+     "Clique para desligar",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Parado: a conta está sem conexão (ou na tela de login)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Segurança e ritmo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Olhar a vitrine a cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Sem abrir nada na tela. Todo anúncio novo fica retido 2 min, então olhar a cada minuto já pega todos antes de liberar.",
+     "",
+     true
+    ],
+    [
+     "QCheckBox",
+     "Nunca comprar anúncio das minhas outras contas do PokeNexus",
+     "Os Termos do PokeIdle permitem negociar entre as suas contas pelo Mercado; com isto ligado o Mercado nunca faz isso sozinho (evita pagar taxa à toa)",
+     true
+    ],
+    [
+     "QLabel",
+     "Mudou, já vale (fica salvo no perfil desta conta).",
+     "",
+     true
+    ]
+   ],
+   "lista": [
+    {
+     "item_id": 7,
+     "item_nome": "Potion",
+     "moeda": "gold",
+     "preco_max": 12,
+     "ligado": true,
+     "lim_unidades": 5,
+     "lim_gasto": 0,
+     "lim_dia": 0,
+     "comprado_total": 0,
+     "gasto_total": 0,
+     "dia": "2026-10-16",
+     "comprado_hoje": 0,
+     "gasto_hoje": 0,
+     "ultima_compra": null,
+     "desligado_por": ""
+    }
+   ]
+  },
+  {
+   "passo": "parar_todas",
+   "conta": 0,
+   "area": "rmt",
+   "ordem": [
+    "saldo",
+    "lista",
+    "seguranca"
+   ],
+   "tela": [
+    [
+     "QLabel",
+     "Mercado da Comunidade",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Guia",
+     "Mostra, passo a passo, para que serve cada parte do Mercado",
+     true
+    ],
+    [
+     "Botao",
+     "Parar todas as compras",
+     "Desliga todos os itens da lista, em todas as contas",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra itens sozinho para esta conta assim que o anúncio libera, sem abrir nada na tela. Mexe com Ouro e Gema (que vale dinheiro de verdade).",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Primeira vez aqui? Veja o guia do Mercado.",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Ver o guia",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "",
+     "Dispensar",
+     true
+    ],
+    [
+     "QLabel",
+     "Saldo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "? ouro  ? gema",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "A conta não está conectada: inicie a conta para o Mercado poder comprar.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Lista de compras",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Adicionar item",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Desligue o item para editar",
+     false
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "Botao",
+     "Ligado",
+     "Clique para desligar",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado: você clicou em Parar todas as compras",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Parado: a conta está sem conexão (ou na tela de login)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Segurança e ritmo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Olhar a vitrine a cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Sem abrir nada na tela. Todo anúncio novo fica retido 2 min, então olhar a cada minuto já pega todos antes de liberar.",
+     "",
+     true
+    ],
+    [
+     "QCheckBox",
+     "Nunca comprar anúncio das minhas outras contas do PokeNexus",
+     "Os Termos do PokeIdle permitem negociar entre as suas contas pelo Mercado; com isto ligado o Mercado nunca faz isso sozinho (evita pagar taxa à toa)",
+     true
+    ],
+    [
+     "QLabel",
+     "Mudou, já vale (fica salvo no perfil desta conta).",
+     "",
+     true
+    ]
+   ],
+   "lista": [
+    {
+     "item_id": 7,
+     "item_nome": "Potion",
+     "moeda": "gold",
+     "preco_max": 12,
+     "ligado": false,
+     "lim_unidades": 5,
+     "lim_gasto": 0,
+     "lim_dia": 0,
+     "comprado_total": 0,
+     "gasto_total": 0,
+     "dia": "2026-10-16",
+     "comprado_hoje": 0,
+     "gasto_hoje": 0,
+     "ultima_compra": null,
+     "desligado_por": "você clicou em Parar todas as compras"
+    }
+   ]
+  },
+  {
+   "passo": "guia_fechado",
+   "conta": 0,
+   "area": "rmt",
+   "ordem": [
+    "saldo",
+    "lista",
+    "seguranca"
+   ],
+   "tela": [
+    [
+     "QLabel",
+     "Mercado da Comunidade",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Guia",
+     "Mostra, passo a passo, para que serve cada parte do Mercado",
+     true
+    ],
+    [
+     "Botao",
+     "Parar todas as compras",
+     "Desliga todos os itens da lista, em todas as contas",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra itens sozinho para esta conta assim que o anúncio libera, sem abrir nada na tela. Mexe com Ouro e Gema (que vale dinheiro de verdade).",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Saldo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "? ouro  ? gema",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "A conta não está conectada: inicie a conta para o Mercado poder comprar.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Lista de compras",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Adicionar item",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Desligue o item para editar",
+     false
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "Botao",
+     "Ligado",
+     "Clique para desligar",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado: você clicou em Parar todas as compras",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado: você clicou em Parar todas as compras",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Parado: a conta está sem conexão (ou na tela de login)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Segurança e ritmo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Olhar a vitrine a cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Sem abrir nada na tela. Todo anúncio novo fica retido 2 min, então olhar a cada minuto já pega todos antes de liberar.",
+     "",
+     true
+    ],
+    [
+     "QCheckBox",
+     "Nunca comprar anúncio das minhas outras contas do PokeNexus",
+     "Os Termos do PokeIdle permitem negociar entre as suas contas pelo Mercado; com isto ligado o Mercado nunca faz isso sozinho (evita pagar taxa à toa)",
+     true
+    ],
+    [
+     "QLabel",
+     "Mudou, já vale (fica salvo no perfil desta conta).",
+     "",
+     true
+    ]
+   ],
+   "lista": [
+    {
+     "item_id": 7,
+     "item_nome": "Potion",
+     "moeda": "gold",
+     "preco_max": 12,
+     "ligado": false,
+     "lim_unidades": 5,
+     "lim_gasto": 0,
+     "lim_dia": 0,
+     "comprado_total": 0,
+     "gasto_total": 0,
+     "dia": "2026-10-16",
+     "comprado_hoje": 0,
+     "gasto_hoje": 0,
+     "ultima_compra": null,
+     "desligado_por": "você clicou em Parar todas as compras"
+    }
+   ]
+  },
+  {
+   "passo": "ctrl+2",
+   "conta": 1,
+   "area": "rmt",
+   "ordem": [
+    "saldo",
+    "lista",
+    "seguranca"
+   ],
+   "tela": [
+    [
+     "QLabel",
+     "Mercado da Comunidade",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Guia",
+     "Mostra, passo a passo, para que serve cada parte do Mercado",
+     true
+    ],
+    [
+     "Botao",
+     "Parar todas as compras",
+     "Desliga todos os itens da lista, em todas as contas",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra itens sozinho para esta conta assim que o anúncio libera, sem abrir nada na tela. Mexe com Ouro e Gema (que vale dinheiro de verdade).",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Saldo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "? ouro  ? gema",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "A conta não está conectada: inicie a conta para o Mercado poder comprar.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Lista de compras",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Adicionar item",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Nenhum item ainda. Clique em Adicionar item, escolha o item e o preço máximo.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Desligue o item para editar",
+     false
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "Botao",
+     "Ligado",
+     "Clique para desligar",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Segurança e ritmo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado: você clicou em Parar todas as compras",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Parado: a conta está sem conexão (ou na tela de login)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Olhar a vitrine a cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Sem abrir nada na tela. Todo anúncio novo fica retido 2 min, então olhar a cada minuto já pega todos antes de liberar.",
+     "",
+     true
+    ],
+    [
+     "QCheckBox",
+     "Nunca comprar anúncio das minhas outras contas do PokeNexus",
+     "Os Termos do PokeIdle permitem negociar entre as suas contas pelo Mercado; com isto ligado o Mercado nunca faz isso sozinho (evita pagar taxa à toa)",
+     true
+    ],
+    [
+     "QLabel",
+     "Mudou, já vale (fica salvo no perfil desta conta).",
+     "",
+     true
+    ]
+   ],
+   "lista": []
+  },
+  {
+   "passo": "ctrl+3",
+   "conta": 2,
+   "area": "rmt",
+   "ordem": [
+    "saldo",
+    "lista",
+    "seguranca"
+   ],
+   "tela": [
+    [
+     "QLabel",
+     "Mercado da Comunidade",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Guia",
+     "Mostra, passo a passo, para que serve cada parte do Mercado",
+     true
+    ],
+    [
+     "Botao",
+     "Parar todas as compras",
+     "Desliga todos os itens da lista, em todas as contas",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra itens sozinho para esta conta assim que o anúncio libera, sem abrir nada na tela. Mexe com Ouro e Gema (que vale dinheiro de verdade).",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Saldo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "? ouro  ? gema",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "A conta não está conectada: inicie a conta para o Mercado poder comprar.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Lista de compras",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Adicionar item",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Nenhum item ainda. Clique em Adicionar item, escolha o item e o preço máximo.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Desligue o item para editar",
+     false
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "Botao",
+     "Ligado",
+     "Clique para desligar",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Segurança e ritmo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado: você clicou em Parar todas as compras",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Parado: a conta está sem conexão (ou na tela de login)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Olhar a vitrine a cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Sem abrir nada na tela. Todo anúncio novo fica retido 2 min, então olhar a cada minuto já pega todos antes de liberar.",
+     "",
+     true
+    ],
+    [
+     "QCheckBox",
+     "Nunca comprar anúncio das minhas outras contas do PokeNexus",
+     "Os Termos do PokeIdle permitem negociar entre as suas contas pelo Mercado; com isto ligado o Mercado nunca faz isso sozinho (evita pagar taxa à toa)",
+     true
+    ],
+    [
+     "QLabel",
+     "Mudou, já vale (fica salvo no perfil desta conta).",
+     "",
+     true
+    ]
+   ],
+   "lista": []
+  },
+  {
+   "passo": "ctrl+4",
+   "conta": 3,
+   "area": "rmt",
+   "ordem": [
+    "saldo",
+    "lista",
+    "seguranca"
+   ],
+   "tela": [
+    [
+     "QLabel",
+     "Mercado da Comunidade",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Guia",
+     "Mostra, passo a passo, para que serve cada parte do Mercado",
+     true
+    ],
+    [
+     "Botao",
+     "Parar todas as compras",
+     "Desliga todos os itens da lista, em todas as contas",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra itens sozinho para esta conta assim que o anúncio libera, sem abrir nada na tela. Mexe com Ouro e Gema (que vale dinheiro de verdade).",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Saldo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "? ouro  ? gema",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "A conta não está conectada: inicie a conta para o Mercado poder comprar.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Lista de compras",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Adicionar item",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Nenhum item ainda. Clique em Adicionar item, escolha o item e o preço máximo.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Desligue o item para editar",
+     false
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "Botao",
+     "Ligado",
+     "Clique para desligar",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Segurança e ritmo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado: você clicou em Parar todas as compras",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Parado: a conta está sem conexão (ou na tela de login)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Olhar a vitrine a cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Sem abrir nada na tela. Todo anúncio novo fica retido 2 min, então olhar a cada minuto já pega todos antes de liberar.",
+     "",
+     true
+    ],
+    [
+     "QCheckBox",
+     "Nunca comprar anúncio das minhas outras contas do PokeNexus",
+     "Os Termos do PokeIdle permitem negociar entre as suas contas pelo Mercado; com isto ligado o Mercado nunca faz isso sozinho (evita pagar taxa à toa)",
+     true
+    ],
+    [
+     "QLabel",
+     "Mudou, já vale (fica salvo no perfil desta conta).",
+     "",
+     true
+    ]
+   ],
+   "lista": []
+  },
+  {
+   "passo": "ctrl+1",
+   "conta": 0,
+   "area": "rmt",
+   "ordem": [
+    "saldo",
+    "lista",
+    "seguranca"
+   ],
+   "tela": [
+    [
+     "QLabel",
+     "Mercado da Comunidade",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Guia",
+     "Mostra, passo a passo, para que serve cada parte do Mercado",
+     true
+    ],
+    [
+     "Botao",
+     "Parar todas as compras",
+     "Desliga todos os itens da lista, em todas as contas",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra itens sozinho para esta conta assim que o anúncio libera, sem abrir nada na tela. Mexe com Ouro e Gema (que vale dinheiro de verdade).",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Saldo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "? ouro  ? gema",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "A conta não está conectada: inicie a conta para o Mercado poder comprar.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Lista de compras",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Adicionar item",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Desligue o item para editar",
+     false
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "Botao",
+     "Ligado",
+     "Clique para desligar",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado: você clicou em Parar todas as compras",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado: você clicou em Parar todas as compras",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado: você clicou em Parar todas as compras",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Parado: a conta está sem conexão (ou na tela de login)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Segurança e ritmo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Olhar a vitrine a cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Sem abrir nada na tela. Todo anúncio novo fica retido 2 min, então olhar a cada minuto já pega todos antes de liberar.",
+     "",
+     true
+    ],
+    [
+     "QCheckBox",
+     "Nunca comprar anúncio das minhas outras contas do PokeNexus",
+     "Os Termos do PokeIdle permitem negociar entre as suas contas pelo Mercado; com isto ligado o Mercado nunca faz isso sozinho (evita pagar taxa à toa)",
+     true
+    ],
+    [
+     "QLabel",
+     "Mudou, já vale (fica salvo no perfil desta conta).",
+     "",
+     true
+    ]
+   ],
+   "lista": [
+    {
+     "item_id": 7,
+     "item_nome": "Potion",
+     "moeda": "gold",
+     "preco_max": 12,
+     "ligado": false,
+     "lim_unidades": 5,
+     "lim_gasto": 0,
+     "lim_dia": 0,
+     "comprado_total": 0,
+     "gasto_total": 0,
+     "dia": "2026-10-16",
+     "comprado_hoje": 0,
+     "gasto_hoje": 0,
+     "ultima_compra": null,
+     "desligado_por": "você clicou em Parar todas as compras"
+    }
+   ]
+  },
+  {
+   "passo": "ctrl+m (volta ao jogo)",
+   "area": "jogo"
+  },
+  {
+   "passo": "ctrl+m (volta ao Mercado)",
+   "conta": 0,
+   "area": "rmt",
+   "ordem": [
+    "saldo",
+    "lista",
+    "seguranca"
+   ],
+   "tela": [
+    [
+     "QLabel",
+     "Mercado da Comunidade",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Guia",
+     "Mostra, passo a passo, para que serve cada parte do Mercado",
+     true
+    ],
+    [
+     "Botao",
+     "Parar todas as compras",
+     "Desliga todos os itens da lista, em todas as contas",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra itens sozinho para esta conta assim que o anúncio libera, sem abrir nada na tela. Mexe com Ouro e Gema (que vale dinheiro de verdade).",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Saldo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "? ouro  ? gema",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "A conta não está conectada: inicie a conta para o Mercado poder comprar.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Lista de compras",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Adicionar item",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Desligue o item para editar",
+     false
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "Botao",
+     "Ligado",
+     "Clique para desligar",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado: você clicou em Parar todas as compras",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado: você clicou em Parar todas as compras",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado: você clicou em Parar todas as compras",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado: você clicou em Parar todas as compras",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Parado: a conta está sem conexão (ou na tela de login)",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Segurança e ritmo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Olhar a vitrine a cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Sem abrir nada na tela. Todo anúncio novo fica retido 2 min, então olhar a cada minuto já pega todos antes de liberar.",
+     "",
+     true
+    ],
+    [
+     "QCheckBox",
+     "Nunca comprar anúncio das minhas outras contas do PokeNexus",
+     "Os Termos do PokeIdle permitem negociar entre as suas contas pelo Mercado; com isto ligado o Mercado nunca faz isso sozinho (evita pagar taxa à toa)",
+     true
+    ],
+    [
+     "QLabel",
+     "Mudou, já vale (fica salvo no perfil desta conta).",
+     "",
+     true
+    ]
+   ],
+   "lista": [
+    {
+     "item_id": 7,
+     "item_nome": "Potion",
+     "moeda": "gold",
+     "preco_max": 12,
+     "ligado": false,
+     "lim_unidades": 5,
+     "lim_gasto": 0,
+     "lim_dia": 0,
+     "comprado_total": 0,
+     "gasto_total": 0,
+     "dia": "2026-10-16",
+     "comprado_hoje": 0,
+     "gasto_hoje": 0,
+     "ultima_compra": null,
+     "desligado_por": "você clicou em Parar todas as compras"
+    }
+   ]
+  },
+  {
+   "passo": "removeu",
+   "conta": 0,
+   "area": "rmt",
+   "ordem": [
+    "saldo",
+    "lista",
+    "seguranca"
+   ],
+   "tela": [
+    [
+     "QLabel",
+     "Mercado da Comunidade",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Guia",
+     "Mostra, passo a passo, para que serve cada parte do Mercado",
+     true
+    ],
+    [
+     "Botao",
+     "Parar todas as compras",
+     "Desliga todos os itens da lista, em todas as contas",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra itens sozinho para esta conta assim que o anúncio libera, sem abrir nada na tela. Mexe com Ouro e Gema (que vale dinheiro de verdade).",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Saldo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "? ouro  ? gema",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "A conta não está conectada: inicie a conta para o Mercado poder comprar.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Lista de compras",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Adicionar item",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Nenhum item ainda. Clique em Adicionar item, escolha o item e o preço máximo.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Potion   (Ouro)",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Editar",
+     "Mudar item, preço ou limites",
+     true
+    ],
+    [
+     "Botao",
+     "Remover",
+     "",
+     true
+    ],
+    [
+     "Botao",
+     "Desligado",
+     "Clique para ligar (pede confirmação)",
+     true
+    ],
+    [
+     "QLabel",
+     "Compra até 12 ouro cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Limites: até 5 unidades.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Segurança e ritmo",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Desligado: você clicou em Parar todas as compras",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Olhar a vitrine a cada",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Hoje: 0 comprados, 0 ouro gastos.   Total: 0 comprados, 0 ouro gastos.   Nenhuma compra ainda.",
+     "",
+     true
+    ],
+    [
+     "QLabel",
+     "Sem abrir nada na tela. Todo anúncio novo fica retido 2 min, então olhar a cada minuto já pega todos antes de liberar.",
+     "",
+     true
+    ],
+    [
+     "QCheckBox",
+     "Nunca comprar anúncio das minhas outras contas do PokeNexus",
+     "Os Termos do PokeIdle permitem negociar entre as suas contas pelo Mercado; com isto ligado o Mercado nunca faz isso sozinho (evita pagar taxa à toa)",
+     true
+    ],
+    [
+     "QLabel",
+     "Mudou, já vale (fica salvo no perfil desta conta).",
+     "",
+     true
+    ]
+   ],
+   "lista": []
+  }
+ ],
+ "guia": [
+  {
+   "titulo": "O que o Mercado faz",
+   "texto": "Aqui o PokeNexus compra itens sozinho para esta conta, sem abrir nada na tela do jogo. Você monta uma lista de compras e liga os itens que quer. Nada é comprado com o item desligado.",
+   "destaque": [
+    true,
+    true
+   ]
+  },
+  {
+   "titulo": "Saldo",
+   "texto": "Mostra quanto de Ouro e de Gema esta conta tem agora. A Gema vale dinheiro de verdade, então vá com calma com ela. Embaixo aparece se a conta está pronta para comprar.",
+   "destaque": [
+    true,
+    true
+   ]
+  },
+  {
+   "titulo": "Adicionar item",
+   "texto": "Escolha o item, a moeda e o preço máximo por unidade. Exemplo: Ultra Ball até 100 de ouro cada: ele nunca paga mais que 100 por unidade. O item entra desligado.",
+   "destaque": [
+    true,
+    true
+   ]
+  },
+  {
+   "titulo": "Ligado e desligado",
+   "texto": "Clique em Desligado para ligar: aparece um resumo para você confirmar. Ligado, compra todo anúncio até o seu preço assim que ele libera, e continua ligado mesmo se você reabrir o PokeNexus. Clique de novo para desligar na hora.",
+   "destaque": [
+    true,
+    true
+   ]
+  },
+  {
+   "titulo": "Limites (opcionais)",
+   "texto": "Você pode mandar parar depois de X unidades, depois de gastar X, ou gastar no máximo X por dia. Sem nenhum limite, ele compra sem parar até você desligar. Os limites mudam em Editar, com o item desligado.",
+   "destaque": [
+    true,
+    true
+   ]
+  },
+  {
+   "titulo": "Está funcionando?",
+   "texto": "Esta frase diz o que o item está fazendo: Procurando (com o menor preço), compra marcada para a hora em que o anúncio libera, Comprou, ou se outro jogador levou no sorteio do jogo. Sem dinheiro, ele espera e volta sozinho.",
+   "destaque": [
+    true,
+    true
+   ]
+  },
+  {
+   "titulo": "Quanto comprou e gastou",
+   "texto": "Aqui ficam quantas unidades ele comprou e quanto gastou hoje e no total, e a hora da última compra. Só conta o que foi comprado de verdade.",
+   "destaque": [
+    true,
+    true
+   ]
+  },
+  {
+   "titulo": "Ritmo e segurança",
+   "texto": "Aqui você escolhe de quanto em quanto ele olha a vitrine (1 minuto já pega todo anúncio novo, que fica 2 min retido). Ele nunca compra das suas outras contas, pede uma vez só por anúncio e desliga o item se o jogo recusar 3 compras seguidas.",
+   "destaque": [
+    true,
+    true
+   ]
+  },
+  {
+   "titulo": "Parar todas as compras",
+   "texto": "Este botão desliga na hora todos os itens da lista, em todas as contas. Para voltar a comprar, ligue cada item de novo.",
+   "destaque": [
+    true,
+    true
+   ]
+  },
+  {
+   "titulo": "Dica final",
+   "texto": "Comece com um item barato e um limite de poucas unidades para ver funcionando. Depois, se quiser, tire o limite. Este guia abre de novo no botão Guia.",
+   "destaque": [
+    true,
+    true
+   ]
+  }
+ ]
+}

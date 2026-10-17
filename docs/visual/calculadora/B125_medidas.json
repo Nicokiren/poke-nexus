@@ -1,0 +1,86 @@
+{
+ "1366x768_fechada": {
+  "janela": [
+   1093,
+   535
+  ],
+  "painel": [
+   702,
+   368
+  ],
+  "y_lista": 249,
+  "titulo_lista_visivel": true,
+  "primeiro_item_inteiro": false,
+  "y_fim_primeiro_item": 482,
+  "calc": {
+   "visivel": false,
+   "tam": [
+    640,
+    480
+   ]
+  }
+ },
+ "1366x768": {
+  "janela": [
+   1093,
+   535
+  ],
+  "painel": [
+   702,
+   368
+  ],
+  "y_lista": 472,
+  "titulo_lista_visivel": false,
+  "primeiro_item_inteiro": false,
+  "y_fim_primeiro_item": 705,
+  "calc": {
+   "visivel": true,
+   "tam": [
+    640,
+    213
+   ]
+  }
+ },
+ "1920x1080_fechada": {
+  "janela": [
+   1536,
+   785
+  ],
+  "painel": [
+   1145,
+   552
+  ],
+  "y_lista": 219,
+  "titulo_lista_visivel": true,
+  "primeiro_item_inteiro": true,
+  "y_fim_primeiro_item": 452,
+  "calc": {
+   "visivel": false,
+   "tam": [
+    640,
+    213
+   ]
+  }
+ },
+ "1920x1080": {
+  "janela": [
+   1536,
+   785
+  ],
+  "painel": [
+   1145,
+   552
+  ],
+  "y_lista": 442,
+  "titulo_lista_visivel": true,
+  "primeiro_item_inteiro": false,
+  "y_fim_primeiro_item": 675,
+  "calc": {
+   "visivel": true,
+   "tam": [
+    640,
+    213
+   ]
+  }
+ }
+}

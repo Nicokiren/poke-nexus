@@ -14,6 +14,12 @@ MERCADO = [
     {"alvo": "saldo", "titulo": "Saldo",
      "texto": "Mostra quanto de Ouro e de Gema esta conta tem agora. A Gema vale dinheiro de verdade, então vá com "
               "calma com ela. Embaixo aparece se a conta está pronta para comprar."},
+    # app/conversor_gemas.py: GEMAS_REF/CENTAVOS_REF (a taxa de referência do usuário, não a do jogo);
+    # app/rmt_ui.py CalculadoraGemas só calcula: não compra, não grava nada e não acessa a internet;
+    # RmtPanel.b_calc abre e fecha (fechada, o destaque é o botão)
+    {"alvo": "calculadora", "titulo": "Calculadora de Gemas",
+     "texto": "O botão Calculadora converte Gemas em dólares e dólares em Gemas, na hora. É só uma conta de "
+              "referência (1.000 Gemas = US$ 9,00), não é cotação nem saque. Ela não compra nem mexe em nada."},
     # app/rmt_ui.py CompraDialog: item da lista do jogo, moeda e preço máximo (obrigatório, rmt/compras.py
     # validar_item); o servidor também confere o teto (comprarLote com precoMax/totalMax)
     {"alvo": "adicionar", "titulo": "Adicionar item",
@@ -57,3 +63,13 @@ MERCADO = [
 ]
 
 CONVITE_MERCADO = "Primeira vez aqui? Veja o guia do Mercado."
+
+# A fala do Meowth na calculadora do Mercado: (até quantos US$, frase), na ordem; None = acima de tudo.
+# Pode trocar à vontade (curtas, sem "·" nem "—"). Quem escolhe: app/conversor_gemas.py frase_do_mascote.
+FRASES_MEOWTH = [
+    (0, "Quanto vale? Digite aí!"),
+    (1, "Trocado de bolso"),
+    (10, "Dá um lanche"),
+    (100, "Agora sim, miau!"),
+    (None, "Isso é muita moeda!"),
+]

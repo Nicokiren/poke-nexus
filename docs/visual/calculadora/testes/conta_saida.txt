@@ -1,0 +1,54 @@
+﻿ok    1.000 Gemas: 'US$ 9,00'
+ok    1 Gema: 'US$ 0,009'
+ok    0 Gemas: 'US$ 0,00'
+ok    111 Gemas: 'US$ 0,999'
+ok    112 Gemas: 'US$ 1,00'
+ok    112 Gemas (exato): Decimal('1.008')
+ok    1.234.567 Gemas: 'US$ 11.111,10'
+ok    US$ 9.00: 1000
+ok    US$ 1.00: 111
+ok    US$ 10.00: 1111
+ok    US$ 0.01: 1
+ok    US$ 0.00: 0
+ok    tipo Gemas -> US$: 'Decimal'
+ok    tipo US$ -> Gemas: 'int'
+ok    ida e volta nunca ganha Gema (5.003 valores): None
+ok    linha da taxa: '1.000 Gemas = US$ 9,00'
+ok    constantes: (1000, 900)
+ok    aceita '1000' (Gemas): True
+ok    aceita '1.000' (Gemas): True
+ok    aceita '' (Gemas): True
+ok    aceita '-5' (Gemas): False
+ok    aceita '1,5' (Gemas): False
+ok    aceita 'abc' (Gemas): False
+ok    aceita '123456789' (Gemas): True
+ok    aceita '1234567890' (Gemas): False
+ok    aceita '9,00' (US$): True
+ok    aceita '9,' (US$): True
+ok    aceita '9,005' (US$): False
+ok    aceita '9,0,0' (US$): False
+ok    aceita '1.234,56' (US$): True
+ok    aceita '-1' (US$): False
+ok    aceita '1e5' (US$): False
+ok    aceita '1234567,89' (US$): True
+ok    aceita '12345678,90' (US$): False
+ok    aceita ' 9' (US$): False
+ok    ler '' Gemas: 0
+ok    ler '1.000' Gemas: 1000
+ok    ler '' US$: Decimal('0')
+ok    ler ',' US$: Decimal('0')
+ok    ler '1.234,5' US$: Decimal('1234.5')
+ok    ler '0,009' US$ (o resultado da tela): Decimal('0.009')
+ok    negativo recusado: True
+ok    frase em US$ 0: 'Quanto vale? Digite aí!'
+ok    frase em US$ 0.009: 'Trocado de bolso'
+ok    frase em US$ 1: 'Trocado de bolso'
+ok    frase em US$ 1.008: 'Trocado de bolso'
+ok    frase em US$ 1.01: 'Dá um lanche'
+ok    frase em US$ 10: 'Dá um lanche'
+ok    frase em US$ 10.01: 'Agora sim, miau!'
+ok    frase em US$ 100: 'Agora sim, miau!'
+ok    frase em US$ 100.01: 'Isso é muita moeda!'
+ok    frase em US$ 8999999.99: 'Isso é muita moeda!'
+
+TUDO OK

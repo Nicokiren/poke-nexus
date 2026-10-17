@@ -286,6 +286,14 @@ PokeIdle permitem automação no Mercado (seção 5).
   `profiles\conta_XX\rmt_extrato.jsonl`. Na primeira abertura, as regras de compra antigas
   (`rmt_regras.json`) viram itens **desligados**, com os mesmos limites; o arquivo antigo não é apagado.
 
+**Calculadora de Gemas:** o botão **Calculadora**, no cartão do Saldo, abre uma conta de Gemas para
+dólares e de dólares para Gemas, com o Meowth dando palpite. A taxa é de **referência** (1.000 Gemas =
+US$ 9,00), não é cotação nem saque. Digitar num campo atualiza o outro; as fichas **100**, **1.000**,
+**10.000** e **Meu saldo** (as Gemas da conta, com ela conectada) preenchem as Gemas. Ela **só calcula**:
+não compra, não liga item, não grava nada e não acessa a internet. Aberta ou fechada vale até você fechar o
+programa. A taxa fica em `app/conversor_gemas.py` (`GEMAS_REF`, `CENTAVOS_REF`) e as falas do Meowth em
+`app/textos_guia.py` (`FRASES_MEOWTH`).
+
 **Guia:** o botão **Guia** (no alto do Mercado) mostra, passo a passo, para que serve cada parte: ele
 destaca a parte, explica e segue com **Próximo** (ou Enter / seta para a direita), **Voltar** (seta para
 a esquerda) e **Pular guia** (ou Esc). O guia só explica: não clica em nada, não liga item e não muda
@@ -448,7 +456,8 @@ app/manager.py              loop asyncio com um worker por conta, watchdog, logs
 app/gui.py, app/widgets.py  interface PySide6 (visão individual e Todas as contas)
 app/hunt_ui.py              painel Hunts (só desenha)
 app/settings_ui.py          janela Ajustes
-app/rmt_ui.py               painel Mercado (lista de compras, ligar/desligar, limites, status)
+app/rmt_ui.py               painel Mercado (lista de compras, ligar/desligar, limites, status, calculadora)
+app/conversor_gemas.py      a conta da calculadora de Gemas (taxa de referência, Decimal, sem Qt)
 app/guia.py, app/textos_guia.py  guia passo a passo do Mercado e os textos dele
 rmt/compras.py              a lista de compras de UMA conta (no perfil dela) e a migração das regras antigas
 rmt/regras.py               formato antigo (regras v1), usado só para migrar

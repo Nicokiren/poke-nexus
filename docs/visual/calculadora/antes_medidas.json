@@ -1,0 +1,30 @@
+{
+ "1366x768": {
+  "janela": [
+   1366,
+   689
+  ],
+  "painel": [
+   975,
+   459
+  ],
+  "y_lista": 232,
+  "titulo_lista_visivel": true,
+  "primeiro_item_inteiro": false,
+  "y_fim_primeiro_item": 461
+ },
+ "1920x1080": {
+  "janela": [
+   1920,
+   1001
+  ],
+  "painel": [
+   1529,
+   771
+  ],
+  "y_lista": 217,
+  "titulo_lista_visivel": true,
+  "primeiro_item_inteiro": true,
+  "y_fim_primeiro_item": 446
+ }
+}

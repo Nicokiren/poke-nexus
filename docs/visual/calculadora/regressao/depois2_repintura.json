@@ -1,0 +1,11 @@
+{
+ "mercado": {
+  "mediana_ms": 3.06,
+  "p90_ms": 3.68
+ },
+ "janela": {
+  "mediana_ms": 6.05,
+  "p90_ms": 6.68
+ },
+ "calculadora_aberta": true
+}

@@ -1,0 +1,45 @@
+﻿ok    Gemas 1000 -> US$: '9,00'
+ok    balão em US$ 9,00: 'Dá um lanche'
+ok    US$ 1,00 -> Gemas: '111'
+ok    US$ 10 -> Gemas: '1.111'
+ok    1 Gema -> US$ (3 casas): '0,009'
+ok    Gemas com letras, sinal e vírgula: '15'
+ok    US$ com sinal e 3 casas: '9,00'
+ok    US$ 9,00 -> Gemas: '1.000'
+ok    vírgula com 1 casa: '277'
+ok    Gemas vazio -> US$ vazio: ''
+ok    balão com zero: 'Quanto vale? Digite aí!'
+ok    Gemas param em 9 dígitos: '123456789'
+ok    123.456.789 Gemas -> US$: '1.111.111,10'
+ok    US$ param em 9 dígitos: '12345678,9'
+ok    US$ 12.345.678,90 -> Gemas: '1.371.742.100'
+ok    entrada no começo: 'gemas'
+ok    inverter: entrada: 'dolares'
+ok    inverter: cursor no campo de dólares: True
+ok    inverter não muda os números: ('1.371.742.100', '12345678,9')
+ok    inverter de novo: entrada: 'gemas'
+ok    ficha 100: ('100', '0,900')
+ok    ficha 1.000: ('1.000', '9,00')
+ok    ficha 10.000: ('10.000', '90,00')
+ok    Meu saldo ligado com conta: True
+ok    Meu saldo (12.345 Gemas): ('12.345', '111,10')
+ok    Meu saldo apagado sem conta: False
+ok    dica sem conta: True
+ok    roda do mouse não muda valor: ('1000', '9,00')
+ok    balão em 111 Gemas (US$ 0,999): 'Trocado de bolso'
+ok    balão em 112 Gemas (US$ 1,00): 'Trocado de bolso'
+ok    balão em 113 Gemas (US$ 1,01): 'Dá um lanche'
+ok    balão em 1111 Gemas (US$ 9,99): 'Dá um lanche'
+ok    balão em 1112 Gemas (US$ 10,00): 'Dá um lanche'
+ok    balão em 1113 Gemas (US$ 10,01): 'Agora sim, miau!'
+ok    balão em 11112 Gemas (US$ 100,00): 'Agora sim, miau!'
+ok    balão em 11113 Gemas (US$ 100,01): 'Isso é muita moeda!'
+ok    todo botão é Botao: ['Botao']
+ok    cartão é Moldura 'card': ('Moldura', 'card')
+ok    sem emoji: []
+ok    mascote: '52.gif'
+ok    anima com o Mercado à vista: 'Running'
+ok    pausa com o Mercado escondido: 'Paused'
+ok    volta a animar: 'Running'
+ok    a calculadora não grava nada: False
+TUDO OK
