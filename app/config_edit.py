@@ -36,12 +36,14 @@ CAMPOS = {
     ("desempenho", "modo_leve"): (bool, None, None, False),
     ("atualizacao", "avisar"): (bool, None, None, True),
 }
-ATALHOS = ("conta_1", "conta_2", "conta_3", "conta_4", "ver_todas", "hunts", "rmt", "pausar_retomar",
+ATALHOS = ("conta_1", "conta_2", "conta_3", "conta_4", "ver_todas", "hunts", "rmt", "pokedex", "pausar_retomar",
            "configuracoes", "painel_conta")
 NOMES_ATALHOS = {"conta_1": "Conta 1", "conta_2": "Conta 2", "conta_3": "Conta 3", "conta_4": "Conta 4",
                  "ver_todas": "Todas as contas", "hunts": "Jogo / Hunts", "rmt": "Jogo / Mercado",
-                 "pausar_retomar": "Pausar / retomar",
+                 "pokedex": "Jogo / Pokédex", "pausar_retomar": "Pausar / retomar",
                  "configuracoes": "Ajustes", "painel_conta": "Mostrar / esconder a ficha do treinador"}
+# Atalhos novos que ainda não estão nos padrões do app/config.py: valem quando o config.toml não tem a chave.
+ATALHO_PADRAO = {"pokedex": "Ctrl+D"}
 CAMPOS_CONTA = ("nome", "sprite", "hunt", "ativa")
 
 

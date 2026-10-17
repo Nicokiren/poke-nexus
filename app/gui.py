@@ -24,6 +24,7 @@ from app.hunt_ui import HuntPanel
 from app.rmt_ui import RmtPanel
 from app.manager import Manager
 from app.atualizacao import Atualizacao
+from app.pokedex_ui import PokedexDados, PokedexPanel
 from app.dialogos import avisar, perguntar
 from app.molduras import Botao, Moldura
 from app.icones import TAM as ICO_TAM, icone, por_nome_do_botao
@@ -500,6 +501,7 @@ class GameArea(Moldura):
     single = Signal(int)
     layout_todas = Signal(str)          # grade | celulares (escolhido na barra do VER TODAS)
     mostrar_painel = Signal()
+    area_mudou = Signal(str)            # jogo | hunts | rmt | pokedex (o botão Pokédex do topo acompanha)
 
     def __init__(self, snap: list[dict], zoom: float):
         super().__init__()
@@ -585,6 +587,7 @@ class GameArea(Moldura):
         self.body.addWidget(self.host)
         self.body.addWidget(self.hunt_panel)
         self.body.addWidget(self.rmt_panel)
+        self.pokedex_panel = None          # só nasce quando a Pokédex é aberta pela primeira vez
         lay.addWidget(self.body, 1)
         self.area = "jogo"
         self.hunts = False
@@ -664,14 +667,23 @@ class GameArea(Moldura):
             self.zoom_lbl.setToolTip(dica)
 
     def set_area(self, area: str):
-        """Jogo, Hunts ou RMT na área principal (as páginas do jogo continuam vivas por trás)."""
+        """Jogo, Hunts, RMT ou Pokédex na área principal (as páginas do jogo continuam vivas por trás)."""
+        if area == "pokedex" and self.pokedex_panel is None:
+            return
         self.area = area
         self.hunts = area == "hunts"
         for b, a in ((self.b_jogo, "jogo"), (self.b_hunts, "hunts"), (self.b_rmt, "rmt")):
             b.setChecked(a == area)
-        self.body.setCurrentWidget({"jogo": self.host, "hunts": self.hunt_panel, "rmt": self.rmt_panel}[area])
+        self.body.setCurrentWidget({"jogo": self.host, "hunts": self.hunt_panel, "rmt": self.rmt_panel,
+                                    "pokedex": self.pokedex_panel}[area])
         for b in (self.b_zoom_in, self.b_zoom_out, self.zoom_lbl):
             b.setVisible(area == "jogo")
+        self.area_mudou.emit(area)
+
+    def set_pokedex(self, painel: QWidget):
+        """A Pokédex entra na área principal na primeira vez que é aberta."""
+        self.pokedex_panel = painel
+        self.body.addWidget(painel)
 
     def set_hunts(self, on: bool):
         """Alterna entre o jogo e o Hunt Analyzer (Ctrl+H)."""
@@ -976,6 +988,11 @@ class MainWindow(QMainWindow):
         rp.parar_todos.connect(self.m.rmt_parar_todos)
         rp.set_convite(not self.cfg["janela"].get("guia_mercado_visto", False))
         rp.guia_visto.connect(self._guia_mercado_visto)
+        # Pokédex (app/pokedex_ui.py): os dados vivem sempre (só guardam as espécies novas); a tela só nasce
+        # quando a pessoa abre a Pokédex.
+        self.pokedex = PokedexDados(self.m)
+        self._pokedex_olhou = 0.0
+        self.game.area_mudou.connect(lambda a: self.b_pokedex.setChecked(a == "pokedex"))
         self._hunt_pedido = 0.0
         self.game.selected.connect(lambda i: self.select(i, keep_mode=True))
         self.game.single.connect(self.select)
@@ -1058,6 +1075,19 @@ class MainWindow(QMainWindow):
         if self.game.area == "rmt":
             self.game.rmt_panel.render(self.selected, self.m.workers[self.selected])
 
+    def _alternar_pokedex(self):
+        """Abre a Pokédex na área do jogo (ou volta para o jogo). Ela só mostra: não mexe no jogo."""
+        if self.game.area == "pokedex":
+            self.game.set_area("jogo")
+            return
+        if self.game.pokedex_panel is None:
+            self.game.set_pokedex(PokedexPanel(self.pokedex, lambda: [a.name for a in self.m.accounts]))
+        self.pokedex.observar()
+        p = self.game.pokedex_panel
+        p.mostrar(self.selected)
+        p.recarregar()
+        self.game.set_area("pokedex")
+
     def _texto_rodape(self, n: int) -> str:
         partes = [f"{APP_NAME} {APP_VERSION}", "Ferramenta não oficial"]
         if MODO_LEVE:
@@ -1074,6 +1104,7 @@ class MainWindow(QMainWindow):
             f"{a.get('ver_todas', 'Ctrl+0')}: todas as contas",
             f"{a.get('hunts', 'Ctrl+H')}: jogo ou Hunts",
             f"{a.get('rmt', 'Ctrl+M')}: jogo ou Mercado",
+            f"{a.get('pokedex', config_edit.ATALHO_PADRAO['pokedex'])}: jogo ou Pokédex",
             f"{a.get('pausar_retomar', 'F8')}: pausar ou retomar a conta",
             f"{a.get('painel_conta', 'Ctrl+B')}: mostrar ou esconder a ficha",
             f"{a.get('configuracoes', 'Ctrl+,')}: ajustes",
@@ -1149,6 +1180,15 @@ class MainWindow(QMainWindow):
         self.counter = QLabel()
         self.counter.setObjectName("counter")
         h.addWidget(self.counter)
+        # Pokédex no lugar onde ficava o "N/4 conectadas" (escolha do usuário, 17/10/2026): o contador fica à
+        # esquerda dela, igual. Não confundir com o botão Pokédex do próprio jogo (dentro da página).
+        atalho_dex = self.cfg["atalhos"].get("pokedex", config_edit.ATALHO_PADRAO["pokedex"])
+        self.b_pokedex = button("Pokédex", None, f"A Pokédex do PokeNexus: quem esta conta já capturou "
+                                f"({atalho_dex}). Só mostra, não mexe no jogo", self._alternar_pokedex, ico="pokedex")
+        self.b_pokedex.setCheckable(True)
+        h.addWidget(self.b_pokedex)
+        self._topo, self._marca = h, brand
+        self._topo_curto = False
         self.b_bottom = button("Registro", None, "Mostra/esconde o dashboard e o log "
                                "(esconder deixa mais espaço para o jogo)", ico="log")
         self.b_bottom.setCheckable(True)
@@ -1224,6 +1264,7 @@ class MainWindow(QMainWindow):
                   (a.get("pausar_retomar", "F8"), self._toggle_pause),
                   (a.get("hunts", "Ctrl+H"), lambda: self.game.set_hunts(not self.game.hunts)),
                   (a.get("rmt", "Ctrl+M"), self._alternar_rmt),
+                  (a.get("pokedex", config_edit.ATALHO_PADRAO["pokedex"]), self._alternar_pokedex),
                   (a.get("configuracoes", "Ctrl+,"), self.open_settings),
                   (a.get("painel_conta", "Ctrl+B"), lambda: self._painel_conta(self.side.isHidden())),
                   ("F1", self._ajuda)]
@@ -1260,6 +1301,8 @@ class MainWindow(QMainWindow):
             self._render_hunts()
         if self.game.area == "rmt":
             self.game.rmt_panel.render(i, self.m.workers[i])
+        if self.game.area == "pokedex":
+            self.game.pokedex_panel.mostrar(i)
 
     def view_all(self):
         """View All: todas as contas na tela ao mesmo tempo (as mesmas páginas, sem recarregar)."""
@@ -1393,7 +1436,7 @@ class MainWindow(QMainWindow):
                 st.setFont(f)
         n = self.m.connected_count()
         lim = self.cfg["max_simultaneas"]
-        self.counter.setText(f"{n}/{lim} conectadas")
+        self.counter.setText(f"{n}/{lim}" if self._topo_curto else f"{n}/{lim} conectadas")
         cor = f"color:{T['aviso'] if n >= lim else T['destaque']};"
         if self.counter.styleSheet() != cor:      # setStyleSheet refaz o estilo mesmo sem mudar nada
             self.counter.setStyleSheet(cor)
@@ -1408,6 +1451,16 @@ class MainWindow(QMainWindow):
             self._render_hunts()
         elif self.game.area == "rmt":
             self.game.rmt_panel.render(self.selected, self.m.workers[self.selected])
+        # Pokédex: a cada 2 s, guarda as espécies novas de cada conta (barato: só a conta que mudou faz a conta).
+        agora = time.monotonic()
+        if agora - self._pokedex_olhou >= 2:
+            self._pokedex_olhou = agora
+            novos = self.pokedex.observar()
+            if self.game.area == "pokedex":
+                p = self.game.pokedex_panel
+                if self.pokedex.atualizar_catalogo():
+                    p.recarregar()
+                p.capturou(novos)
 
     def resizeEvent(self, e):
         """Adapta o layout à largura da janela."""
@@ -1419,6 +1472,26 @@ class MainWindow(QMainWindow):
         self.top_split.setOrientation(Qt.Vertical if w < 900 else Qt.Horizontal)
         self.bottom.setOrientation(Qt.Vertical if w < 900 else Qt.Horizontal)
         self.header.setDirection(QBoxLayout.TopToBottom if w < 820 else QBoxLayout.LeftToRight)
+        self._ajustar_topo(w)
+
+    def _ajustar_topo(self, w: int):
+        """Janela estreita (ex.: 760×600): o topo não comporta tudo com a Pokédex. Aí a Pokédex fica só com o
+        ícone (a dica diz o que é) e o contador vira "N/4" (dica: contas conectadas). Os outros não mudam."""
+        h = self._topo
+        largos = [h.itemAt(k).widget() for k in range(h.count()) if h.itemAt(k).widget()]
+        outros = sum(x.sizeHint().width() for x in largos if x not in (self.counter, self.b_pokedex))
+        fm = self.counter.fontMetrics()
+        cont = fm.horizontalAdvance("4/4 conectadas") + 28
+        dex = self.b_pokedex.fontMetrics().horizontalAdvance(" Pokédex") + 50
+        lugar = w - 32 - (0 if w < 820 else self._marca.sizeHint().width() + self.header.spacing())
+        curto = outros + cont + dex + h.spacing() * (len(largos) - 1) > lugar
+        if curto == self._topo_curto:
+            return
+        self._topo_curto = curto
+        self.b_pokedex.setText("" if curto else " Pokédex")
+        self.counter.setToolTip("contas conectadas" if curto else "")
+        n, lim = self.m.connected_count(), self.cfg["max_simultaneas"]
+        self.counter.setText(f"{n}/{lim}" if curto else f"{n}/{lim} conectadas")
 
     def _drain_logs(self):
         while not self.m.logs.empty():

@@ -1,0 +1,12 @@
+﻿LOG Conta 1 - iniciando
+LOG Conta 2 - iniciando
+LOG Conta 3 - iniciando
+LOG Conta 4 - iniciando
+LOG Conta 1 - sessão aberta
+LOG Conta 2 - sessão aberta
+LOG Conta 3 - sessão aberta
+LOG Conta 4 - sessão aberta
+LOG Conta 1 - sessão expirada - faça login: botão 'Login' do programa
+LOG Conta 2 - sessão expirada - faça login: botão 'Login' do programa
+LOG Conta 3 - sessão expirada - faça login: botão 'Login' do programa
+LOG Conta 4 - sessão expirada - faça login: botão 'Login' do programa

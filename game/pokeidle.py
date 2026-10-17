@@ -22,7 +22,7 @@ from browser.cdp import CdpPage
 from game import selectors as S
 
 # Campos do estado tratados à parte: a coleção de pokémon chega em pedaços (pkMud/pkFora) e a
-# Pokédex não é usada.
+# Pokédex também (dexMud/dexFora): ela fica só em `self.dex`, para a Pokédex do PokeNexus ler.
 _IGNORAR = {"pokemons", "pkMud", "pkFora", "dexMud", "dexFora", "pokedex", "cheio"}
 
 # Tipos de mensagem do servidor que o PokeNexus usa (os demais — chat, ranking... — são ignorados).
@@ -72,6 +72,11 @@ class GameSession:
         self.mercado_seq = 0              # sobe a cada resposta do mercado
         self.mercado_evento = asyncio.Event()
         self.mercado_eventos: list[tuple[float, dict]] = []   # eventos market* (comprou, vendeu...)
+        # Pokédex do jogo, só para a Pokédex do PokeNexus ler (game/pokedex.py): {chave: {k, c, sv, sc}}, com
+        # a mesma regra do jogo (shared/estado-delta.mjs: inteira no welcome/cheio, dexMud entra, dexFora sai).
+        self.dex: dict = {}
+        self.dex_seq = 0                  # sobe a cada mudança (a tela só olha quando ele muda)
+        self.dex_capturas: list = []      # speciesId do evento de batalha "capturado" (os últimos 50)
         self.ultimo_erro: tuple[float, str, dict] | None = None   # (monotonic, chave, params)
         # Recusas e avisos recentes (erro do servidor, ou o aviso "market.*" do sorteio da liberação):
         # [(monotonic, chave, params)], os últimos 40. O Mercado confere o resultado de uma compra aqui.
@@ -142,6 +147,7 @@ class GameSession:
             estado = m.get("estado") or {}
             self.eu = {k: v for k, v in estado.items() if k not in _IGNORAR}
             self._merge_pokemons({**estado, "cheio": True})
+            self._merge_dex({**estado, "cheio": True})
             self._wave = self.eu.get("ondaSeq")
             for h in m.get("hunts") or []:
                 if isinstance(h, dict) and h.get("slug"):
@@ -161,6 +167,7 @@ class GameSession:
             if parcial.get("servidorAgora"):
                 self._srv = (parcial["servidorAgora"], time.monotonic())
             self._merge_pokemons(parcial)
+            self._merge_dex(parcial)
             self._check_new_wave()
             self.changed.set()
         elif t in ("campo.init", "campo"):
@@ -198,6 +205,21 @@ class GameSession:
                 self.pokemons[p["id"]] = enxuto(p)
         for pid in parcial.get("pkFora") or []:
             self.pokemons.pop(pid, None)
+
+    def _merge_dex(self, parcial: dict):
+        """A Pokédex do jogo em delta (shared/estado-delta.mjs): `cheio` ou a Pokédex inteira recomeçam;
+        dexMud entra/troca; dexFora sai. Só guarda: quem lê é a Pokédex do PokeNexus."""
+        mud, fora = parcial.get("dexMud"), parcial.get("dexFora")
+        if parcial.get("cheio") or "pokedex" in parcial:
+            self.dex = dict(parcial.get("pokedex") or {})
+        elif not mud and not fora:
+            return
+        if isinstance(mud, dict):
+            self.dex.update(mud)
+        for chave in fora or []:
+            self.dex.pop(chave, None)
+            self.dex.pop(str(chave), None)
+        self.dex_seq += 1
 
     @property
     def active_pokemon(self) -> dict | None:
@@ -273,6 +295,10 @@ class GameSession:
         elif k in ("fugiu", "capturado"):
             nome = (e.get("pokemon") or {}).get("nome") if k == "capturado" else e.get("nome")
             self._resolve({"xp": 0, "resultado": k, "nome": nome})
+            if k == "capturado" and (e.get("pokemon") or {}).get("speciesId") is not None:
+                self.dex_capturas.append(e["pokemon"]["speciesId"])     # a Pokédex do PokeNexus, na hora
+                del self.dex_capturas[:-50]
+                self.dex_seq += 1
         elif k == "centro":
             self.in_battle = False
             self.on_event("centro", {"motivo": e.get("motivo")})

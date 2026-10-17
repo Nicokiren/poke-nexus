@@ -1,0 +1,39 @@
+﻿ok    antes de abrir: a tela não existe: None
+ok    abriu na área do jogo: ('pokedex', True, False)
+ok    385 na lista (sprites ∩ jogo): 385
+ok    Unown fora: False
+ok    conta 1: total = Pokédex do jogo + inventário: 166
+ok    barra de: 385
+ok    fichas por região: ['Kanto 106/151', 'Johto 28/99', 'Hoenn 32/135']
+ok    só no inventário conta (133) e Orre do inventário vira a base (13258 -> 258): (True, True)
+ok    dica: no inventário: True
+ok    filtro Kanto: (151, 1, 151)
+ok    filtro Johto: (99, 152, 251)
+ok    filtro Hoenn: (135, 252, 386)
+ok    filtro Todas: 385
+ok    busca número 25: [25]
+ok    busca #006: [6]
+ok    nome de quem falta (Ivysaur) não aparece: False
+ok    nome de capturado (Bulbasaur) aparece: True
+ok    busca sem resultado: aviso: ([], True)
+ok    só os que faltam: True
+ok    Ctrl+2: conta vazia: (1, 0, 'Conta 2', 'pokedex')
+ok    vazia: tudo ???: '#001\nAinda não capturado'
+ok    Todas as contas: junta as 4: 211
+ok    Todas: o dono na dica: 'Conta: Conta 3'
+ok    captura nova: +1: 167
+ok    selo Novo (capturado agora): True
+ok    dica: data da primeira captura: True
+ok    salvo no perfil da conta: True
+ok    Ctrl+H: Hunts: ('hunts', False)
+ok    Ctrl+D: Pokédex: 'pokedex'
+ok    Ctrl+M: Mercado: 'rmt'
+ok    Ctrl+0: todas as contas: (True, 'pokedex')
+ok    Ctrl+D de novo: volta ao jogo: ('jogo', False)
+ok    botão Jogo volta para o jogo: ('jogo', False)
+ok    F1 lista Ctrl+D: True
+ok    Ajustes: atalho da Pokédex: 'Ctrl+D'
+ok    Ajustes: grava o atalho: 'Ctrl+D'
+ok    nenhum widget por pokémon: True
+ok    nenhum PixelSprite na Pokédex: 0
+TUDO OK

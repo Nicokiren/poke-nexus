@@ -37,6 +37,14 @@ App desktop para Windows (Python 3.11+, PySide6/Qt WebEngine) que roda até **4 
   `app/textos_guia.py` `FRASES_MEOWTH`). **A taxa da calculadora é a de referência do usuário
   (1.000 Gemas = US$ 9,00), num lugar só (`GEMAS_REF`, `CENTAVOS_REF`)**: não use o preço do jogo
   (`welcome.economia`) nem espalhe o número pelo código. Ela só calcula: não compra, não grava, sem rede.
+- Pokédex (17/10/2026): `game/pokedex.py` (sem Qt: lista, captura, arquivo `profiles\conta_XX\pokedex.json`;
+  teste em `ferramentas/pokedex/teste_dados.py`), `app/pokedex_ui.py` (a tela, visual "aparelho" escolhido pelo
+  usuário; `QListView` + delegate, nada de widget por pokémon, sem animação), `game/pokeidle.py` guarda a
+  Pokédex do jogo em `self.dex` (só acréscimo), botão no topo no lugar do antigo "N/4 conectadas" e Ctrl+D (o
+  padrão fica em `config_edit.ATALHO_PADRAO`). **A Pokédex só lê; a lista de espécies vem dos sprites ∩ catálogo
+  do jogo no ar** (nada fixo no código). Pego = Pokédex do jogo `c > 0` + inventário da conta (pedido do usuário)
+  + evento `capturado`; Mega/Forma seguem o jogo. A Pokébola das células é `assets/sprites/ui/bola_capturado.png`
+  (pacote pokesprite, que o usuário mandou). Relatório em `docs/pokedex/RELATORIO.md`.
 - `hunts/` — motor do Hunt Analyzer; `hunts/bridge.js` usa os módulos do próprio jogo.
 - Modo Leve: só a opção `[desempenho] modo_leve` nas Configurações (vale ao reiniciar). **Não existe**
   mais executável separado "Leve" — o usuário não quer. **Leve 2.0** (`browser/web_host.py`): NÃO
@@ -152,6 +160,8 @@ App desktop para Windows (Python 3.11+, PySide6/Qt WebEngine) que roda até **4 
    OK do usuário).
 
 8. Calculadora Gemas ⇄ Dólares no Mercado — **feita e testada** (16/10/2026), relatório em
-   `docs/visual/calculadora/RELATORIO.md`. Falta só o push (com o OK do usuário: publica atualização).
+   `docs/visual/calculadora/RELATORIO.md`. Publicada na v1.1.5.
+9. Pokédex — **feita e testada sem contas reais** (17/10/2026), relatório em `docs/pokedex/RELATORIO.md`. Falta: a
+   conferência com uma conta real e o farm de 4 contas (só com autorização) e o push (publica atualização).
 
 Prompts antigos já executados: `PROMPT_CONFIG_MODO_LEVE.md`, `PROMPT_RMT_VERTICAL.md`.

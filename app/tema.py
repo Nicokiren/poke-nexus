@@ -48,6 +48,10 @@ T = {
     "chao": "#3E6B34",                # chão de grama do palco do mascote
     "chao_luz": "#5E9A4C",
     "sprite_cinza": "#6E5A64",        # mascote de conta parada
+    # a tela de LCD da Pokédex (app/pokedex_ui.py; texto escuro 11,3:1, fraco 5,3:1, silhueta 11,8:1)
+    "tela_dex": "#CDD5B3",
+    "tela_dex_borda": "#98A47F",
+    "tela_dex_fraco": "#4A5436",      # texto secundário na tela
     # só nas molduras dos botões (ferramentas/arte/gerar_ui.py)
     "botao_hover": "#4A2E3B",
     "destaque_hover": "#F2C25E",
@@ -231,6 +235,9 @@ QScrollBar::add-page, QScrollBar::sub-page {{ background: transparent; }}
 QProgressBar {{ background: {t['trilho']}; border: 2px solid {t['filete']}; min-height: 18px;
                 color: {t['texto']}; font-size: 12px; font-weight: 700; text-align: center; }}
 QProgressBar::chunk {{ background: {t['moldura_esc']}; }}
+QListView#gradeDexTela {{ background: {t['tela_dex']}; border: 2px solid {t['filete']}; }}
+QFrame#telaDex {{ background: {t['tela_dex']}; border: 2px solid {t['filete']}; }}
+QFrame#telaDex QLabel {{ color: {t['sobre_destaque']}; }}
 """ + qss_campos()
 
 

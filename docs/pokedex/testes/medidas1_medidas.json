@@ -1,0 +1,15 @@
+{
+ "memoria_antes_mb": 84.2,
+ "abrir_ms": 86.0,
+ "rolar": {
+  "passos": 60,
+  "mediana_ms": 10.07,
+  "pior_ms": 26.41
+ },
+ "filtro_Kanto_ms": 11.0,
+ "filtro_Johto_ms": 14.6,
+ "filtro_Todas_ms": 13.6,
+ "memoria_aberta_mb": 97.3,
+ "memoria_a_mais_mb": 13.1,
+ "sprites_lidos": 385
+}

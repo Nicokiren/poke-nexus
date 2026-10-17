@@ -1,0 +1,51 @@
+﻿ok    números dos sprites (ignora o que não é número): [1, 4, 6, 25, 152, 252, 400]
+ok    lista = sprites ∩ espécies base: [1, 4, 6, 25, 152, 252]
+ok    nome e tipos em português: ('Bulbasaur', ['Planta', 'Venenoso'])
+ok    região: ['Kanto', 'Kanto', 'Kanto', 'Kanto', 'Johto', 'Hoenn']
+ok    sem catálogo: os sprites, sem nome: ([1, 4, 6, 25, 152, 252, 400], '')
+ok    catálogo com chave texto: [1, 4]
+ok    chave_pokedex(25): 25
+ok    chave_pokedex('25'): 25
+ok    chave_pokedex(13252): 252
+ok    chave_pokedex(14009): 9
+ok    chave_pokedex(2050): 2050
+ok    chave_pokedex(10530): 2030
+ok    chave_pokedex(3006): 3006
+ok    chave_pokedex(4019): 4019
+ok    chave_pokedex(1001): 1001
+ok    chave_pokedex(0): None
+ok    chave_pokedex(-3): None
+ok    chave_pokedex('x'): None
+ok    chave_pokedex(None): None
+ok    só c > 0; 13xxx vira a base; Mega fica com a chave dela: [1, 252, 3006]
+ok    visto sem captura (só k) não conta: False
+ok    soma a chave do número e a do clone: [252]
+ok    reforço: coleção e evento capturado: [6, 25, 152]
+ok    progresso: {'total': (3, 6), 'Kanto': (2, 4), 'Johto': (0, 1), 'Hoenn': (1, 1)}
+ok    welcome: Pokédex inteira: {'1': {'k': 5, 'c': 1}, '4': {'k': 2, 'c': 0}}
+ok    welcome: a Pokédex não vai para o estado do jogador: False
+ok    estado sem Pokédex: nada muda: (1, 2)
+ok    dexMud entra e troca: ({'k': 3, 'c': 1}, {'k': 1, 'c': 0}, 2)
+ok    dexFora sai (chave número ou texto): False
+ok    a coleção continua igual: [25]
+ok    evento capturado: ([13252], True)
+ok    tudo junto: [1, 4, 25, 252]
+ok    cheio (conta trocada): recomeça: {'6': {'k': 1, 'c': 1}}
+ok    cheio sem Pokédex: vazia, como no jogo: {}
+ok    guarda só as últimas 50 capturas: (50, 11)
+ok    mensagem que o PokeNexus não usa não é lida: {}
+ok    sem arquivo: vazio: ({}, None)
+ok    1ª vez: não é novidade (já estava capturado): []
+ok    1ª vez: sem data: {1: None, 4: None}
+ok    captura nova: com data: ([25], 2000.0)
+ok    solto ou trocado continua contado: ([], [1, 4, 25])
+ok    outra conta do jogo no mesmo lugar: lista própria: ([], {6: None})
+ok    arquivo: só números e datas, por conta do jogo: (['77', '88'], {'1': None, '4': None, '25': 2000.0})
+ok    relendo: a última conta: ('88', {6: None})
+ok    a conta de volta: a lista dela: [1, 4, 25]
+ok    arquivo quebrado: começa vazio, sem erro: {}
+ok    sem id da conta do jogo: não grava: []
+ok    todas: donos: {1: ['Conta 1', 'Conta 3'], 25: ['Conta 1', 'Conta 2'], 6: ['Conta 2']}
+ok    todas: a primeira captura (sem data = a mais antiga): {1: None, 25: 500.0, 6: 700.0}
+
+TUDO OK

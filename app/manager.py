@@ -140,6 +140,14 @@ class Manager:
     def go_hunt(self, i: int, slug: str):
         self._call(self.workers[i].go_hunt, slug)
 
+    # -------------------------------------------------------------- Pokédex
+    def pokedex_catalogo(self):
+        """Só leitura, para a Pokédex: o catálogo de espécies da versão no ar (o mesmo do Hunt Analyzer, pela
+        página de dados sem conta). Não bloqueia a tela: devolve um Future."""
+        fut = asyncio.run_coroutine_threadsafe(self.hunt_data.garantir(), self.loop)
+        fut.add_done_callback(self._report_error)
+        return fut
+
     # ------------------------------------------------------------- RMT
     def contas_proprias(self) -> set:
         """Nicks (minúsculos) e ids no jogo de TODAS as contas do PokeNexus — o RMT nunca compra

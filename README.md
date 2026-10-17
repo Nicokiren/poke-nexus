@@ -301,6 +301,27 @@ nenhum limite. Na primeira vez que você abre o Mercado aparece o convite "Prime
 abrir o guia ou fechar o convite, ele não volta (fica salvo em `[janela] guia_mercado_visto`). Os textos
 do guia estão em `app/textos_guia.py`.
 
+## 9. Pokédex
+
+O botão **Pokédex** no alto da janela (ou **Ctrl+D**) abre a Pokédex da conta selecionada na área do jogo. As
+contas continuam caçando por trás; **Jogo** (ou Ctrl+D de novo) volta. Ela **só mostra**: não captura, não clica
+no jogo e não manda nada ao servidor.
+
+- **Quem entra:** os pokémon que o PokeNexus tem desenho **e** que existem no jogo no ar: hoje 385 (Kanto 151,
+  Johto 99, Hoenn 135; o Unown fica de fora por falta de desenho). A lista se monta sozinha: espécie nova do
+  jogo que tenha desenho aparece.
+- **Pego ou não:** quem a conta ainda não tem aparece como **silhueta preta**, sem nome. Quem ela já tem aparece
+  colorido, com o nome e uma Pokébola no canto. Conta o que a **Pokédex do próprio jogo** registra como capturado
+  e o que está no **inventário** da conta (inclusive o Depot e os que vieram de evolução ou troca), então o
+  número pode passar o da aba do jogo. Mega e Forma seguem o jogo (entrada própria, não marcam a espécie base).
+- **Em cima:** a barra "123 de 385", a porcentagem e Kanto/Johto/Hoenn. **Esta conta** ou **Todas as contas**
+  (vale se qualquer conta tiver; a dica diz qual). Filtros por região, busca por número (qualquer um) ou por nome
+  (só dos que você já tem, para não estragar a surpresa) e "Mostrar só os que faltam".
+- **Dica no mouse:** nome, número, tipos, a primeira captura e "No inventário". O selo **Novo** marca o que
+  chegou nas últimas 24 h. A telinha da esquerda mostra o pokémon em que o mouse está.
+- **Arquivos:** `profiles\conta_XX\pokedex.json` (só números e datas; abre com a conta parada) e
+  `pokedex_especies.json` na pasta de dados (nomes e tipos, para abrir sem internet).
+
 ## Aparência
 
 O PokeNexus tem visual próprio, o tema **"Base do Treinador"**: molduras de madeira escura em pixel art,
@@ -317,6 +338,7 @@ logo e o ícone do programa são **arte própria**, desenhada por código em `fe
 | Ctrl+0 | Todas as contas |
 | Ctrl+H | Alterna entre o jogo e o Hunt Analyzer (Hunts) |
 | Ctrl+M | Alterna entre o jogo e o RMT (Mercado) |
+| Ctrl+D | Alterna entre o jogo e a Pokédex |
 | F8 | Pausa / retoma a automação da conta selecionada |
 | Ctrl+, | Abre os Ajustes |
 | Ctrl+B | Esconde / mostra a ficha do treinador |
@@ -458,6 +480,8 @@ app/hunt_ui.py              painel Hunts (só desenha)
 app/settings_ui.py          janela Ajustes
 app/rmt_ui.py               painel Mercado (lista de compras, ligar/desligar, limites, status, calculadora)
 app/conversor_gemas.py      a conta da calculadora de Gemas (taxa de referência, Decimal, sem Qt)
+app/pokedex_ui.py           a Pokédex na tela (grade com delegate, silhuetas, Todas as contas)
+game/pokedex.py             a Pokédex sem tela: quem entra, quem foi pego, o arquivo de cada conta
 app/guia.py, app/textos_guia.py  guia passo a passo do Mercado e os textos dele
 rmt/compras.py              a lista de compras de UMA conta (no perfil dela) e a migração das regras antigas
 rmt/regras.py               formato antigo (regras v1), usado só para migrar

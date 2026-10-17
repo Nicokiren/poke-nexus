@@ -392,7 +392,7 @@ class SettingsDialog(QDialog):
                 wc["ativa"].setChecked(a["enabled"] if isinstance(a, dict) else a.enabled)
         if quer("atalhos"):
             for k, w in self.w_atalhos.items():
-                w.setKeySequence(QKeySequence(cfg["atalhos"].get(k, "")))
+                w.setKeySequence(QKeySequence(cfg["atalhos"].get(k, config_edit.ATALHO_PADRAO.get(k, ""))))
         if quer("desempenho"):
             self.w_leve.setChecked(bool(cfg["desempenho"]["modo_leve"]))
         if quer("atualizacao"):
