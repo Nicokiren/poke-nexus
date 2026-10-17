@@ -273,19 +273,6 @@ oooooolo..
 ..oioooooo
 ...oo....."""
 
-# o aparelho da Pokédex (desenho próprio): a lente grande, uma luzinha e a tela
-ACOES["pokedex"] = """
-.oooooooo.
-oiiiiiiiio
-oiooooiiio
-oiolloilio
-oiolloiiio
-oiooooiiio
-oiiiiiiiio
-oillllllio
-oiiiiiiiio
-.oooooooo."""
-
 # Ícones de status (cada um pintado com a cor do status).
 STATUS = {
     "FARMING": """

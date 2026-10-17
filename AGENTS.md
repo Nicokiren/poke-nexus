@@ -44,7 +44,8 @@ App desktop para Windows (Python 3.11+, PySide6/Qt WebEngine) que roda até **4 
   padrão fica em `config_edit.ATALHO_PADRAO`). **A Pokédex só lê; a lista de espécies vem dos sprites ∩ catálogo
   do jogo no ar** (nada fixo no código). Pego = Pokédex do jogo `c > 0` + inventário da conta (pedido do usuário)
   + evento `capturado`; Mega/Forma seguem o jogo. A Pokébola das células é `assets/sprites/ui/bola_capturado.png`
-  (pacote pokesprite, que o usuário mandou). Relatório em `docs/pokedex/RELATORIO.md`.
+  (pacote pokesprite, que o usuário mandou); a Great Ball do botão do topo é `bola_botao.png` e a Ultra Ball
+  do cabeçalho é `bola_pokedex.png`. Relatório em `docs/pokedex/RELATORIO.md`.
 - `hunts/` — motor do Hunt Analyzer; `hunts/bridge.js` usa os módulos do próprio jogo.
 - Modo Leve: só a opção `[desempenho] modo_leve` nas Configurações (vale ao reiniciar). **Não existe**
   mais executável separado "Leve" — o usuário não quer. **Leve 2.0** (`browser/web_host.py`): NÃO

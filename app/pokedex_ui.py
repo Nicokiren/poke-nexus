@@ -289,26 +289,21 @@ CORES = {"fundo": T["tela_dex"], "fundo_pego": T["tela_dex"], "borda": T["tela_d
          "selo": T["destaque"], "sobre_selo": T["sobre_destaque"], "silhueta": T["filete"]}
 
 
-class Lente(QWidget):
-    """A lente e as três luzinhas do aparelho (desenho próprio em pixel, cores do tema)."""
+def bola(arquivo, fator: int = 1) -> QPixmap:
+    """Uma Pokébola do pacote pokesprite (assets/sprites/ui), recortada no desenho e ampliada sem borrar."""
+    img = QImage(str(ASSETS_DIR / "sprites" / "ui" / arquivo))
+    r = _alpha_bbox(img) if not img.isNull() else None
+    img = img.copy(r) if r else img
+    return QPixmap.fromImage(img.scaled(img.width() * fator, img.height() * fator, Qt.IgnoreAspectRatio,
+                                        Qt.FastTransformation))
+
+
+class Lente(QLabel):
+    """A Ultra Ball no alto da Pokédex (escolha do usuário, 17/10/2026: no lugar da lente desenhada)."""
 
     def __init__(self):
         super().__init__()
-        self.setFixedSize(92, 44)
-
-    def paintEvent(self, _ev):
-        p = QPainter(self)
-        ret = lambda x, y, w, h, cor: p.fillRect(x, y, w, h, QColor(T[cor]))
-        # a lente: quadrados encaixados, cantos de pixel (um "círculo" de pixel art)
-        for (x, y, w, h), cor in (((8, 0, 28, 44), "filete"), ((0, 8, 44, 28), "filete"), ((4, 4, 36, 36), "filete"),
-                                  ((10, 4, 24, 36), "sobre_madeira"), ((4, 10, 36, 24), "sobre_madeira"),
-                                  ((8, 8, 28, 28), "sobre_madeira"), ((12, 8, 20, 28), "foco"), ((8, 12, 28, 20), "foco"),
-                                  ((12, 12, 20, 20), "foco"), ((14, 14, 8, 6), "sobre_madeira")):
-            ret(x, y, w, h, cor)
-        for i, cor in enumerate(("perigo_luz", "aviso", "ok")):
-            ret(54 + i * 13, 4, 10, 10, "filete")
-            ret(56 + i * 13, 6, 6, 6, cor)
-        p.end()
+        self.setPixmap(bola("bola_pokedex.png", 3))
 
 
 # ============================================================ o painel

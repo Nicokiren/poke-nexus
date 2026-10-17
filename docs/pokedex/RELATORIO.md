@@ -16,6 +16,7 @@ Reconhecimento (Fase 1, mostrado ao usuário): `RECONHECIMENTO.md`.
 | Inventário (mensagem durante o trabalho) | **"A pokedex deve identificar os pokémons já adquiridos no inventário"**: o inventário da conta (`pokemons`, com o Depot) conta sempre, inclusive pokémon vindo de evolução ou troca. Por isso o total do PokeNexus **pode passar** o da aba do jogo, que só conta capturas |
 | Visual | **B, o aparelho**: lente e luzinhas no alto, a grade numa tela de LCD clara e a telinha do pokémon em que o mouse está (a proposta A, vitrine escura, ficou nos prints `A_*`) |
 | Topo estreito | Na janela mínima (760×600) não cabia: **só nesse caso** a Pokédex fica só com o ícone e o contador vira "0/4" (dica "contas conectadas") |
+| Ícones (depois da v1.1.6) | O ícone do botão Pokédex e a lente do cabeçalho viraram duas Pokébolas do mesmo pacote: a **Great Ball** no botão (`bola_botao.png`) e a **Ultra Ball** no cabeçalho (`bola_pokedex.png`, 3×). O ícone desenhado `ico_pokedex_*` saiu |
 | Pokébolas (mensagem durante o trabalho) | Usar as bolas enviadas "só onde for necessário": **só a Poké Ball, no canto das células capturadas**. Arquivo `poke.png` do pacote pokesprite (`Downloads\pokesprite-master\items\ball`), copiado sem mudança para `assets/sprites/ui/bola_capturado.png` |
 
 ## O que foi feito

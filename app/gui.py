@@ -24,7 +24,7 @@ from app.hunt_ui import HuntPanel
 from app.rmt_ui import RmtPanel
 from app.manager import Manager
 from app.atualizacao import Atualizacao
-from app.pokedex_ui import PokedexDados, PokedexPanel
+from app.pokedex_ui import PokedexDados, PokedexPanel, bola as pokedex_bola
 from app.dialogos import avisar, perguntar
 from app.molduras import Botao, Moldura
 from app.icones import TAM as ICO_TAM, icone, por_nome_do_botao
@@ -1184,7 +1184,10 @@ class MainWindow(QMainWindow):
         # esquerda dela, igual. Não confundir com o botão Pokédex do próprio jogo (dentro da página).
         atalho_dex = self.cfg["atalhos"].get("pokedex", config_edit.ATALHO_PADRAO["pokedex"])
         self.b_pokedex = button("Pokédex", None, f"A Pokédex do PokeNexus: quem esta conta já capturou "
-                                f"({atalho_dex}). Só mostra, não mexe no jogo", self._alternar_pokedex, ico="pokedex")
+                                f"({atalho_dex}). Só mostra, não mexe no jogo", self._alternar_pokedex)
+        self.b_pokedex.setText(" Pokédex")
+        self.b_pokedex.setIcon(QIcon(pokedex_bola("bola_botao.png")))     # a Great Ball (escolha do usuário)
+        self.b_pokedex.setIconSize(ICO_TAM)
         self.b_pokedex.setCheckable(True)
         h.addWidget(self.b_pokedex)
         self._topo, self._marca = h, brand
