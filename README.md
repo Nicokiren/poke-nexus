@@ -289,7 +289,8 @@ PokeIdle permitem automação no Mercado (seção 5).
 **Calculadora de Gemas:** o botão **Calculadora**, no cartão do Saldo, abre uma conta de Gemas para
 dólares e de dólares para Gemas, com o Meowth dando palpite. A taxa é de **referência** (1.000 Gemas =
 US$ 9,00), não é cotação nem saque. Digitar num campo atualiza o outro; as fichas **100**, **1.000**,
-**10.000** e **Meu saldo** (as Gemas da conta, com ela conectada) preenchem as Gemas. Ela **só calcula**:
+**10.000**, **Meu saldo** (as Gemas da conta, com ela conectada) e **Saldo de todas as contas** (a soma das
+Gemas das contas conectadas; a dica diz quantas) preenchem as Gemas. Ela **só calcula**:
 não compra, não liga item, não grava nada e não acessa a internet. Aberta ou fechada vale até você fechar o
 programa. A taxa fica em `app/conversor_gemas.py` (`GEMAS_REF`, `CENTAVOS_REF`) e as falas do Meowth em
 `app/textos_guia.py` (`FRASES_MEOWTH`).

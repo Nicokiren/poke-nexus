@@ -391,6 +391,12 @@ class CalculadoraGemas(Moldura):
         self.b_saldo.setObjectName("tool")
         self.b_saldo.clicked.connect(lambda: self._saldo is not None and self.usar_gemas(self._saldo))
         fichas.addWidget(self.b_saldo)
+        # a soma das Gemas das contas conectadas (pedido do usuário, 19/10/2026)
+        self._todas: tuple[int, int] | None = None          # (soma, quantas contas)
+        self.b_todas = Botao("Saldo de todas as contas")
+        self.b_todas.setObjectName("tool")
+        self.b_todas.clicked.connect(lambda: self._todas is not None and self.usar_gemas(self._todas[0]))
+        fichas.addWidget(self.b_todas)
         fichas.addStretch()
         for b in (fichas.itemAt(i).widget() for i in range(fichas.count())):
             if b:
@@ -403,6 +409,7 @@ class CalculadoraGemas(Moldura):
         base.addWidget(_rot("Valor de referência. Não é cotação nem saque.", "muted", "font-size:11px;"))
         v.addLayout(base)
         self.set_saldo(None)
+        self.set_saldo_todas([])
         self._calcular("gemas")
 
     def _campo(self, rotulo: str, dolares: bool):
@@ -464,6 +471,21 @@ class CalculadoraGemas(Moldura):
         self.b_saldo.setToolTip("Conecte a conta para usar o saldo dela" if gemas is None
                                 else f"Usa as Gemas desta conta ({cg.formatar_gemas(gemas)})")
 
+    def set_saldo_todas(self, saldos):
+        """As Gemas de cada conta (None = conta sem conexão). A ficha usa a soma das conectadas."""
+        vals = [int(g) for g in saldos if g is not None]
+        novo = (sum(vals), len(vals)) if vals else None
+        if novo == self._todas and self.b_todas.toolTip():
+            return
+        self._todas = novo
+        self.b_todas.setEnabled(novo is not None)
+        if novo is None:
+            dica = "Conecte uma conta para usar a soma das Gemas"
+        else:
+            quem = "da conta conectada" if novo[1] == 1 else f"das {novo[1]} contas conectadas"
+            dica = f"Soma as Gemas {quem} ({cg.formatar_gemas(novo[0])})"
+        self.b_todas.setToolTip(dica)
+
 
 # ============================================================ o painel
 class RmtPanel(QScrollArea):
@@ -471,6 +493,7 @@ class RmtPanel(QScrollArea):
     parar_todos = Signal()         # desliga todas as compras, em todas as contas
     guia_visto = Signal()          # a pessoa já viu (ou dispensou) o guia
     _calc_aberta = False           # calculadora aberta ou fechada: só na memória (não vai para o config.toml)
+    saldos = None                  # () -> [Gemas de cada conta, None = sem conexão] (a janela principal passa)
 
     def __init__(self):
         super().__init__()
@@ -674,6 +697,8 @@ class RmtPanel(QScrollArea):
         s = v["saldo"]
         self.saldo.setText(f"{num(s['gold'])} ouro  {num(s['orb'])} gema")
         self.calc.set_saldo(s["orb"] if v["conectada"] else None)
+        if self.saldos is not None:
+            self.calc.set_saldo_todas(self.saldos())
         parada = rot._conta_parada() if any(i.ligado for i in v["itens"]) else None
         if not v["conectada"]:
             sit, cor = "A conta não está conectada: inicie a conta para o Mercado poder comprar.", T["dim"]

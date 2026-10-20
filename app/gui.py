@@ -986,6 +986,8 @@ class MainWindow(QMainWindow):
         self.game.layout_todas.connect(self._trocar_layout_todas)
         rp = self.game.rmt_panel
         rp.parar_todos.connect(self.m.rmt_parar_todos)
+        # "Saldo de todas as contas" da calculadora: as Gemas que cada conta conectada já mostra (só lê)
+        rp.saldos = lambda: [w.game.eu.get("orbs") if w.game and w.game.welcomed else None for w in self.m.workers]
         rp.set_convite(not self.cfg["janela"].get("guia_mercado_visto", False))
         rp.guia_visto.connect(self._guia_mercado_visto)
         # Pokédex (app/pokedex_ui.py): os dados vivem sempre (só guardam as espécies novas); a tela só nasce

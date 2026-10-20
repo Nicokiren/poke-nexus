@@ -267,6 +267,41 @@ def testes():
     foto("teste_sem_conta", c)
     SALDO["conectada"] = True
     rp.render(win.selected, m.workers[win.selected])
+    # Saldo de todas as contas (a soma das conectadas)
+    if "Saldo de todas as contas" in fichas:
+        bt = fichas["Saldo de todas as contas"]
+        confere("todas: sem conta conectada, apagada", (bt.isEnabled(), "Conecte uma conta" in bt.toolTip()), (False, True))
+        real = rp.saldos
+        for saldos, ligada, dica, campos in (
+                ([12_345, None, 1_000, 500], True, "Soma as Gemas das 3 contas conectadas (13.845)", ("13.845", "124,60")),
+                ([None, 777, None, None], True, "Soma as Gemas da conta conectada (777)", ("777", "6,99")),
+                ([0, 0, None, None], True, "Soma as Gemas das 2 contas conectadas (0)", ("0", "0,00")),
+                ([400_000_000, 300_000_000, 200_000_000, 150_000_000], True,
+                 "Soma as Gemas das 4 contas conectadas (1.050.000.000)", ("1.050.000.000", "9.450.000,00")),
+                ([None, None, None, None], False, "Conecte uma conta para usar a soma das Gemas", None)):
+            rp.saldos = lambda s=saldos: s
+            rp.render(win.selected, m.workers[win.selected])
+            confere(f"todas {saldos}: ligada e dica", (bt.isEnabled(), bt.toolTip()), (ligada, dica))
+            if campos:
+                bt.click()
+                qapp.processEvents()
+                confere(f"todas {saldos}: campos", (eg.text(), ed.text()), campos)
+        # o caminho de verdade da janela principal: as Gemas que cada conta conectada já recebeu do jogo
+        from types import SimpleNamespace as NS
+        rp.saldos = real
+        guardados = [w.game for w in m.workers]
+        jogos = [NS(welcomed=True, eu={"orbs": 1_500}), NS(welcomed=False, eu={"orbs": 9_999}),
+                 NS(welcomed=True, eu={"orbs": 2_500.0}), NS(welcomed=True, eu={})]
+        for w, j in zip(m.workers, jogos):
+            w.game = j
+        confere("janela: lê só as conectadas (sem saldo ainda = fora)", real(), [1_500, None, 2_500.0, None])
+        for w, j in zip(m.workers, guardados):
+            w.game = j
+        rp.calc.set_saldo_todas([1_500, None, 2_500.0, None])
+        bt.click()
+        qapp.processEvents()
+        confere("janela: soma 1.500 + 2.500", eg.text(), "4.000")
+        rp.render(win.selected, m.workers[win.selected])
     # roda do mouse em cima dos campos e das fichas: nenhum valor muda
     digitar(eg, "1000")
     antes = (eg.text(), ed.text())
