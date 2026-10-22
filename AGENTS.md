@@ -83,6 +83,14 @@ App desktop para Windows (Python 3.11+, PySide6/Qt WebEngine) que roda até **4 
   no fim.
 - `profiles/`, `logs/` e saídas de build nunca vão para o Git; confira com a trava antes de todo push.
 
+- **Rede (22/10/2026, `docs/rede/RELATORIO.md`):** o navegador embutido usa DNS seguro com volta para o do
+  sistema (`browser/web_host.py` `configurar_dns`, `QWebEngineGlobalSettings.setDnsMode`, antes de qualquer
+  perfil); erros de rede são traduzidos só na tela (`app/erros_rede.py`; o código do Chromium vai na dica), o
+  log guarda o original. O contador do topo mostra só as contas jogando ("N/4 jogando"); o limite continua
+  em `Manager.connected_count`/`can_connect` (contas iniciadas): não mude. O aviso de atualização tenta o
+  DNS seguro (1.1.1.1, depois 8.8.8.8) quando o DNS do Windows não acha o GitHub (`atualizacao._abrir`).
+  Testes em `ferramentas/rede/` e `ferramentas/atualizacao/teste_doh.py`.
+
 ## Regras que não mudam
 
 - **Máximo de 4 contas** (Termos do PokeIdle, seção 5). Nada para burlar anti-bot, limites, travas ou
@@ -164,5 +172,9 @@ App desktop para Windows (Python 3.11+, PySide6/Qt WebEngine) que roda até **4 
    `docs/visual/calculadora/RELATORIO.md`. Publicada na v1.1.5.
 9. Pokédex — **feita e testada sem contas reais** (17/10/2026), relatório em `docs/pokedex/RELATORIO.md`. Falta: a
    conferência com uma conta real e o farm de 4 contas (só com autorização) e o push (publica atualização).
+10. Identidade Artística 2.0: abandonada em 22/10/2026; guardada em
+   `C:\Users\Paulo Afonso\Documents\PokeNexus_arquivo\identidade2_20261022-0957.zip` (+ `identidade2.patch` na
+   mesma pasta) e no stash `Identidade 2.0 abandonada (20/10/2026)` (`git stash list`). Não volte a ela sem o
+   usuário pedir.
 
 Prompts antigos já executados: `PROMPT_CONFIG_MODO_LEVE.md`, `PROMPT_RMT_VERTICAL.md`.

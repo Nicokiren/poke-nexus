@@ -13,9 +13,11 @@ e instala.
 """
 import base64
 import hashlib
+import http.client
 import json
 import os
 import re
+import socket
 import subprocess
 import sys
 import tempfile
@@ -23,7 +25,7 @@ import threading
 import urllib.error
 import urllib.request
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import quote, urlparse
 
 from PySide6.QtCore import QObject, Qt, QTimer, Signal
 from PySide6.QtWidgets import (QApplication, QDialog, QHBoxLayout, QLabel, QProgressBar, QVBoxLayout)
@@ -40,6 +42,10 @@ URL_RELEASES = "https://api.github.com/repos/PauloAfonsoGR/poke-nexus/releases/l
 URL_TESTE = os.environ.get("POKENEXUS_ATUALIZACAO_URL", "").strip()
 # De onde o instalador pode ser baixado (o github.com redireciona para os servidores de arquivos dele).
 HOSTS_GITHUB = {"github.com", "objects.githubusercontent.com", "release-assets.githubusercontent.com"}
+# Se o DNS do Windows não achar o GitHub: a mesma pergunta ao DNS seguro, pelo IP (ver _abrir). Primeiro a
+# Cloudflare; o Google fica de segunda porque o certificado dele vem de outra raiz (o Python só confia nas raízes
+# que o Windows já tem, e o Windows só baixa uma raiz quando algum programa dele precisa: medido em 22/10/2026).
+URLS_DOH = ("https://1.1.1.1/dns-query", "https://8.8.8.8/resolve")
 PRIMEIRA_S = 30
 INTERVALO_S = 6 * 3600
 TIMEOUT_S = 10
@@ -69,9 +75,49 @@ class ErroAtualizacao(Exception):
     pass
 
 
+def resolver_doh(host: str, timeout: float = TIMEOUT_S) -> list[str]:
+    """Os IPv4 de `host` pelo DNS seguro, chamado pelo IP (não depende do DNS do Windows)."""
+    erro = None
+    for base in URLS_DOH:
+        req = urllib.request.Request(f"{base}?name={quote(host)}&type=A", headers={
+            "Accept": "application/dns-json", "User-Agent": f"{APP_NAME}/{APP_VERSION}"})
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                dados = json.loads(r.read(100_000).decode("utf-8"))
+        except (OSError, ValueError) as e:          # URLError é OSError
+            erro = e
+            continue
+        ips = [a["data"] for a in dados.get("Answer") or [] if a.get("type") == 1 and a.get("data")]
+        if ips:
+            return ips
+        erro = OSError(f"o DNS seguro não achou {host}")
+    raise erro if isinstance(erro, OSError) else OSError(f"DNS seguro sem resposta ({erro})")
+
+
+class _ConexaoDoh(http.client.HTTPSConnection):
+    """HTTPS para o IP achado por resolver_doh; o certificado continua conferido pelo nome do host."""
+
+    def connect(self):
+        sock = socket.create_connection((resolver_doh(self.host, self.timeout)[0], self.port), self.timeout)
+        self.sock = self._context.wrap_socket(sock, server_hostname=self.host)
+
+
+class _HttpsDoh(urllib.request.HTTPSHandler):
+    def https_open(self, req):
+        return self.do_open(_ConexaoDoh, req, context=self._context)
+
+
 def _abrir(url: str, cabecalhos: dict | None = None, timeout: float = TIMEOUT_S):
-    req = urllib.request.Request(url, headers={"User-Agent": f"{APP_NAME}/{APP_VERSION}", **(cabecalhos or {})})
-    return urllib.request.urlopen(req, timeout=timeout)
+    def pedido():
+        return urllib.request.Request(url, headers={"User-Agent": f"{APP_NAME}/{APP_VERSION}", **(cabecalhos or {})})
+    try:
+        return urllib.request.urlopen(pedido(), timeout=timeout)
+    except urllib.error.URLError as e:
+        # O DNS do Windows não achou o GitHub (o mesmo defeito do ERR_NAME_NOT_RESOLVED no jogo): tenta de novo
+        # perguntando o endereço ao DNS seguro. Qualquer outro erro segue igual.
+        if not isinstance(e.reason, socket.gaierror) or urlparse(url).scheme != "https":
+            raise
+    return urllib.request.build_opener(_HttpsDoh()).open(pedido(), timeout=timeout)
 
 
 def ler_release(dados: dict) -> dict:

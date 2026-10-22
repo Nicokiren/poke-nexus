@@ -378,7 +378,18 @@ Os números vêm das mensagens do próprio jogo. Quando algo ainda não pode ser
 
 **A conta fica em SESSÃO EXPIRADA** — o login dela não existe ou venceu. Use **🔑 Login**.
 
-**"Já há 4 contas conectadas"** — é o limite dos Termos do PokeIdle. Pare uma conta antes.
+**"Já há 4 contas conectadas"** — é o limite dos Termos do PokeIdle. Pare uma conta antes. O topo mostra
+só as contas **jogando** de verdade (ex.: "0/4 jogando"); conta iniciada com erro não aparece ali, mas
+continua contando no limite (passe o mouse no contador para ver iniciadas e com erro).
+
+**"Não consegui achar o endereço do PokeIdle" (ERR_NAME_NOT_RESOLVED)** — o DNS do Windows não achou o
+site. O programa já tenta um DNS seguro (Cloudflare e Google) e repete sozinho em alguns segundos. Se o
+site abre no navegador mas não no PokeNexus, troque o DNS do Windows: **Win+R** → `ncpa.cpl` → botão
+direito no adaptador da internet → **Propriedades** → **Protocolo IP Versão 4 (TCP/IPv4)** →
+**Propriedades** → em cima *"Obter um endereço IP automaticamente"*, embaixo *"Usar os seguintes
+endereços de servidor DNS"*: `1.1.1.1` e `8.8.8.8` → OK. Depois, no Prompt de Comando:
+`ipconfig /flushdns`. Para testar, desative também adaptadores de VPN (ex.: Radmin). Os outros erros de
+rede também aparecem em português; o código original fica na dica do mouse e no log.
 
 **ERRO "conta aberta em outro lugar"** — a mesma conta foi aberta em outro navegador/celular. Só uma
 sessão joga por vez. Para jogar pelo PokeNexus: **Jogar eu mesmo** → *"Jogar aqui"* no jogo →

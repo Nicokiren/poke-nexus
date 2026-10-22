@@ -11,7 +11,8 @@ import socket
 
 from PySide6.QtCore import QObject, Qt, QTimer, QUrl, Signal
 from PySide6.QtGui import QDesktopServices
-from PySide6.QtWebEngineCore import QWebEnginePage, QWebEngineProfile, QWebEngineProfileBuilder
+from PySide6.QtWebEngineCore import (QWebEngineGlobalSettings, QWebEnginePage, QWebEngineProfile,
+                                     QWebEngineProfileBuilder)
 from PySide6.QtWebEngineWidgets import QWebEngineView
 
 # Só desempenho: páginas escondidas (contas não selecionadas) continuam rodando normalmente.
@@ -31,6 +32,24 @@ CHROMIUM_FLAGS = ("--disable-background-timer-throttling --disable-renderer-back
 CHROMIUM_FLAGS_LEVE_EXTRA = "--force-prefers-reduced-motion"
 # Como o Leve desenha nesta máquina (preenchido por setup_environment): "gpu", "software" ou "" (normal).
 DESENHO_LEVE = ""
+# DNS seguro (DNS por HTTPS) com volta para o DNS do Windows. Um amigo do usuário via
+# "ERR_NAME_NOT_RESOLVED" só no PokeNexus: o DNS do PC dele não achava o pokeidle.io. Com o modo
+# "SecureWithFallback" o Chromium pergunta a estes servidores e, se não der, usa o do Windows como
+# sempre: para quem o DNS já funciona nada muda. Vale para todos os perfis (4 contas e a página de
+# dados do Hunt). Ver docs/rede/RELATORIO.md.
+DNS_SERVIDORES = ["https://cloudflare-dns.com/dns-query", "https://dns.google/dns-query"]
+DNS_SEGURO = False      # setup_environment conseguiu ligar?
+
+
+def configurar_dns() -> bool:
+    """Liga o DNS seguro com volta. Precisa rodar antes de criar qualquer perfil ou página."""
+    try:
+        modo = QWebEngineGlobalSettings.DnsMode()
+        modo.secureMode = QWebEngineGlobalSettings.SecureDnsMode.SecureWithFallback
+        modo.serverTemplates = DNS_SERVIDORES
+        return bool(QWebEngineGlobalSettings.setDnsMode(modo))
+    except Exception:
+        return False        # sem a função (Qt antigo): fica o DNS do Windows, como antes
 
 
 def tem_gpu() -> bool:
@@ -104,6 +123,8 @@ def setup_environment() -> int:
             flags += " --disable-gpu"
             os.environ["QT_QUICK_BACKEND"] = "software"     # antes do QApplication
     os.environ["QTWEBENGINE_CHROMIUM_FLAGS"] = (os.environ.get("QTWEBENGINE_CHROMIUM_FLAGS", "") + " " + flags).strip()
+    global DNS_SEGURO
+    DNS_SEGURO = configurar_dns()
     return port
 
 

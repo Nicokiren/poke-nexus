@@ -26,6 +26,7 @@ from app.manager import Manager
 from app.atualizacao import Atualizacao
 from app.pokedex_ui import PokedexDados, PokedexPanel, bola as pokedex_bola
 from app.dialogos import avisar, perguntar
+from app.erros_rede import traduzir as traduzir_erro
 from app.molduras import Botao, Moldura
 from app.icones import TAM as ICO_TAM, icone, por_nome_do_botao
 from app.tema import T, carregar_fontes, qss
@@ -36,6 +37,8 @@ from browser.web_host import WebHost
 YELLOW = T["destaque"]
 
 ATIVOS = ("FARMING", "BATALHA", "MANUAL")
+# status de uma conta ligada ao jogo (o contador do topo, com o servidor do jogo conectado)
+JOGANDO = ("FARMING", "BATALHA", "AGUARDANDO", "MANUAL", "PAUSADO")
 # Pokémon em campo que aparecem nas abas das contas (speciesId do jogo = nº da Pokédex).
 INICIAIS = {1: "Bulbasaur", 4: "Charmander", 7: "Squirtle"}
 
@@ -282,12 +285,17 @@ class Placeholder(QWidget):
             self.text.setText(f"{s['name']} está desativada no config.toml (ativa = false).")
             self.btn.hide()
         elif s["running"] or s["login_open"]:
-            self.text.setText(s["detail"] or "abrindo a sessão…")
+            # erro de rede em português; o código do Chromium fica na dica e o log guarda o original
+            texto, dica = traduzir_erro(s["detail"] or "abrindo a sessão…")
+            self.text.setText(texto)
+            self.text.setToolTip(dica)
             self.btn.hide()
+            return
         else:
             self.text.setText(f"{s['name']} está parada. Ao iniciar, o PokeIdle dela aparece aqui.")
             self.btn.setText(f" Iniciar {s['name']}")
             self.btn.show()
+        self.text.setToolTip("")
 
 
 class AccountCell(QFrame):
@@ -909,7 +917,10 @@ class SidePanel(Moldura):
             self.stage.color = cor
             self.stage.update()
         self.nick.setText(f"@{s['nick']}" if s["nick"] else "")
-        self.detail.setText(s["detail"] or "")
+        texto, dica = traduzir_erro(s["detail"] or "")
+        self.detail.setText(texto)
+        if self.detail.toolTip() != dica:
+            self.detail.setToolTip(dica)
         v = self.vals
         v["level"].setText(fmt_num(s["level"]))
         v["xp_h"].setText(fmt_num(s["xp_h"]))
@@ -1114,6 +1125,16 @@ class MainWindow(QMainWindow):
             "A automação é permitida pelos Termos do PokeIdle, com no máximo "
             f"{LIMITE_TERMOS} contas conectadas por rede e por aparelho.",
             "Os atalhos mudam em Ajustes.",
+            "",
+            "Erro de conexão só no PokeNexus?",
+            "Se o PokeIdle abre no navegador, troque o DNS do Windows:",
+            "1. Win+R, digite ncpa.cpl e Enter.",
+            "2. Botão direito no adaptador da internet, Propriedades.",
+            "3. Protocolo IP Versão 4 (TCP/IPv4), Propriedades.",
+            "4. Em cima, Obter um endereço IP automaticamente. Embaixo, Usar os seguintes endereços de "
+            "servidor DNS: 1.1.1.1 e 8.8.8.8. OK.",
+            "5. No Prompt de Comando: ipconfig /flushdns",
+            "Para testar, desative também adaptadores de VPN (ex.: Radmin) no ncpa.cpl.",
         ]
         avisar(self, "Atalhos e ajuda", "\n".join(linhas))
 
@@ -1439,12 +1460,7 @@ class MainWindow(QMainWindow):
                 f = st.font()
                 f.setBold(True)
                 st.setFont(f)
-        n = self.m.connected_count()
-        lim = self.cfg["max_simultaneas"]
-        self.counter.setText(f"{n}/{lim}" if self._topo_curto else f"{n}/{lim} conectadas")
-        cor = f"color:{T['aviso'] if n >= lim else T['destaque']};"
-        if self.counter.styleSheet() != cor:      # setStyleSheet refaz o estilo mesmo sem mudar nada
-            self.counter.setStyleSheet(cor)
+        self._mostrar_contador()
         self._drain_logs()
         if self.game.hunts:
             # Só a conta com a aba Hunts aberta é analisada; o analisador ignora o pedido se
@@ -1486,7 +1502,7 @@ class MainWindow(QMainWindow):
         largos = [h.itemAt(k).widget() for k in range(h.count()) if h.itemAt(k).widget()]
         outros = sum(x.sizeHint().width() for x in largos if x not in (self.counter, self.b_pokedex))
         fm = self.counter.fontMetrics()
-        cont = fm.horizontalAdvance("4/4 conectadas") + 28
+        cont = fm.horizontalAdvance("4/4 jogando") + 28
         dex = self.b_pokedex.fontMetrics().horizontalAdvance(" Pokédex") + 50
         lugar = w - 32 - (0 if w < 820 else self._marca.sizeHint().width() + self.header.spacing())
         curto = outros + cont + dex + h.spacing() * (len(largos) - 1) > lugar
@@ -1494,9 +1510,27 @@ class MainWindow(QMainWindow):
             return
         self._topo_curto = curto
         self.b_pokedex.setText("" if curto else " Pokédex")
-        self.counter.setToolTip("contas conectadas" if curto else "")
-        n, lim = self.m.connected_count(), self.cfg["max_simultaneas"]
-        self.counter.setText(f"{n}/{lim}" if curto else f"{n}/{lim} conectadas")
+        self._mostrar_contador()
+
+    def _mostrar_contador(self):
+        """O topo conta só as contas jogando de verdade (ligadas ao servidor do jogo: farm, batalha, esperando,
+        manual ou pausada). Conta iniciada que não conectou (ex.: erro de rede) não entra. O limite dos Termos
+        continua sendo conferido pelo Manager.connected_count/can_connect, que contam as iniciadas."""
+        jogando = sum(1 for w in self.m.workers
+                      if w.running and w.game is not None and w.game.welcomed and w.status in JOGANDO)
+        iniciadas = self.m.connected_count()
+        com_erro = sum(1 for w in self.m.workers if w.running and w.status == "ERRO")
+        login = sum(1 for w in self.m.workers if w.login_open or (w.running and w.status == "SESSÃO EXPIRADA"))
+        lim = self.cfg["max_simultaneas"]
+        self.counter.setText(f"{jogando}/{lim}" if self._topo_curto else f"{jogando}/{lim} jogando")
+        dica = (f"Jogando agora: {jogando}\nIniciadas: {iniciadas}\nCom erro: {com_erro}\n"
+                + (f"Esperando o login: {login}\n" if login else "")
+                + f"Limite dos Termos do PokeIdle: {LIMITE_TERMOS} contas conectadas")
+        if self.counter.toolTip() != dica:
+            self.counter.setToolTip(dica)
+        cor = f"color:{T['erro'] if com_erro else T['aviso'] if iniciadas >= lim else T['destaque']};"
+        if self.counter.styleSheet() != cor:      # setStyleSheet refaz o estilo mesmo sem mudar nada
+            self.counter.setStyleSheet(cor)
 
     def _drain_logs(self):
         while not self.m.logs.empty():
