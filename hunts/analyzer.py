@@ -42,6 +42,33 @@ def _chave_ordem(ordem):
     return lambda l: (-l["xp_pokemon_h"], l["nivel"])
 
 
+def recomendar_hunt_automatica(resultado: dict | None, atual_slug: str | None,
+                               ganho_minimo_pct: float = 10) -> dict | None:
+    """Escolhe uma melhora conservadora para o farm automático.
+
+    Só considera áreas liberadas, viáveis e sem risco alto. Uma hunt atual segura
+    só é trocada quando a estimativa de XP/h melhora pelo percentual configurado;
+    isso evita ficar saltando entre áreas por pequenas oscilações da medição.
+    """
+    if not resultado:
+        return None
+    candidatas = [l for l in resultado.get("todas", [])
+                  if l.get("liberada") and not l.get("inviavel")
+                  and nivel_de_risco(l)[0] != "alto" and float(l.get("xp_pokemon_h") or 0) > 0]
+    if not candidatas:
+        return None
+    melhor = max(candidatas, key=lambda l: (float(l.get("xp_pokemon_h") or 0), -int(l.get("nivel") or 0)))
+    if melhor.get("slug") == atual_slug:
+        return None
+    atual = next((l for l in resultado.get("todas", []) if l.get("slug") == atual_slug), None)
+    if atual and not atual.get("inviavel") and nivel_de_risco(atual)[0] != "alto":
+        xp_atual = float(atual.get("xp_pokemon_h") or 0)
+        minimo = xp_atual * (1 + max(0, float(ganho_minimo_pct)) / 100)
+        if xp_atual > 0 and float(melhor.get("xp_pokemon_h") or 0) < minimo:
+            return None
+    return melhor
+
+
 class HuntAnalyzer:
     def __init__(self, profile_dir: Path, data):
         self.data = data                       # GameData compartilhado (só catálogo do jogo)

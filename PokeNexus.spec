@@ -6,6 +6,7 @@
 # (QtWebEngineProcess.exe); no modo de arquivo único ele seria extraído para uma pasta
 # temporária a CADA abertura. Em pasta, abre na hora.
 import os
+import PySide6
 
 a = Analysis(
     ["main.py"],
@@ -76,6 +77,17 @@ def manter(entry):
 
 a.datas = [e for e in a.datas if manter(e)]
 a.binaries = [e for e in a.binaries if manter(e)]
+# O Python e o PySide6 podem trazer revisões diferentes do runtime MSVC. O WebEngine
+# precisa da revisão distribuída com o próprio PySide6; sem esta substituição o .exe
+# abre com "DLL load failed while importing QtCore" em instalações limpas do Windows.
+PYSIDE_DIR = os.path.dirname(PySide6.__file__)
+MSVC_RUNTIME = ("VCRUNTIME140.dll", "VCRUNTIME140_1.dll")
+a.binaries = [e for e in a.binaries if os.path.basename(e[0]).casefold()
+              not in {n.casefold() for n in MSVC_RUNTIME}]
+for nome in MSVC_RUNTIME:
+    origem = os.path.join(PYSIDE_DIR, nome.lower())
+    if os.path.isfile(origem):
+        a.binaries.append((nome, origem, "BINARY"))
 pyz = PYZ(a.pure)
 
 exe = EXE(
