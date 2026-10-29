@@ -6,6 +6,7 @@
 # (QtWebEngineProcess.exe); no modo de arquivo único ele seria extraído para uma pasta
 # temporária a CADA abertura. Em pasta, abre na hora.
 import os
+import shutil
 import PySide6
 
 a = Analysis(
@@ -109,3 +110,14 @@ coll = COLLECT(
     upx=False,
     name="PokeNexus",
 )
+
+# O bootloader procura o runtime também ao lado do .exe, antes de inicializar o diretório
+# `_internal`. Deixar a cópia 14.44 somente dentro de `_internal` ainda permite que uma revisão
+# antiga instalada no Windows seja escolhida e faça o QtCore falhar. Mantemos uma cópia explícita
+# na raiz do pacote para tornar a seleção determinística em instalações limpas e antigas.
+for nome in MSVC_RUNTIME:
+    origem = os.path.join(PYSIDE_DIR, nome.lower())
+    if os.path.isfile(origem):
+        destino = os.path.join(DISTPATH, "PokeNexus", nome)
+        os.makedirs(os.path.dirname(destino), exist_ok=True)
+        shutil.copy2(origem, destino)
