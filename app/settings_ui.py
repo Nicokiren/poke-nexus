@@ -266,11 +266,22 @@ class SettingsDialog(QDialog):
                 ("reabrir_navegador", "Reabrir a sessão sozinho se a página travar", bool, None),
                 ("limite_memoria_pagina_mb", "Reabrir a página acima de", int, " MB"),
                 ("avancar_melhor_hunt", "Avançar para a melhor hunt segura", bool, None),
+                ("objetivo_hunt", "Otimizar o farm para", str,
+                 (("XP do Pokémon", "xp_pokemon"), ("XP do treinador", "xp_treinador"), ("Ouro", "ouro"))),
+                ("risco_maximo_hunt", "Risco máximo aceito", str,
+                 (("Baixo", "baixo"), ("Médio", "medio"))),
+                ("usar_medicoes_reais", "Aprender com o ritmo real de cada hunt", bool, None),
                 ("reavaliar_hunt_minutos", "Reavaliar a melhor hunt a cada", int, " min"),
                 ("ganho_minimo_troca_pct", "Trocar somente com ganho mínimo de", int, "%")):
             if tipo is bool:
                 w = QCheckBox(rot)
                 self._linha(g, "", w, "farm", k)
+            elif tipo is str:
+                w = QComboBox()
+                for texto, valor in extra:
+                    w.addItem(texto, valor)
+                self._linha(g, rot, w, "farm", k,
+                            "Define a métrica e o risco usados pelo modo de rendimento máximo")
             else:
                 w = self._spin("farm", k, extra, 100 if k == "limite_memoria_pagina_mb" else 1)
                 if k == "limite_memoria_pagina_mb":
@@ -402,7 +413,12 @@ class SettingsDialog(QDialog):
         if quer("farm"):
             for k, w in self.w_farm.items():
                 v = cfg["farm"][k]
-                w.setChecked(bool(v)) if isinstance(w, QCheckBox) else w.setValue(int(v))
+                if isinstance(w, QCheckBox):
+                    w.setChecked(bool(v))
+                elif isinstance(w, QComboBox):
+                    w.setCurrentIndex(max(0, w.findData(v)))
+                else:
+                    w.setValue(int(v))
         if quer("contas"):
             for wc, a in zip(self.widgets_contas, contas):
                 wc["nome"].setText(a["name"] if isinstance(a, dict) else a.name)
@@ -438,7 +454,13 @@ class SettingsDialog(QDialog):
         for k, w in self.w_int.items():
             v[("intervalos", k)] = w.value()
         for k, w in self.w_farm.items():
-            v[("farm", k)] = w.isChecked() if isinstance(w, QCheckBox) else w.value()
+            if isinstance(w, QCheckBox):
+                valor = w.isChecked()
+            elif isinstance(w, QComboBox):
+                valor = w.currentData()
+            else:
+                valor = w.value()
+            v[("farm", k)] = valor
         for k, w in self.w_atalhos.items():
             v[("atalhos", k)] = w.keySequence().toString(QKeySequence.PortableText)
         v[("desempenho", "modo_leve")] = self.w_leve.isChecked()

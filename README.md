@@ -121,9 +121,10 @@ ative em **Ajustes → Geral → Iniciar as contas ativas ao abrir o programa**.
   usava economia continua com ela ligada.
 - Parar tudo também fecha o login reserva e cancela partidas que ainda estavam aguardando.
 - Com **Avançar para a melhor hunt segura**, cada conta sem hunt fixa reaproveita o ranking do
-  Hunt Analyzer. A reavaliação padrão é a cada 30 minutos; áreas bloqueadas, inviáveis ou de risco
-  alto são ignoradas e a troca exige pelo menos 10% de ganho estimado de XP/h. Uma hunt fixa nunca
-  é substituída por essa automação.
+  Hunt Analyzer. O objetivo pode ser XP do Pokémon, XP do treinador ou Ouro. A reavaliação padrão
+  é a cada 15 minutos; áreas bloqueadas, inviáveis ou acima do risco escolhido são ignoradas e a
+  troca exige pelo menos 5% de ganho. Medições de 10+ minutos corrigem o modelo de cada hunt para
+  este PC e este Pokémon. Uma hunt fixa nunca é substituída por essa automação.
 - O computador precisa continuar ligado, acordado e com internet. Login válido e uma área liberada
   continuam necessários. Não foi medida uma porcentagem de economia de CPU/RAM em contas reais.
 - O limite simultâneo de quatro contas foi mantido. VM, proxy e troca de identificador não são

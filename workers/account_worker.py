@@ -252,20 +252,22 @@ class AccountWorker:
                 or not self.game or not self.game.welcomed or not self.game.hunt_slug
                 or self.game.in_battle or agora < self._melhor_hunt_em):
             return
-        minutos = max(5, int(farm_cfg.get("reavaliar_hunt_minutos", 30)))
+        minutos = max(5, int(farm_cfg.get("reavaliar_hunt_minutos", 15)))
         self._melhor_hunt_em = agora + minutos * 60
         await self.hunts.refresh(self.game)
         escolha = recomendar_hunt_automatica(
             self.hunts.result, self.game.hunt_slug,
-            farm_cfg.get("ganho_minimo_troca_pct", 10))
+            farm_cfg.get("ganho_minimo_troca_pct", 5),
+            farm_cfg.get("objetivo_hunt", "xp_pokemon"),
+            farm_cfg.get("risco_maximo_hunt", "medio"),
+            farm_cfg.get("usar_medicoes_reais", True))
         if not escolha:
             return
-        atual = next((l for l in self.hunts.result.get("todas", [])
-                      if l.get("slug") == self.game.hunt_slug), None)
-        atual_xp = float((atual or {}).get("xp_pokemon_h") or 0)
-        novo_xp = float(escolha.get("xp_pokemon_h") or 0)
-        ganho = round((novo_xp / atual_xp - 1) * 100) if atual_xp > 0 else None
-        extra = f" (+{ganho}% de XP/h estimado)" if ganho is not None else ""
+        ganho = escolha.get("_otimizador_ganho_pct")
+        metrica = {"xp_pokemon": "XP do Pokémon/h", "xp_treinador": "XP do treinador/h",
+                   "ouro": "ouro/h"}.get(escolha.get("_otimizador_objetivo"), "rendimento")
+        fonte = "medição real + modelo" if escolha.get("_otimizador_medido") else "modelo"
+        extra = f" (+{round(ganho)}% de {metrica}, {fonte})" if ganho is not None else f" ({fonte})"
         nome = self.game.hunt_name(escolha["slug"])
         self.log(f"melhor hunt segura: mudando para {nome}{extra}")
         await self.farm.go_hunt(escolha["slug"])

@@ -72,11 +72,20 @@ class Configuracao(unittest.TestCase):
         with self.assertRaises(ErroConfig):
             validar({(None, "max_simultaneas"): 0}, [])
 
+    def test_opcoes_do_otimizador_sao_validadas(self):
+        validar({("farm", "objetivo_hunt"): "ouro", ("farm", "risco_maximo_hunt"): "baixo",
+                 ("farm", "usar_medicoes_reais"): True}, [])
+        with self.assertRaises(ErroConfig):
+            validar({("farm", "objetivo_hunt"): "qualquer"}, [])
+        with self.assertRaises(ErroConfig):
+            validar({("farm", "risco_maximo_hunt"): "alto"}, [])
+
 
 class MelhorHunt(unittest.TestCase):
     @staticmethod
     def linha(slug, xp, risco=0.2, liberada=True, inviavel=False, nivel=1, mortes=0, um_hit=False):
         return {"slug": slug, "xp_pokemon_h": xp, "hit_pct": risco, "liberada": liberada,
+                "xp_treinador_h": xp * 2, "ouro_h": xp / 2, "kph": 100, "kph_modelo": 100,
                 "inviavel": inviavel, "nivel": nivel, "mortes_h": mortes, "um_hit": um_hit}
 
     def test_escolhe_maior_xp_segura_e_liberada(self):
@@ -92,6 +101,23 @@ class MelhorHunt(unittest.TestCase):
     def test_sai_de_hunt_de_risco_alto(self):
         r = {"todas": [self.linha("atual", 300, um_hit=True), self.linha("segura", 100)]}
         self.assertEqual(recomendar_hunt_automatica(r, "atual", 50)["slug"], "segura")
+
+    def test_objetivo_ouro_pode_escolher_outra_hunt(self):
+        atual, ouro = self.linha("atual", 150), self.linha("ouro", 100)
+        ouro["ouro_h"] = 300
+        r = {"todas": [atual, ouro]}
+        self.assertEqual(recomendar_hunt_automatica(r, "atual", 5, "ouro")["slug"], "ouro")
+
+    def test_medicao_real_corrige_ranking(self):
+        atual, teorica = self.linha("atual", 100), self.linha("teorica", 120)
+        atual["kph_medido"], teorica["kph_medido"] = 140, 60
+        r = {"todas": [atual, teorica]}
+        self.assertIsNone(recomendar_hunt_automatica(r, "atual", 5, usar_medicoes_reais=True))
+        self.assertEqual(recomendar_hunt_automatica(r, "atual", 5, usar_medicoes_reais=False)["slug"], "teorica")
+
+    def test_risco_baixo_exclui_hunt_media(self):
+        r = {"todas": [self.linha("atual", 100), self.linha("media", 200, risco=0.6)]}
+        self.assertIsNone(recomendar_hunt_automatica(r, "atual", 5, risco_maximo="baixo"))
 
 
 class ContaFalsa:

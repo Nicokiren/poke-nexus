@@ -46,10 +46,13 @@ reabrir_navegador = true
 # 0 = desligado.
 limite_memoria_pagina_mb = 2000
 # true = quando a conta não tem uma hunt fixa, reavalia as hunts liberadas e muda apenas se houver
-# uma opção viável, de risco baixo/médio e com ganho de XP suficiente. Nunca troca para risco alto.
+# uma opção viável, dentro do risco escolhido e com ganho suficiente no objetivo configurado.
 avancar_melhor_hunt = true
-reavaliar_hunt_minutos = 30
-ganho_minimo_troca_pct = 10
+objetivo_hunt = "xp_pokemon" # xp_pokemon | xp_treinador | ouro
+risco_maximo_hunt = "medio" # baixo | medio
+usar_medicoes_reais = true
+reavaliar_hunt_minutos = 15
+ganho_minimo_troca_pct = 5
 
 [janela]
 fechar_para_bandeja = true

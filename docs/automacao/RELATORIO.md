@@ -29,13 +29,15 @@ O gerenciador reserva vagas antes de abrir login/iniciar/reiniciar e serializa o
 mesma conta. Parar tudo fecha também páginas de login e cancela partidas agendadas. Os demais
 perfis não são interrompidos por uma falha individual.
 
-Contas sem hunt fixa podem avançar automaticamente com o mesmo cálculo do Hunt Analyzer. O padrão
-reavalia a cada 30 minutos e exige ganho de 10% em XP/h. A rotina só escolhe hunt liberada, viável e
-sem risco alto; não troca durante batalha, em modo manual/pausado nem quando há hunt fixa.
+Contas sem hunt fixa podem avançar automaticamente com o mesmo cálculo do Hunt Analyzer. O objetivo
+pode ser XP do Pokémon, XP do treinador ou Ouro. O padrão reavalia a cada 15 minutos, exige ganho de
+5% e aceita no máximo risco médio. Ritmos reais medidos por 10+ minutos corrigem a estimativa dentro
+de uma faixa conservadora. A rotina não troca durante batalha, em modo manual/pausado nem quando há
+hunt fixa.
 
 ## Verificação
 
-- 24 testes de configuração, início/parada, reservas de conexão, retomada, recomendação de hunt e
+- 28 testes de configuração, início/parada, reservas de conexão, retomada, recomendação de hunt e
   diagnóstico: passaram.
 - Janela real Qt/WebEngine com quatro perfis temporários e servidor HTTP/WebSocket em localhost:
   início automático, entrada na hunt, batalhas durante a bandeja, economia, restauração após reload,
