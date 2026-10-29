@@ -52,6 +52,12 @@ RECURSOS_FORA = ("qtwebengine_devtools_resources.pak", "qtwebengine_devtools_res
 def manter(entry):
     destino = entry[0].replace("\\", "/")
     nome = destino.rsplit("/", 1)[-1]
+    # Qt uses the ICU implementation provided by Windows. Build environments that
+    # expose Poppler on PATH can make PyInstaller collect Poppler's private ICU by
+    # mistake (versioned exports), causing WinError 127 while importing QtCore.
+    if nome.casefold() == "icuuc.dll" or (nome.casefold().startswith("icudt")
+                                           and nome.casefold().endswith(".dll")):
+        return False
     if destino in ("libcrypto-3-x64.dll", "libssl-3-x64.dll"):
         return False                  # OpenSSL do plugin de TLS do Qt (o navegador tem o próprio)
     if not destino.startswith("PySide6/"):
@@ -78,11 +84,19 @@ def manter(entry):
 
 a.datas = [e for e in a.datas if manter(e)]
 a.binaries = [e for e in a.binaries if manter(e)]
-# O Python e o PySide6 podem trazer revisões diferentes do runtime MSVC. O WebEngine
-# precisa da revisão distribuída com o próprio PySide6; sem esta substituição o .exe
-# abre com "DLL load failed while importing QtCore" em instalações limpas do Windows.
+# Python, Windows, and PySide6 can provide different MSVC runtime revisions.
+# Mixing PySide's VCRUNTIME with system MSVCP/CONCRT can also break QtCore loading
+# ("The specified procedure could not be found"), so bundle PySide's full set.
 PYSIDE_DIR = os.path.dirname(PySide6.__file__)
-MSVC_RUNTIME = ("VCRUNTIME140.dll", "VCRUNTIME140_1.dll")
+MSVC_RUNTIME = (
+    "CONCRT140.dll",
+    "MSVCP140.dll",
+    "MSVCP140_1.dll",
+    "MSVCP140_2.dll",
+    "MSVCP140_CODECVT_IDS.dll",
+    "VCRUNTIME140.dll",
+    "VCRUNTIME140_1.dll",
+)
 a.binaries = [e for e in a.binaries if os.path.basename(e[0]).casefold()
               not in {n.casefold() for n in MSVC_RUNTIME}]
 for nome in MSVC_RUNTIME:
@@ -111,10 +125,9 @@ coll = COLLECT(
     name="PokeNexus",
 )
 
-# O bootloader procura o runtime também ao lado do .exe, antes de inicializar o diretório
-# `_internal`. Deixar a cópia 14.44 somente dentro de `_internal` ainda permite que uma revisão
-# antiga instalada no Windows seja escolhida e faça o QtCore falhar. Mantemos uma cópia explícita
-# na raiz do pacote para tornar a seleção determinística em instalações limpas e antigas.
+# The bootloader searches beside the executable before `_internal` is initialized.
+# Keep the same complete set at the package root so the Windows loader never combines
+# a bundled DLL with a different globally installed revision.
 for nome in MSVC_RUNTIME:
     origem = os.path.join(PYSIDE_DIR, nome.lower())
     if os.path.isfile(origem):
